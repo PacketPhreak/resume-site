@@ -10,13 +10,13 @@ window.CAREER_TIMELINE = [
       "Network",
       "Operations"
     ],
-    "summary": "Current manufacturing IT role focused on onsite operations, identity troubleshooting, user support, network/application access, and escalation evidence in a global enterprise environment.",
+    "summary": "Current manufacturing IT role focused on onsite operations, identity troubleshooting, user support, network/application access, and escalation documentation in a global enterprise environment.",
     "bullets": [
       "Support endpoints, Microsoft 365, printers/scanners, user access, application onboarding, and plant operations support.",
       "Troubleshoot AD/Entra ID, domain-joined endpoints, password reset behavior, MFA, OneDrive, Teams, and Microsoft 365 sign-in issues.",
-      "Document impact, testing evidence, and root-cause patterns for escalation to global IT teams, managed providers, and vendors."
+      "Document impact, testing documentation, and root-cause patterns for escalation to global IT teams, managed providers, and vendors."
     ],
-    "evidence": "Future additions: sanitized troubleshooting templates, identity flow diagrams, OneDrive repair notes, escalation summaries, screenshots with sensitive data removed."
+    "evidence": "Archive additions: public-safe troubleshooting templates, identity flow diagrams, OneDrive repair notes, escalation summaries, screenshots with sensitive data removed."
   },
   {
     "period": "2023 - 2024",
@@ -35,7 +35,7 @@ window.CAREER_TIMELINE = [
       "Strengthened segmentation, endpoint protection, vulnerability response, access control, VOIP/HVAC/security integrations, and disaster recovery practices.",
       "Built cross-training and vendor coordination paths to improve support speed and operational resilience."
     ],
-    "evidence": "Future additions: sanitized network diagrams, E-Rate project notes, VLAN design notes, support playbooks, photos of lab gear or project boards."
+    "evidence": "Archive additions: public-safe network diagrams, E-Rate project notes, VLAN design notes, support playbooks, photos of lab gear or project boards."
   },
   {
     "period": "2021 - 2023",
@@ -54,7 +54,7 @@ window.CAREER_TIMELINE = [
       "Implemented Isilon archive storage replacing aging NAS infrastructure, maintained documentation, and supported performance/reliability improvements.",
       "Collaborated across IT, security, operations, and vendors to troubleshoot root cause and protect service availability."
     ],
-    "evidence": "Future additions: sanitized topology map, storage migration notes, Wi-Fi/fiber project snapshots, vendor coordination summaries."
+    "evidence": "Archive additions: public-safe topology map, storage migration notes, Wi-Fi/fiber project snapshots, vendor coordination summaries."
   },
   {
     "period": "2020 - 2021",
@@ -73,7 +73,7 @@ window.CAREER_TIMELINE = [
       "Replaced Cisco switching with Extreme Networks equipment and implemented Extreme Management Center.",
       "Improved Aerohive Wi-Fi and supported migration into Extreme Networks XMC management."
     ],
-    "evidence": "Future additions: sanitized migration checklist, XMC project notes, campus support diagrams, AWS inventory summary."
+    "evidence": "Archive additions: public-safe migration checklist, XMC project notes, campus support diagrams, AWS inventory summary."
   },
   {
     "period": "2018 - 2020",
@@ -91,7 +91,7 @@ window.CAREER_TIMELINE = [
       "Led implementation/delivery/migration tasks and translated client pain points into practical technology solutions.",
       "Built stakeholder relationships across education and business environments."
     ],
-    "evidence": "Future additions: sanitized RFP/project summary, implementation checklist, case-study story on business + technology translation."
+    "evidence": "Archive additions: public-safe RFP/project summary, implementation checklist, case-study story on business + technology translation."
   },
   {
     "period": "2016 - 2017",
@@ -109,7 +109,7 @@ window.CAREER_TIMELINE = [
       "Initiated an internship program with Richmond Community College.",
       "Created The Tech Cadets to expose local children to science and technology through weekly programs."
     ],
-    "evidence": "Future additions: photos, flyers, program notes, community artifacts, internship documentation."
+    "evidence": "Archive additions: photos, flyers, program notes, community artifacts, internship documentation."
   },
   {
     "period": "2012 - 2016",
@@ -128,7 +128,7 @@ window.CAREER_TIMELINE = [
       "Administered AD, FSMO/DC/GC/DNS/DHCP, Exchange 2003, secure email gateway, servers, PBX, backups, Cisco WLAN, cabling, and vendors.",
       "Supported manufacturing operations, customer needs, department requests, and business continuity."
     ],
-    "evidence": "Future additions: sanitized project notes, phone system/backup architecture summary, international collaboration story."
+    "evidence": "Archive additions: public-safe project notes, phone system/backup architecture summary, international collaboration story."
   },
   {
     "period": "2009 - 2012",
@@ -147,7 +147,7 @@ window.CAREER_TIMELINE = [
       "Participated in Dynamics AX ERP implementation and new data center rollout for a large manufacturing facility.",
       "Built the troubleshooting foundation: Wireshark, DNS, DHCP, firmware/updates, remote support, and vendor coordination."
     ],
-    "evidence": "Future additions: sanitized ERP/data center story, early server/network notes, photos of hardware/racks if available."
+    "evidence": "Archive additions: public-safe ERP/data center story, early server/network notes, photos of hardware/racks if available."
   },
   {
     "period": "2007 - 2009",
@@ -164,6 +164,6 @@ window.CAREER_TIMELINE = [
       "Assisted students with network issues and equipment setup/troubleshooting.",
       "Performed light network printer administration and diagnosed connectivity problems across campus."
     ],
-    "evidence": "Future additions: student worker notes, photos, early stories, campus tech memories."
+    "evidence": "Archive additions: student worker notes, photos, early stories, campus tech memories."
   }
 ];

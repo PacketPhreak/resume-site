@@ -20,8 +20,17 @@ Cloudflare Pages
 - Build output directory: `/`
 - Root directory: `/`
 
-## How to add timeline evidence later
+## How to add archive material later
 
 - Add sanitized photos/files to `assets/img/timeline/` or `assets/docs/`
 - Update each timeline entry in `assets/js/timeline-data.js`
 - Never publish internal IPs, private screenshots, usernames, tickets, domain details, or employer-sensitive information
+
+
+## v3 education update
+
+This package adds a polished Education Path section to `timeline.html` and includes cleaned web-ready school logo assets in:
+
+`assets/img/education/`
+
+Use public-safe archive content only. Keep employer/internal screenshots, ticket numbers, IP addresses, usernames, and confidential details out of the public repository.
