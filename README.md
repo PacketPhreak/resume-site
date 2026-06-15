@@ -1,10 +1,13 @@
-# PacketPhreak Site
+# PacketPhreak Resume Site v2
 
-Static resume/portfolio starter site for Joshua C. McDonald.
+Static resume/portfolio site for Joshua C. McDonald / PacketPhreak.
 
-## Project name
+## New in v2
 
-`packetphreak-site`
+- Added current resume PDF/DOCX under `assets/docs/`
+- Added `timeline.html` Career Time Capsule page
+- Added searchable/filterable timeline data under `assets/js/timeline-data.js`
+- Added resume, LinkedIn, GitHub, and email links
 
 ## Deploy target
 
@@ -17,6 +20,8 @@ Cloudflare Pages
 - Build output directory: `/`
 - Root directory: `/`
 
-## Before publishing
+## How to add timeline evidence later
 
-Replace the LinkedIn placeholder, email placeholder, domain references, and add a resume PDF link when ready.
+- Add sanitized photos/files to `assets/img/timeline/` or `assets/docs/`
+- Update each timeline entry in `assets/js/timeline-data.js`
+- Never publish internal IPs, private screenshots, usernames, tickets, domain details, or employer-sensitive information
