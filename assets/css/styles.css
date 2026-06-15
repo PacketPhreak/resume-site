@@ -2,22 +2,22 @@
 
 /* Career Time Capsule */
 .timeline-hero {
-  min-height: 56vh;
-  display: grid;
-  align-items: end;
-  padding-top: 120px;
+  min-height: auto;
+  display: block;
+  padding: 112px 0 56px;
 }
 .timeline-hero h1 {
   max-width: 12ch;
 }
 .timeline-controls {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr;
   gap: 16px;
-  margin: 26px 0 20px;
+  margin: 0 0 24px;
 }
 .search-box {
   width: 100%;
+  max-width: 760px;
   min-height: 52px;
   border: 1px solid var(--line);
   border-radius: 999px;
