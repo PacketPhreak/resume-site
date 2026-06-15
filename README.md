@@ -1,8 +1,8 @@
-# PacketPhreak Resume Site v3
+# PacketPhreak Resume Site
 
 Static resume/portfolio site for Joshua C. McDonald / PacketPhreak.
 
-## New in v3
+## New in v2
 
 - Added current resume PDF/DOCX under `assets/docs/`
 - Added `timeline.html` Career Time Capsule page
@@ -34,3 +34,8 @@ This package adds a polished Education Path section to `timeline.html` and inclu
 `assets/img/education/`
 
 Use public-safe archive content only. Keep employer/internal screenshots, ticket numbers, IP addresses, usernames, and confidential details out of the public repository.
+
+
+## v3.1 fix
+
+This package forces a new CSS file (`assets/css/styles-v31.css`) so Cloudflare/browser cache cannot keep the old stylesheet. It also replaces the education logo canvases with tighter web-ready assets so they do not render as huge transparent images if CSS cache misbehaves.
