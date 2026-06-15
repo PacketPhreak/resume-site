@@ -1,8 +1,8 @@
-# PacketPhreak Resume Site v2
+# PacketPhreak Resume Site v3
 
 Static resume/portfolio site for Joshua C. McDonald / PacketPhreak.
 
-## New in v2
+## New in v3
 
 - Added current resume PDF/DOCX under `assets/docs/`
 - Added `timeline.html` Career Time Capsule page
