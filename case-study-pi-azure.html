@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="site-version" content="v3.2-case-study" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tracing Manufacturing PI Connectivity to Azure | PacketPhreak</title>
+  <meta name="description" content="Sanitized case study: tracing manufacturing PI / Seeq connectivity to Azure across OT, DMZ, NAT, firewall, and cloud routing boundaries." />
+  <meta name="theme-color" content="#08111f" />
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/css/styles-v31.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html#top" aria-label="PacketPhreak home">
+        <span class="brand-mark" aria-hidden="true">⟠</span>
+        <span><strong>PacketPhreak</strong><small>Joshua C. McDonald</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" aria-label="Primary navigation" data-nav>
+        <a href="index.html#about">About</a>
+        <a href="index.html#focus">Focus</a>
+        <a href="index.html#case-studies">Case Studies</a>
+        <a href="timeline.html">Time Capsule</a>
+        <a href="assets/docs/Joshua_C_McDonald_Resume_2026.pdf">Resume</a>
+        <a class="nav-cta" href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="case-hero section-pad">
+      <div class="container case-hero-grid">
+        <div>
+          <p class="eyebrow">Manufacturing • OT / DMZ • Azure • PI / Seeq</p>
+          <h1 class="case-title">Tracing manufacturing PI connectivity to Azure.</h1>
+          <p class="hero-lede">A sanitized case study on following the packet from the OT side through layered firewalls, DMZ relay services, NAT, and cloud routing to isolate where communication succeeded — and where return traffic needed closer scrutiny.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#visuals">See the redacted visuals</a>
+            <a class="btn btn-ghost" href="timeline.html">Back to Time Capsule</a>
+          </div>
+          <div class="signal-strip" aria-label="Case study summary">
+            <span>Three redacted cloud destinations</span>
+            <span>Packet-path validated hop by hop</span>
+            <span>Public-safe version only</span>
+          </div>
+        </div>
+        <aside class="mission-card" aria-label="Case study overview">
+          <div class="terminal-top"><span></span><span></span><span></span></div>
+          <div class="mission-card-body">
+            <div class="mission-stat"><strong>Situation</strong><span>Manufacturing data path to Azure-hosted analytics endpoints needed validation.</span></div>
+            <div class="mission-stat"><strong>Challenge</strong><span>Trace OT → DMZ → edge firewall/NAT → internet → Azure and inspect return-traffic behavior.</span></div>
+            <div class="mission-stat"><strong>Outcome</strong><span>Separated outbound reachability from return-path handling and produced a clear remediation story.</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-pad case-overview-strip">
+      <div class="container overview-grid">
+        <article class="mini-panel"><h3>Situation</h3><p>Connectivity was required between a manufacturing PI-related environment and Azure-hosted analytics services. The environment was segmented and tightly controlled.</p></article>
+        <article class="mini-panel"><h3>What I traced</h3><p>OT source, OT firewall, DMZ relay path, upstream firewall, NAT/effective egress, internet transit, cloud-side topology, and return traffic behavior.</p></article>
+        <article class="mini-panel"><h3>Why it mattered</h3><p>This was not just a port-opening exercise. It required proving what path the packets actually took and which security boundary shaped the outcome.</p></article>
+      </div>
+    </section>
+
+    <section id="visuals" class="section-pad case-visuals">
+      <div class="container">
+        <div class="section-head narrow-head">
+          <p class="eyebrow">Redacted visual path</p>
+          <h2>Follow the packet without giving away the farm.</h2>
+          <p class="section-note">The visuals below are rebuilt from the troubleshooting story — not raw screenshots. They preserve the technical shape of the problem while removing internal identifiers.</p>
+        </div>
+        <div class="visual-stack">
+          <article class="visual-panel">
+            <div class="visual-copy">
+              <h3>Nmap-style path map</h3>
+              <p>A stylized representation of tracing the path from the manufacturing source, through security boundaries and backbone hops, toward three Azure-hosted destination groups.</p>
+              <ul>
+                <li>Shows the observed outbound route shape.</li>
+                <li>Highlights layered boundaries instead of internal names.</li>
+                <li>Keeps destination identity abstracted to endpoint groups.</li>
+              </ul>
+            </div>
+            <div class="visual-frame"><img src="assets/img/case-studies/pi-path-map-redacted.svg" alt="Redacted radial path map showing manufacturing traffic heading toward Azure endpoint groups"></div>
+          </article>
+
+          <article class="visual-panel reverse">
+            <div class="visual-copy">
+              <h3>Cloud-side topology</h3>
+              <p>A simplified, portfolio-safe view of the Azure virtual WAN / hub perspective that helped validate cloud-side routing and supporting segments during the investigation.</p>
+              <ul>
+                <li>Useful for distinguishing “internet reachable” from “end-to-end working.”</li>
+                <li>Helps explain why cloud topology review mattered.</li>
+                <li>Makes the escalation narrative easier for non-network audiences.</li>
+              </ul>
+            </div>
+            <div class="visual-frame"><img src="assets/img/case-studies/pi-azure-topology-redacted.svg" alt="Redacted topology diagram showing virtual WAN and hub connections related to the case study"></div>
+          </article>
+
+          <article class="visual-panel">
+            <div class="visual-copy">
+              <h3>Flow validation and return traffic</h3>
+              <p>Outbound traffic visibility was only half the story. The critical troubleshooting step was comparing that success with what happened on the way back.</p>
+              <ul>
+                <li>Validated source initiation and layered outbound flow.</li>
+                <li>Reviewed NAT and edge policy handling.</li>
+                <li>Focused on the inbound boundary where return behavior required review.</li>
+              </ul>
+            </div>
+            <div class="visual-frame"><img src="assets/img/case-studies/pi-packet-flow-redacted.svg" alt="Redacted packet flow diagram showing outbound validation and return path analysis"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="container split-case">
+        <div>
+          <p class="eyebrow">Longer version</p>
+          <h2>The public-safe story.</h2>
+          <div class="rich-text">
+            <p>This case centered on connectivity between a manufacturing PI-related environment and Azure-hosted analytics resources used in a Seeq integration workflow. The environment was segmented by design: traffic originated on the OT/manufacturing side, traversed an OT firewall, crossed a DMZ relay path, passed through an upstream firewall with source translation, left through public egress, and then depended on cloud-side routing and destination reachability.</p>
+            <p>The hard part was not simply asking “is the destination reachable?” The real problem was determining <em>how</em> the traffic moved, which boundaries were involved, whether outbound traffic behaved as expected, and whether return traffic was treated differently on the way back. That meant comparing traceroute-style path observations, firewall policy logic, service/port requirements, and cloud-side topology context instead of stopping at a single green check.</p>
+            <p>I mapped the expected flow, validated the controlled service families required for the PI / Seeq integration path, reviewed the policy boundaries between OT, DMZ, and edge layers, and used packet-path visibility to confirm how the communication left the environment. From there, I compared that outbound success against return-path behavior to narrow the investigation to the right security boundary and produce a cleaner escalation narrative.</p>
+            <p>The result was a much clearer technical story: this was not a vague “application problem,” and it was not a mystery hidden somewhere in the internet. It was a boundary-specific connectivity problem that needed to be explained in terms of path, policy, NAT, cloud routing context, and observed return behavior. That kind of clarity is what helps cross-functional teams move from opinions to action.</p>
+          </div>
+        </div>
+        <aside class="stacked-aside">
+          <div class="side-card">
+            <h3>Technical focus</h3>
+            <ul>
+              <li>OT / DMZ segmentation</li>
+              <li>Firewall policy review</li>
+              <li>NAT and egress validation</li>
+              <li>Azure routing awareness</li>
+              <li>Packet-path troubleshooting</li>
+              <li>Vendor / escalation communication</li>
+            </ul>
+          </div>
+          <div class="side-card">
+            <h3>Service families involved</h3>
+            <p>PI relay, DCM, Web-DCM, and related service paths over defined TCP/UDP ports formed the core of the connectivity review.</p>
+            <div class="tag-row">
+              <span class="tag">Relay</span>
+              <span class="tag">DCM</span>
+              <span class="tag">Web DCM</span>
+              <span class="tag">OPC-DA</span>
+            </div>
+          </div>
+          <div class="side-card alert-card">
+            <h3>Sanitization note</h3>
+            <p>Internal IPs, firewall names, Azure resource identifiers, raw screenshots, and organization-specific labels were intentionally removed or generalized for public presentation.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-pad case-proof">
+      <div class="container">
+        <div class="section-head narrow-head">
+          <p class="eyebrow">What this proves</p>
+          <h2>Why this belongs in the portfolio.</h2>
+        </div>
+        <div class="cards proof-grid">
+          <article class="card"><span class="card-icon">01</span><h3>Cross-boundary troubleshooting</h3><p>Shows the ability to reason across OT, DMZ, enterprise, internet, and cloud boundaries instead of treating them as separate universes.</p></article>
+          <article class="card"><span class="card-icon">02</span><h3>Packet-path judgment</h3><p>Demonstrates understanding of routing, NAT, policy, and the difference between simple reachability and end-to-end functionality.</p></article>
+          <article class="card"><span class="card-icon">03</span><h3>Escalation clarity</h3><p>Turns raw traces, maps, and technical observations into a story stakeholders can act on without exposing sensitive details.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad contact-section">
+      <div class="container contact-card">
+        <div>
+          <p class="eyebrow">Next step</p>
+          <h2>Want more case studies like this?</h2>
+          <p>Use this page as the model: public-safe visuals, a concise timeline summary, and a deeper technical writeup for the projects that matter most.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="timeline.html">Back to Time Capsule</a>
+          <a class="btn btn-ghost" href="index.html#case-studies">More case studies</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span data-year></span> Joshua C. McDonald / PacketPhreak</p>
+      <p>Case study archive · Light in the dark fiber</p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

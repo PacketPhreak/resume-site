@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+<title id="title">Redacted path map from manufacturing network to Azure endpoints</title>
+<desc id="desc">A stylized radial map showing nodes flowing from the manufacturing source through security boundaries and internet backbone to three redacted Azure endpoints.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0%" stop-color="#08111f"/>
+    <stop offset="100%" stop-color="#06101b"/>
+  </linearGradient>
+  <linearGradient id="line" x1="0" x2="1" y1="0" y2="1">
+    <stop offset="0%" stop-color="#66e3ff"/>
+    <stop offset="100%" stop-color="#9bffcb"/>
+  </linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1200" height="720" fill="url(#bg)" rx="24"/>
+<g opacity="0.16" stroke="#e8f1ff" fill="none">
+<circle cx="210" cy="540" r="40" stroke-width="1"/><circle cx="210" cy="540" r="75" stroke-width="1"/><circle cx="210" cy="540" r="110" stroke-width="1"/><circle cx="210" cy="540" r="145" stroke-width="1"/><circle cx="210" cy="540" r="180" stroke-width="1"/><circle cx="210" cy="540" r="215" stroke-width="1"/><circle cx="210" cy="540" r="250" stroke-width="1"/><circle cx="210" cy="540" r="285" stroke-width="1"/><circle cx="210" cy="540" r="320" stroke-width="1"/><circle cx="210" cy="540" r="355" stroke-width="1"/><circle cx="210" cy="540" r="390" stroke-width="1"/><circle cx="210" cy="540" r="425" stroke-width="1"/><circle cx="210" cy="540" r="460" stroke-width="1"/><circle cx="210" cy="540" r="495" stroke-width="1"/><circle cx="210" cy="540" r="530" stroke-width="1"/><circle cx="210" cy="540" r="565" stroke-width="1"/><circle cx="210" cy="540" r="600" stroke-width="1"/><circle cx="210" cy="540" r="635" stroke-width="1"/></g>
+<g font-family="Inter, Arial, sans-serif" fill="#e8f1ff">
+  <text x="72" y="62" font-size="26" font-weight="800">Redacted packet path</text>
+  <text x="72" y="92" font-size="15" fill="#9fb1c9">Manufacturing OT → layered firewalls → NAT → internet backbone → Azure-hosted analytics endpoints</text>
+</g>
+<g stroke="url(#line)" stroke-width="5" fill="none" filter="url(#glow)">
+  <path d="M230 540 C 300 500, 350 470, 395 435 S 500 360, 560 320 S 690 250, 740 220 S 860 140, 980 105"/>
+  <path d="M740 220 C 815 260, 870 290, 920 320" stroke-dasharray="6 10" opacity="0.7"/>
+  <path d="M820 160 C 880 155, 930 145, 1000 125" stroke-dasharray="6 10" opacity="0.7"/>
+</g>
+<g><circle cx="230" cy="540" r="11" fill="#050a12" stroke="#e8f1ff" stroke-width="3"/><text x="248" y="545" font-size="15" fill="#e8f1ff">OT source</text></g><g><circle cx="320" cy="490" r="11" fill="#050a12" stroke="#e8f1ff" stroke-width="3"/><text x="338" y="495" font-size="15" fill="#e8f1ff">OT firewall</text></g><g><circle cx="395" cy="435" r="11" fill="#050a12" stroke="#e8f1ff" stroke-width="3"/><text x="413" y="440" font-size="15" fill="#e8f1ff">DMZ relay</text></g><g><circle cx="480" cy="395" r="11" fill="#050a12" stroke="#e8f1ff" stroke-width="3"/><text x="498" y="400" font-size="15" fill="#e8f1ff">Edge firewall / NAT</text></g><g><circle cx="560" cy="320" r="11" fill="#050a12" stroke="#e8f1ff" stroke-width="3"/><text x="578" y="325" font-size="15" fill="#e8f1ff">Regional ISP</text></g><g><circle cx="650" cy="278" r="11" fill="#050a12" stroke="#e8f1ff" stroke-width="3"/><text x="668" y="283" font-size="15" fill="#e8f1ff">Transit backbone</text></g><g><circle cx="740" cy="220" r="11" fill="#050a12" stroke="#e8f1ff" stroke-width="3"/><text x="758" y="225" font-size="15" fill="#e8f1ff">Cloud edge</text></g><g><circle cx="820" cy="160" r="11" fill="#10351e" stroke="#9bffcb" stroke-width="3"/><text x="838" y="165" font-size="15" fill="#e8f1ff">Azure endpoint A</text></g><g><circle cx="920" cy="320" r="11" fill="#10351e" stroke="#9bffcb" stroke-width="3"/><text x="938" y="325" font-size="15" fill="#e8f1ff">Azure endpoint B</text></g><g><circle cx="980" cy="105" r="11" fill="#10351e" stroke="#9bffcb" stroke-width="3"/><text x="998" y="110" font-size="15" fill="#e8f1ff">Azure endpoint C</text></g><circle cx="760" cy="208" r="6" fill="#08111f" stroke="#7ec8ff" stroke-width="2" opacity="0.95"/><circle cx="780" cy="196" r="6" fill="#08111f" stroke="#7ec8ff" stroke-width="2" opacity="0.95"/><circle cx="800" cy="184" r="6" fill="#08111f" stroke="#7ec8ff" stroke-width="2" opacity="0.95"/><circle cx="820" cy="172" r="6" fill="#08111f" stroke="#7ec8ff" stroke-width="2" opacity="0.95"/><circle cx="840" cy="160" r="6" fill="#08111f" stroke="#7ec8ff" stroke-width="2" opacity="0.95"/><circle cx="860" cy="148" r="6" fill="#08111f" stroke="#7ec8ff" stroke-width="2" opacity="0.95"/><circle cx="880" cy="136" r="6" fill="#08111f" stroke="#7ec8ff" stroke-width="2" opacity="0.95"/><circle cx="900" cy="124" r="6" fill="#08111f" stroke="#7ec8ff" stroke-width="2" opacity="0.95"/><circle cx="920" cy="112" r="6" fill="#08111f" stroke="#7ec8ff" stroke-width="2" opacity="0.95"/><circle cx="940" cy="100" r="6" fill="#08111f" stroke="#7ec8ff" stroke-width="2" opacity="0.95"/><circle cx="960" cy="88" r="6" fill="#08111f" stroke="#7ec8ff" stroke-width="2" opacity="0.95"/><circle cx="980" cy="76" r="6" fill="#08111f" stroke="#7ec8ff" stroke-width="2" opacity="0.95"/><circle cx="762" cy="232" r="6" fill="#08111f" stroke="#7ec8ff" stroke-width="2" opacity="0.95"/><circle cx="784" cy="244" r="6" fill="#08111f" stroke="#7ec8ff" stroke-width="2" opacity="0.95"/><circle cx="806" cy="256" r="6" fill="#08111f" stroke="#7ec8ff" stroke-width="2" opacity="0.95"/><circle cx="828" cy="268" r="6" fill="#08111f" stroke="#7ec8ff" stroke-width="2" opacity="0.95"/><circle cx="850" cy="280" r="6" fill="#08111f" stroke="#7ec8ff" stroke-width="2" opacity="0.95"/><circle cx="872" cy="292" r="6" fill="#08111f" stroke="#7ec8ff" stroke-width="2" opacity="0.95"/><circle cx="894" cy="304" r="6" fill="#08111f" stroke="#7ec8ff" stroke-width="2" opacity="0.95"/><circle cx="916" cy="316" r="6" fill="#08111f" stroke="#7ec8ff" stroke-width="2" opacity="0.95"/>
+<g transform="translate(72 590)">
+  <rect width="420" height="86" rx="18" fill="rgba(16,31,55,0.84)" stroke="rgba(141,191,255,0.18)"/>
+  <circle cx="26" cy="28" r="8" fill="#050a12" stroke="#e8f1ff" stroke-width="2"/>
+  <text x="44" y="33" font-size="14" fill="#e8f1ff">Observed hop / security boundary</text>
+  <circle cx="26" cy="58" r="8" fill="#10351e" stroke="#9bffcb" stroke-width="2"/>
+  <text x="44" y="63" font-size="14" fill="#e8f1ff">Redacted Azure destination</text>
+  <path d="M248 28 h60" stroke="url(#line)" stroke-width="4"/>
+  <text x="320" y="33" font-size="14" fill="#e8f1ff">Validated outbound path</text>
+  <path d="M248 58 h60" stroke="#7ec8ff" stroke-width="4" stroke-dasharray="6 8"/>
+  <text x="320" y="63" font-size="14" fill="#e8f1ff">Additional observed branches</text>
+</g>
+</svg>

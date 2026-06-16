@@ -8,15 +8,22 @@ window.CAREER_TIMELINE = [
       "Manufacturing",
       "Identity",
       "Network",
-      "Operations"
+      "Operations",
+      "Cloud"
     ],
-    "summary": "Current manufacturing IT role focused on onsite operations, identity troubleshooting, user support, network/application access, and escalation documentation in a global enterprise environment.",
+    "summary": "Current manufacturing IT role focused on onsite operations, identity troubleshooting, user support, network/application access, escalation documentation, and selected public-safe case studies that show real packet-path investigation work.",
     "bullets": [
       "Support endpoints, Microsoft 365, printers/scanners, user access, application onboarding, and plant operations support.",
       "Troubleshoot AD/Entra ID, domain-joined endpoints, password reset behavior, MFA, OneDrive, Teams, and Microsoft 365 sign-in issues.",
-      "Document impact, testing documentation, and root-cause patterns for escalation to global IT teams, managed providers, and vendors."
+      "Document impact, testing documentation, and root-cause patterns for escalation to global IT teams, managed providers, and vendors.",
+      "Featured case study: traced a manufacturing PI / Azure connectivity path across OT, DMZ, firewall, NAT, and cloud routing boundaries to isolate return-traffic behavior."
     ],
-    "evidence": "Archive additions: public-safe troubleshooting templates, identity flow diagrams, OneDrive repair notes, escalation summaries, screenshots with sensitive data removed."
+    "evidence": "Archive additions: public-safe troubleshooting templates, identity flow diagrams, OneDrive repair notes, escalation summaries, screenshots with sensitive data removed.",
+    "caseStudy": {
+      "label": "Open featured case study",
+      "href": "case-study-pi-azure.html",
+      "title": "Tracing Manufacturing PI Connectivity to Azure"
+    }
   },
   {
     "period": "2023 - 2024",
