@@ -47,3 +47,20 @@ This package forces a new CSS file (`assets/css/styles-v31.css`) so Cloudflare/b
 - Added redacted SVG visuals for packet path, Azure topology, and flow validation
 - Added a featured case study card on the home page
 - Added a linked case study action to the current-role timeline card
+
+
+## New in v3.3
+
+- Added toned-down metallic teal 3D gradient header treatment
+- Applied upgraded hero headers across the homepage, Time Capsule, and PI/Azure case study page
+- Added cache-busting stylesheet reference: `assets/css/styles-v31.css?v=3.3`
+- Kept text selectable/searchable instead of rendering headers as images
+- Added small card shadow/hover polish to match the new PacketPhreak visual direction
+
+
+## New in v3.3.1
+
+- Fixed the PI/Azure case-study hero title/card collision risk
+- Reduced the case-study title max width slightly and improved desktop grid spacing
+- Added responsive fallback so the mission card drops below the title before overlap happens
+- Bumped stylesheet cache string to `?v=3.3.1`

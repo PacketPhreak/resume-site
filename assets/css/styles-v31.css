@@ -377,3 +377,201 @@
 .proof-grid{grid-template-columns:repeat(3,1fr)}
 .timeline-actions{display:flex;flex-wrap:wrap;gap:12px}
 @media(max-width:980px){.case-hero-grid,.visual-panel,.visual-panel.reverse,.overview-grid,.proof-grid,.split-case{grid-template-columns:1fr}.visual-panel.reverse .visual-copy,.visual-panel.reverse .visual-frame{order:initial}.stacked-aside{position:static}}
+
+
+/* ==========================================================
+   v3.3 PacketPhreak Visual Upgrade
+   Toned-down 3D metallic / teal gradient header system.
+   Uses real selectable text, not image text.
+   ========================================================== */
+
+.hero-3d-title,
+.section-3d-title {
+  position: relative;
+  display: inline-block;
+  color: #e8f1ff;
+  background:
+    linear-gradient(180deg,
+      #ffffff 0%,
+      #e8f8ff 22%,
+      #bdefff 46%,
+      #63e6f2 72%,
+      #8dfbd0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.34),
+    0 3px 0 rgba(18, 72, 91, 0.72),
+    0 6px 0 rgba(9, 43, 58, 0.58),
+    0 11px 20px rgba(0, 0, 0, 0.54),
+    0 0 24px rgba(102, 227, 255, 0.22);
+  filter: drop-shadow(0 18px 18px rgba(0, 0, 0, 0.36));
+  isolation: isolate;
+}
+
+.hero-3d-title::before,
+.section-3d-title::before {
+  content: attr(data-title);
+}
+
+.hero-3d-title::after,
+.section-3d-title::after {
+  content: "";
+  position: absolute;
+  left: 0.025em;
+  right: -0.045em;
+  bottom: 0.03em;
+  height: 0.085em;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(102,227,255,0), rgba(102,227,255,0.58), rgba(155,255,203,0.28), rgba(102,227,255,0));
+  opacity: 0.58;
+  transform: skewX(-12deg);
+  z-index: -1;
+  filter: blur(3px);
+}
+
+.hero-3d-title {
+  letter-spacing: -0.075em;
+}
+
+.section-3d-title {
+  letter-spacing: -0.052em;
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.26),
+    0 2px 0 rgba(18, 72, 91, 0.58),
+    0 5px 0 rgba(9, 43, 58, 0.42),
+    0 9px 16px rgba(0, 0, 0, 0.42),
+    0 0 18px rgba(102, 227, 255, 0.16);
+  filter: drop-shadow(0 12px 14px rgba(0, 0, 0, 0.30));
+}
+
+.case-title.hero-3d-title {
+  max-width: 12ch;
+}
+
+/* Tighter hero balance after the dimensional headers. */
+.case-hero .hero-lede,
+.timeline-hero .hero-lede,
+.hero .hero-lede {
+  position: relative;
+  z-index: 2;
+}
+
+.case-hero-grid {
+  align-items: center;
+}
+
+/* Give feature cards a tiny extra polish to match the new headers. */
+.case-card,
+.timeline-card,
+.education-card,
+.visual-panel,
+.mission-card,
+.terminal-card,
+.side-card,
+.mini-panel {
+  box-shadow:
+    0 18px 70px rgba(0, 0, 0, 0.30),
+    inset 0 1px 0 rgba(255, 255, 255, 0.025);
+}
+
+.case-card:hover,
+.timeline-card:hover,
+.visual-panel:hover {
+  border-color: rgba(102, 227, 255, 0.34);
+  box-shadow:
+    0 20px 80px rgba(0, 0, 0, 0.34),
+    0 0 34px rgba(102, 227, 255, 0.055),
+    inset 0 1px 0 rgba(255, 255, 255, 0.035);
+}
+
+/* Avoid glow clipping and keep the big case title from crowding. */
+.case-hero {
+  overflow: hidden;
+}
+
+.case-hero .case-title {
+  margin-bottom: 22px;
+}
+
+/* Very small screen fallback: less depth, more readability. */
+@media (max-width: 720px) {
+  .hero-3d-title,
+  .section-3d-title {
+    text-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.24),
+      0 3px 0 rgba(9, 43, 58, 0.45),
+      0 8px 14px rgba(0, 0, 0, 0.38),
+      0 0 16px rgba(102, 227, 255, 0.16);
+    filter: drop-shadow(0 9px 12px rgba(0, 0, 0, 0.28));
+  }
+}
+
+
+/* ==========================================================
+   v3.3.1 Collision Fix
+   Keeps the 3D header look but prevents title/card overlap.
+   ========================================================== */
+
+.case-hero-grid {
+  grid-template-columns: minmax(0, 0.98fr) minmax(340px, 0.72fr);
+  column-gap: clamp(28px, 4vw, 70px);
+}
+
+.case-title.hero-3d-title {
+  max-width: 10.8ch;
+  font-size: clamp(3.15rem, 6.4vw, 6.55rem);
+  line-height: 0.90;
+  margin-bottom: 26px;
+}
+
+.case-hero .hero-lede {
+  max-width: 64ch;
+}
+
+.case-hero .mission-card {
+  max-width: 520px;
+  justify-self: end;
+}
+
+.hero-3d-title {
+  overflow-wrap: normal;
+}
+
+@media (min-width: 981px) and (max-width: 1280px) {
+  .case-hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .case-hero .mission-card {
+    justify-self: stretch;
+    max-width: none;
+  }
+
+  .case-title.hero-3d-title {
+    max-width: 12ch;
+  }
+}
+
+@media (max-width: 980px) {
+  .case-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-title.hero-3d-title {
+    max-width: 11ch;
+    font-size: clamp(2.95rem, 12vw, 5.8rem);
+  }
+
+  .case-hero .mission-card {
+    justify-self: stretch;
+    max-width: none;
+  }
+}
+
+/* If the 2x2 preview board is opened directly, keep its mock panels from clipping text. */
+.preview-board .hero-3d-title,
+.preview-board .section-3d-title {
+  transform: none;
+}

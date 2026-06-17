@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="site-version" content="v3.2-case-study" />
+  <meta name="site-version" content="v3.3.1-collision-fix" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tracing Manufacturing PI Connectivity to Azure | PacketPhreak</title>
   <meta name="description" content="Sanitized case study: tracing manufacturing PI / Seeq connectivity to Azure across OT, DMZ, NAT, firewall, and cloud routing boundaries." />
   <meta name="theme-color" content="#08111f" />
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/css/styles-v31.css" />
+  <link rel="stylesheet" href="assets/css/styles-v31.css?v=3.3.1" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -37,7 +37,7 @@
       <div class="container case-hero-grid">
         <div>
           <p class="eyebrow">Manufacturing • OT / DMZ • Azure • PI / Seeq</p>
-          <h1 class="case-title">Tracing manufacturing PI connectivity to Azure.</h1>
+          <h1 class="case-title hero-3d-title" data-title="Tracing manufacturing PI connectivity to Azure.">Tracing manufacturing PI connectivity to Azure.</h1>
           <p class="hero-lede">A sanitized case study on following the packet from the OT side through layered firewalls, DMZ relay services, NAT, and cloud routing to isolate where communication succeeded — and where return traffic needed closer scrutiny.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#visuals">See the redacted visuals</a>
@@ -72,7 +72,7 @@
       <div class="container">
         <div class="section-head narrow-head">
           <p class="eyebrow">Redacted visual path</p>
-          <h2>Follow the packet without giving away the farm.</h2>
+          <h2 class="section-3d-title" data-title="Follow the packet without giving away the farm.">Follow the packet without giving away the farm.</h2>
           <p class="section-note">The visuals below are rebuilt from the troubleshooting story — not raw screenshots. They preserve the technical shape of the problem while removing internal identifiers.</p>
         </div>
         <div class="visual-stack">
@@ -122,7 +122,7 @@
       <div class="container split-case">
         <div>
           <p class="eyebrow">Longer version</p>
-          <h2>The public-safe story.</h2>
+          <h2 class="section-3d-title" data-title="The public-safe story.">The public-safe story.</h2>
           <div class="rich-text">
             <p>This case centered on connectivity between a manufacturing PI-related environment and Azure-hosted analytics resources used in a Seeq integration workflow. The environment was segmented by design: traffic originated on the OT/manufacturing side, traversed an OT firewall, crossed a DMZ relay path, passed through an upstream firewall with source translation, left through public egress, and then depended on cloud-side routing and destination reachability.</p>
             <p>The hard part was not simply asking “is the destination reachable?” The real problem was determining <em>how</em> the traffic moved, which boundaries were involved, whether outbound traffic behaved as expected, and whether return traffic was treated differently on the way back. That meant comparing traceroute-style path observations, firewall policy logic, service/port requirements, and cloud-side topology context instead of stopping at a single green check.</p>
@@ -164,7 +164,7 @@
       <div class="container">
         <div class="section-head narrow-head">
           <p class="eyebrow">What this proves</p>
-          <h2>Why this belongs in the portfolio.</h2>
+          <h2 class="section-3d-title" data-title="Why this belongs in the portfolio.">Why this belongs in the portfolio.</h2>
         </div>
         <div class="cards proof-grid">
           <article class="card"><span class="card-icon">01</span><h3>Cross-boundary troubleshooting</h3><p>Shows the ability to reason across OT, DMZ, enterprise, internet, and cloud boundaries instead of treating them as separate universes.</p></article>
@@ -178,7 +178,7 @@
       <div class="container contact-card">
         <div>
           <p class="eyebrow">Next step</p>
-          <h2>Want more case studies like this?</h2>
+          <h2 class="section-3d-title" data-title="Want more case studies like this?">Want more case studies like this?</h2>
           <p>Use this page as the model: public-safe visuals, a concise timeline summary, and a deeper technical writeup for the projects that matter most.</p>
         </div>
         <div class="contact-actions">
