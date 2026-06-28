@@ -1,78 +1,61 @@
 # PacketPhreak Resume Site
 
-Static resume/portfolio site for Joshua C. McDonald / PacketPhreak.
+Personal portfolio site for **Joshua C. McDonald / PacketPhreak**.
 
-## New in v2
+This site is a public-safe portfolio, resume, case-study archive, and technical storytelling space. It is designed to show real infrastructure, networking, identity, support, and troubleshooting experience without exposing confidential employer, customer, ticket, network, or security details.
 
-- Added current resume PDF/DOCX under `assets/docs/`
-- Added `timeline.html` Career Time Capsule page
-- Added searchable/filterable timeline data under `assets/js/timeline-data.js`
-- Added resume, LinkedIn, GitHub, and email links
+## Live site
 
-## Deploy target
+Primary domain:
 
-Cloudflare Pages
+```text
+https://joshuacmcdonald.com
+```
 
-## Cloudflare Pages settings
+## Site sections
 
-- Framework preset: None
-- Build command: leave blank
-- Build output directory: `/`
-- Root directory: `/`
+```text
+index.html                  Main portfolio page
+timeline.html               Career Time Capsule
+case-study-pi-azure.html    Manufacturing PI / Azure connectivity case study
+breachd.html                BreachD digital exposure helper
+SECURITY.md                 Security policy
+_headers                    Cloudflare Pages security headers
+assets/                     CSS, JavaScript, images, resume files, and visual assets
+```
 
-## (var 404 = Sanity Check)
+## What this site is
 
-## How to add archive material later (404)
+This is not just a resume page.
 
-- Add sanitized photos/files to `assets/img/timeline/` or `assets/docs/`
-- Update each timeline entry in `assets/js/timeline-data.js`
-- Never publish internal IPs, private screenshots, usernames, tickets, domain details, or employer-sensitive information
+This is the PacketPhreak command center:
 
+- professional background
+- searchable career timeline
+- public-safe case studies
+- technical archive material
+- sanitized visuals and diagrams
+- resume download
+- BreachD digital identity awareness helper
 
-## v3 education update
+## Public-safe rule
 
-This package adds an Education Path section to `timeline.html` and includes cleaned web-ready (decent) school logo assets in:
+Do not commit confidential or internal material.
 
-`assets/img/education/`
+Keep the public repository free of:
 
-- Use public-safe archive content only. Keep employer/internal screenshots, ticket numbers, IP addresses, usernames, and confidential details out of the public repository. (404)
+- internal IP addresses
+- usernames
+- passwords
+- API keys or secrets
+- ticket numbers
+- private screenshots
+- confidential diagrams
+- employer-sensitive details
+- vendor/customer-specific information
+- raw troubleshooting captures that have not been sanitized
 
-
-## v3.1 fix
-
-This package forces a new CSS file (`assets/css/styles-v31.css`) so Cloudflare/browser cache cannot keep the old stylesheet. It also replaces the education logo canvases with tighter web-ready assets so they do not render as huge transparent images if CSS cache misbehaves.
-
-
-## New in v3.2
-
-- Added `case-study-pi-azure.html` public-safe case study page
-- Added redacted SVG visuals for packet path, Azure topology, and flow validation
-- Added a featured case study card on the home page
-- Added a linked case study action to the current-role timeline card
-
-
-## New in v3.3
-
-- Added toned-down metallic teal 3D gradient header treatment
-- Applied upgraded hero headers across the homepage, Time Capsule, and PI/Azure case study page
-- Added cache-busting stylesheet reference: `assets/css/styles-v31.css?v=3.3`
-- Kept text selectable/searchable instead of rendering headers as images
-- Added small card shadow/hover polish to match the new PacketPhreak visual direction
-
-
-## New in v3.3.1
-
-- Fixed the PI/Azure case-study hero title/card collision risk
-- Reduced the case-study title max width slightly and improved desktop grid spacing
-- Added responsive fallback so the mission card drops below the title before overlap happens
-- Bumped stylesheet cache string to `?v=3.3.1`
-
-## New in v3.3.2
-
-- Added SECURITY.md 
-
-
-## New in v3.4 Current Merge
+<img src="assets/readme/new-v34-beast-breachd.svg" alt="New in v3.4 Current Merge... BEAST... BreachD" width="820">
 
 - Merged BreachD into the current uploaded repo instead of overwriting live changes
 - Preserved `SECURITY.md`, existing resume docs, education logos, case-study assets, and the Experience nav item
@@ -80,3 +63,156 @@ This package forces a new CSS file (`assets/css/styles-v31.css`) so Cloudflare/b
 - Added a BreachD feature section to the homepage
 - Added `_headers` starter security headers for Cloudflare Pages
 - Removed the duplicate 3D heading `::before` rule if present
+- Added client-side email validation and a confirmation modal before leaving PacketPhreak
+- BreachD redirects visitors to Have I Been Pwned results without storing email addresses on this site
+
+## BreachD
+
+BreachD is PacketPhreak's blue-team cyber buddy.
+
+It showed up at **9:42**, crawled out of the terminal, and decided to help visitors think about digital identity, breach exposure, password hygiene, MFA, suspicious QR codes, and the online footprint that follows people around.
+
+BreachD is not here to scare people.
+
+BreachD is here to remind them:
+
+```text
+No fear. Just facts.
+Check your exposure.
+Take the next right step.
+```
+
+## BreachD privacy note
+
+The BreachD form does not store email addresses on PacketPhreak.
+
+The form validates the email format in the browser and then opens Have I Been Pwned in a new tab after confirmation.
+
+```text
+PacketPhreak does not store the submitted email.
+The visitor leaves PacketPhreak to view results securely.
+```
+
+<img src="assets/readme/archive-reminder-flicker.svg" alt="How to add archive material later reminder" width="700">
+
+> Future PacketPhreak, do not commit the whole evidence locker like a raccoon with passwords, Git access and dinner.
+
+When adding future archive material:
+
+- Add public-safe project material only
+- Redact internal names, IP addresses, ticket numbers, screenshots, and private notes
+- Keep source material private until it has been cleaned
+- Convert sensitive screenshots into redacted diagrams or recreated visuals
+- Use case-study language that explains the technical shape of the work without exposing the organization
+- Keep the resume sharp and let the Time Capsule carry the deeper story
+
+## How to add a case study later
+
+1. Create a new HTML page using the existing case-study layout as a template.
+2. Add any public-safe visuals under:
+
+```text
+assets/img/case-studies/
+```
+
+3. Add a card or link from `index.html`.
+4. Add a timeline link if the case belongs to a specific role.
+5. Confirm no private/internal details are visible.
+6. Commit with a clear message.
+
+Example commit message:
+
+```text
+Add public-safe network outage case study
+```
+
+## How to add timeline archive material later
+
+Timeline entries live in:
+
+```text
+assets/js/timeline-data.js
+```
+
+Keep entries concise and public-safe.
+
+Recommended entry fields:
+
+```text
+period
+role
+org
+location
+type
+summary
+bullets
+evidence
+caseStudy
+```
+
+Use `caseStudy` only when the entry should link to a dedicated page.
+
+## Local testing
+
+Open the files directly in a browser, or use a simple local web server:
+
+```bash
+python -m http.server 8000
+```
+
+Then browse to:
+
+```text
+http://localhost:8000
+```
+
+Test these pages before committing:
+
+```text
+/
+timeline.html
+case-study-pi-azure.html
+breachd.html
+```
+
+## Cloudflare Pages
+
+This site is built as a static site.
+
+Recommended Cloudflare Pages settings:
+
+```text
+Framework preset: None
+Build command: blank
+Build output directory: /
+Root directory: /
+```
+
+## Security headers
+
+The `_headers` file provides a starter set of public-site response headers for Cloudflare Pages:
+
+```text
+X-Content-Type-Options
+Referrer-Policy
+X-Frame-Options
+Permissions-Policy
+```
+
+Do not add an aggressive Content Security Policy until the site layout, images, scripts, and future embeds are stable.
+
+## Suggested commit messages
+
+```text
+Launch BreachD from current site
+Update README archive reminder
+Add public-safe case study visuals
+Fix case study hero spacing
+Update Time Capsule archive entries
+```
+
+## License / usage note
+
+This repository is a personal portfolio project. Public-safe text, layout, and custom site material are maintained for Joshua C. McDonald / PacketPhreak.
+
+Do not reuse personal branding, resume material, portfolio copy, or original case-study content without permission.
