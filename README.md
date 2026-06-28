@@ -64,3 +64,7 @@ This package forces a new CSS file (`assets/css/styles-v31.css`) so Cloudflare/b
 - Reduced the case-study title max width slightly and improved desktop grid spacing
 - Added responsive fallback so the mission card drops below the title before overlap happens
 - Bumped stylesheet cache string to `?v=3.3.1`
+
+## New in v3.3.2
+
+- Added SECURITY.md 
