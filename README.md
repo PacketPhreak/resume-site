@@ -216,3 +216,15 @@ Update Time Capsule archive entries
 This repository is a personal portfolio project. Public-safe text, layout, and custom site material are maintained for Joshua C. McDonald / PacketPhreak.
 
 Do not reuse personal branding, resume material, portfolio copy, or original case-study content without permission.
+
+
+## New in v3.4.1 BreachD BEAST polish
+
+- Rebuilt `breachd.html` into a full launch-style feature page
+- Made BreachD and the command-room artwork the hero centerpiece
+- Added a live-console style exposure check layout
+- Tightened spacing and reduced dead zones on desktop
+- Added hero Situation / Challenge / Outcome cards
+- Added two CSS analog clocks showing 10:10:42
+- Added a replayable Guardian Init terminal button
+- Improved QR warning, first steps, promise, and final CTA sections

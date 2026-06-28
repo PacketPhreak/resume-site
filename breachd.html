@@ -1,17 +1,18 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="site-version" content="v3.4-breachd-current-merge" />
+  <meta name="site-version" content="v3.4.1-breachd-beast" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BreachD | PacketPhreak</title>
-  <meta name="description" content="BreachD is PacketPhreak's blue-team cyber buddy for checking digital exposure and building better identity safety habits." />
-  <meta name="theme-color" content="#08111f" />
+  <meta name="description" content="BreachD is PacketPhreak's blue-team cyber buddy for checking exposure, tightening identity habits, and keeping the digital footprint under control." />
+  <meta name="theme-color" content="#07111f" />
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/css/styles-v31.css?v=3.4" />
+  <link rel="stylesheet" href="assets/css/styles-v31.css?v=3.4.1" />
 </head>
-<body>
+<body class="breachd-page">
   <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index.html#top" aria-label="PacketPhreak home">
@@ -25,7 +26,7 @@
         <a href="index.html#about">About</a>
         <a href="index.html#focus">Focus</a>
         <a href="index.html#case-studies">Case Studies</a>
-        <a href="breachd.html">BreachD</a>
+        <a href="breachd.html" class="is-active">BreachD</a>
         <a href="index.html#timeline">Experience</a>
         <a href="timeline.html">Time Capsule</a>
         <a href="assets/docs/Joshua_C_McDonald_Resume_2026.pdf">Resume</a>
@@ -35,58 +36,129 @@
   </header>
 
   <main id="main">
-    <section class="breachd-hero">
-      <div class="container breachd-hero-grid">
-        <div>
+    <section class="breachd-beast-hero" id="top">
+      <div class="breachd-room" aria-hidden="true">
+        <span class="room-grid"></span>
+        <span class="room-light room-light-a"></span>
+        <span class="room-light room-light-b"></span>
+      </div>
+
+      <div class="container breachd-beast-grid">
+        <div class="breachd-intro">
           <p class="eyebrow">Digital identity • breach exposure • blue-team reminder</p>
-          <h1 class="hero-3d-title breachd-title" data-title="BreachD chose the blue team.">BreachD chose <span class="blue-word">the blue team.</span></h1>
-          <p class="hero-lede breachd-subtitle">
+          <h1 class="hero-3d-title breachd-beast-title" data-title="BreachD chose the blue team.">
+            BreachD chose <span>the blue team.</span>
+          </h1>
+          <p class="hero-lede">
             BreachD showed up at 9:42 and never really left. Now it watches your back while you clean up your digital footprint.
           </p>
 
-          <div class="breachd-form-panel" id="check">
-            <p class="eyebrow">Check your exposure</p>
-            <h2>Take control before the cloud opens up.</h2>
-            <p class="section-note">
-              Enter an email and BreachD will send you to Have I Been Pwned to check known public breach exposure.
-              PacketPhreak does not store your email.
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#check">Initialize BreachD Check</a>
+            <a class="btn btn-ghost" href="#lore">Meet the lore</a>
+          </div>
+
+          <div class="breachd-badge-row">
+            <div><strong>No fear.</strong><span>Just facts.</span></div>
+            <div><strong>Privacy first</strong><span>No storage here.</span></div>
+            <div><strong>Blue team approved</strong><span>Defend. Detect. Respond.</span></div>
+            <div><strong>Identity aware</strong><span>Reduce exposure.</span></div>
+          </div>
+        </div>
+
+        <div class="breachd-stage" aria-label="BreachD command room">
+          <div class="breachd-stage-glow"></div>
+          <img src="assets/img/breachd/breachd-blue-team-hero.png" alt="BreachD running a blue-team digital exposure command room" />
+          <div class="breachd-stage-chip chip-threat">Threat feed<br><strong>analyzing...</strong></div>
+          <div class="breachd-stage-chip chip-trust">Trust<br><strong>but verify</strong></div>
+          <div class="breachd-stage-clock">
+            <div class="breachd-clock mini-clock" role="img" aria-label="Analog clock showing 10:10:42">
+              <span class="clock-hand clock-hour"></span>
+              <span class="clock-hand clock-minute"></span>
+              <span class="clock-hand clock-second"></span>
+              <span class="clock-center"></span>
+              <span class="clock-smile"></span>
+            </div>
+            <p>10:10:42</p>
+            <span>One more thing...</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container breachd-sco-row">
+        <article>
+          <span>Situation</span>
+          <strong>Your digital footprint is bigger than you think.</strong>
+        </article>
+        <article>
+          <span>Challenge</span>
+          <strong>Exposure hides in places you do not check.</strong>
+        </article>
+        <article>
+          <span>Outcome</span>
+          <strong>BreachD helps you find it, fix it, and stay ahead.</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="breachd-live-console section-pad" id="check">
+      <div class="container">
+        <div class="breachd-console-panel">
+          <div class="console-main">
+            <p class="eyebrow">Live BreachD Console</p>
+            <h2 class="section-3d-title" data-title="Check your exposure.">Check your exposure.</h2>
+            <p>
+              BreachD does not keep the signal. PacketPhreak does not store your email.
+              You leave PacketPhreak to review results securely.
             </p>
 
-            <form class="breachd-form" data-breachd-form>
+            <form class="breachd-console-form" data-breachd-form>
               <label class="sr-only" for="breachd-email">Email address</label>
               <div class="breachd-input-wrap">
                 <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="1.8"/>
                   <path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8"/>
                 </svg>
-                <input class="breachd-input" id="breachd-email" data-breachd-email name="email" type="email" inputmode="email" autocomplete="email" placeholder="name@example.com" />
+                <input class="breachd-input" id="breachd-email" data-breachd-email name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" />
               </div>
-              <button class="btn btn-primary" type="submit">Check your exposure</button>
+              <button class="btn btn-primary" type="submit">Run Exposure Check</button>
             </form>
 
-            <p class="breachd-form-message" data-breachd-message>No email stored here. Helpful first steps, not spam.</p>
+            <p class="breachd-form-message" data-breachd-message>breachd@guardian:~$ waiting for identity signal...</p>
+          </div>
 
-            <div class="breachd-trust-row" aria-label="BreachD principles">
-              <div class="breachd-trust-item"><strong>Privacy first</strong><span>PacketPhreak does not store queries.</span></div>
-              <div class="breachd-trust-item"><strong>No fear</strong><span>Just facts and next steps.</span></div>
-              <div class="breachd-trust-item"><strong>Identity aware</strong><span>Reduce your online exposure.</span></div>
-              <div class="breachd-trust-item"><strong>Blue team</strong><span>Defend. Detect. Respond. Recover.</span></div>
+          <aside class="console-status" aria-label="BreachD live status">
+            <div class="status-terminal">
+              <span class="status-dot"></span>
+              <code>breachd@guardian:~$ status</code>
+              <strong>BreachD is online and ready.</strong>
             </div>
+            <div class="guardian-map">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="guardian-card">
+              <strong>Guardian nodes active</strong>
+              <b>24/7</b>
+              <span>Watching the open internet</span>
+            </div>
+          </aside>
+
+          <div class="breachd-trust-strip">
+            <div><strong>Privacy first</strong><span>We do not store queries. Your data stays yours.</span></div>
+            <div><strong>No fear</strong><span>Just facts and next steps.</span></div>
+            <div><strong>Blue team approved</strong><span>Defend. Detect. Respond. Recover.</span></div>
+            <div><strong>Identity aware</strong><span>Reduce exposure. Reclaim control.</span></div>
           </div>
         </div>
-
-        <aside class="breachd-lore-card" aria-label="BreachD artwork">
-          <img src="assets/img/breachd/breachd-blue-team-hero.png" alt="BreachD, a friendly blue-team cyber daemon, watching over PacketPhreak's digital exposure dashboard">
-        </aside>
       </div>
     </section>
 
-    <section class="section-pad">
-      <div class="container breachd-section-grid">
-        <div class="breachd-lore">
-          <p class="eyebrow">BreachD lore</p>
+    <section class="breachd-lore-zone section-pad" id="lore">
+      <div class="container breachd-lore-grid">
+        <article class="breachd-lore-panel">
+          <p class="eyebrow">Meet the lore</p>
           <h2 class="section-3d-title" data-title="Meet BreachD.">Meet BreachD.</h2>
-          <p>BreachD was not installed. BreachD emerged.</p>
+          <p><strong>BreachD was not installed. BreachD emerged.</strong></p>
           <p>
             At <strong>9:42</strong>, inside a quiet corner of PacketPhreak’s portfolio, a terminal window flashed,
             a cursor blinked, and a tiny daemon crawled out of the glow carrying a mug that said <strong>BLUE TEAM</strong>.
@@ -104,14 +176,12 @@
             It has seen what happens when people reuse passwords, ignore breach alerts, scan unknown QR codes,
             click convincing links, and sign into pages that looked just real enough.
           </p>
-          <p class="callout">
-            BreachD is not here to scare you. BreachD is here to remind you that your identity matters,
-            your exposure can be reduced, and it is never too late to take control.
-          </p>
-        </div>
+          <p class="breachd-pill">No fear. Just facts.</p>
+        </article>
 
-        <aside class="stacked-aside">
-          <div class="analog-clock-card">
+        <aside class="breachd-card-stack">
+          <div class="clock-feature-card">
+            <p>One more thing...</p>
             <div class="breachd-clock" role="img" aria-label="Analog clock showing 10:10:42 with PacketPhreak mark">
               <span class="clock-hand clock-hour"></span>
               <span class="clock-hand clock-minute"></span>
@@ -119,16 +189,19 @@
               <span class="clock-center"></span>
               <span class="clock-smile"></span>
             </div>
-            <p class="clock-copy">One more thing...</p>
-            <p class="breachd-small-note">10:10:42 — the smile, the homage, and the daemon showing up on time.</p>
+            <strong>10:10:42</strong>
+            <span>the smile, the homage, and the daemon showing up on time.</span>
           </div>
 
-          <div class="side-card">
-            <h3>Suspicious QR code?</h3>
-            <p>Slow down before signing in. Unknown QR codes can send you to convincing phishing pages that only need one rushed tap.</p>
+          <div class="qr-warning-card">
+            <div class="fake-qr" aria-hidden="true"></div>
+            <div>
+              <h3>Suspicious QR code?</h3>
+              <p>Slow down before signing in. Unknown QR codes can send you to convincing phishing pages that only need one rushed tap.</p>
+            </div>
           </div>
 
-          <div class="side-card">
+          <div class="first-steps-card">
             <h3>First steps</h3>
             <ul>
               <li>Use unique passwords</li>
@@ -142,10 +215,10 @@
       </div>
     </section>
 
-    <section class="section-pad">
-      <div class="container">
-        <div class="breachd-terminal">
-          <div class="terminal-top"><span></span><span></span><span></span></div>
+    <section class="breachd-ops-zone section-pad">
+      <div class="container breachd-ops-grid">
+        <article class="breachd-terminal beast-terminal">
+          <div class="terminal-top"><span></span><span></span><span></span><b>ONLINE</b></div>
 <pre><code>packetphreak@portfolio:~$ ./guardian --init
 &gt; Initializing BreachD...
 &gt; Spawning guardian process
@@ -156,14 +229,31 @@
 BreachD status: ACTIVE
 Mode: defend / detect / respond / recover
 Message: No shame. No scare tactics. Just useful first steps.</code></pre>
-        </div>
+          <button class="btn btn-ghost terminal-replay" type="button" data-terminal-replay>Run Guardian Init</button>
+        </article>
+
+        <article class="breachd-promise-card">
+          <div class="promise-icon">⟠</div>
+          <h2>BreachD is not here to scare you.</h2>
+          <p>
+            BreachD is here to remind you that your identity matters, your exposure can be reduced,
+            and it is never too late to take control.
+          </p>
+          <div class="promise-row">
+            <span>Detect early</span>
+            <span>Act quickly</span>
+            <span>Stay private</span>
+            <span>Keep control</span>
+          </div>
+        </article>
       </div>
     </section>
 
     <section class="section-pad contact-section">
-      <div class="container contact-card">
+      <div class="container contact-card breachd-final-cta">
+        <div class="cta-footprint" aria-hidden="true">◌</div>
         <div>
-          <p class="eyebrow">No fear, just facts</p>
+          <p class="eyebrow">No fear. Just facts.</p>
           <h2 class="section-3d-title" data-title="Clean up the footprint.">Clean up the footprint.</h2>
           <p>
             Checking exposure is only the first step. The win is reducing password reuse, enabling MFA,
@@ -204,6 +294,6 @@ Message: No shame. No scare tactics. Just useful first steps.</code></pre>
   </footer>
 
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/breachd.js"></script>
+  <script src="assets/js/breachd.js?v=3.4.1"></script>
 </body>
 </html>
