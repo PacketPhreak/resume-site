@@ -228,3 +228,12 @@ Do not reuse personal branding, resume material, portfolio copy, or original cas
 - Added two CSS analog clocks showing 10:10:42
 - Added a replayable Guardian Init terminal button
 - Improved QR warning, first steps, promise, and final CTA sections
+
+
+## New in v3.4.2 BreachD spacing pass
+
+- Tightened vertical spacing across the BreachD page
+- Cropped the hero artwork toward BreachD and the command room instead of showing the full embedded poster
+- Reduced dead space between the hero, console, lore, terminal, and CTA sections
+- Stopped the lore card from stretching into a tall empty rectangle
+- Improved desktop rhythm while preserving mobile responsiveness

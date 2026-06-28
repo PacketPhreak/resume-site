@@ -1743,3 +1743,224 @@
     height: 86px;
   }
 }
+
+
+/* ==========================================================
+   v3.4.2 BreachD spacing and hero crop fix
+   ========================================================== */
+
+.breachd-page .section-pad {
+  padding-top: clamp(40px, 5vw, 68px);
+  padding-bottom: clamp(40px, 5vw, 68px);
+}
+
+.breachd-beast-hero {
+  min-height: auto;
+  padding-top: clamp(104px, 10vw, 132px);
+  padding-bottom: clamp(34px, 5vw, 56px);
+}
+
+.breachd-beast-grid {
+  grid-template-columns: minmax(370px, 0.82fr) minmax(560px, 1.18fr);
+  gap: clamp(28px, 4vw, 76px);
+  align-items: center;
+}
+
+.breachd-intro {
+  padding-bottom: 0;
+}
+
+.breachd-beast-title {
+  font-size: clamp(4rem, 7.4vw, 8.25rem);
+  margin-bottom: 18px;
+}
+
+.breachd-intro .hero-lede {
+  max-width: 610px;
+  margin-bottom: 0;
+}
+
+.breachd-stage {
+  min-height: clamp(430px, 40vw, 560px);
+  max-height: 610px;
+  transform: none;
+}
+
+.breachd-stage img {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transform: none;
+  object-fit: cover;
+  object-position: 68% 50%;
+  filter: saturate(1.14) contrast(1.08) brightness(1.03) drop-shadow(0 0 30px rgba(102,227,255,.18));
+}
+
+.breachd-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(4, 10, 18, .30), transparent 28%, transparent 72%, rgba(4, 10, 18, .18)),
+    radial-gradient(circle at 56% 45%, transparent 0 36%, rgba(4, 10, 18, .18) 72%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.breachd-stage-chip,
+.breachd-stage-clock {
+  backdrop-filter: blur(8px);
+}
+
+.breachd-sco-row {
+  margin-top: clamp(18px, 3vw, 30px);
+  max-width: 880px;
+}
+
+.breachd-badge-row {
+  margin-top: 22px;
+}
+
+.breachd-live-console {
+  padding-top: clamp(42px, 5vw, 64px) !important;
+}
+
+.breachd-console-panel {
+  gap: 20px;
+  padding: clamp(22px, 3vw, 32px);
+}
+
+.console-main h2 {
+  font-size: clamp(2.2rem, 3.8vw, 3.8rem);
+  margin-bottom: 12px;
+}
+
+.breachd-console-form {
+  margin-top: 20px;
+  grid-template-columns: minmax(260px, 1fr) minmax(210px, auto);
+  max-width: 720px;
+}
+
+.breachd-trust-strip {
+  margin-top: 4px;
+}
+
+.breachd-lore-grid,
+.breachd-ops-grid {
+  align-items: start;
+}
+
+.breachd-lore-panel,
+.breachd-card-stack,
+.beast-terminal,
+.breachd-promise-card {
+  align-self: start;
+}
+
+.breachd-lore-panel {
+  padding: clamp(24px, 3vw, 34px);
+}
+
+.breachd-lore-panel p {
+  margin-bottom: 16px;
+}
+
+.breachd-card-stack {
+  gap: 16px;
+}
+
+.clock-feature-card {
+  padding: 24px;
+}
+
+.clock-feature-card .breachd-clock {
+  width: 170px;
+  height: 170px;
+}
+
+.qr-warning-card,
+.first-steps-card {
+  padding: 18px;
+}
+
+.breachd-ops-zone {
+  padding-top: clamp(30px, 4vw, 54px) !important;
+}
+
+.beast-terminal pre {
+  min-height: 0;
+  padding-bottom: 18px;
+}
+
+.breachd-promise-card {
+  min-height: 100%;
+}
+
+.promise-row {
+  gap: 8px;
+}
+
+.promise-row span {
+  padding: 12px 8px;
+}
+
+.breachd-final-cta {
+  margin-top: 0;
+  padding: clamp(28px, 4vw, 42px);
+  gap: clamp(22px, 4vw, 40px);
+}
+
+.breachd-final-cta .section-3d-title {
+  margin-bottom: 8px;
+}
+
+.cta-footprint {
+  width: 96px;
+  height: 96px;
+}
+
+@media (max-width: 1100px) {
+  .breachd-beast-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .breachd-stage {
+    min-height: clamp(360px, 54vw, 520px);
+  }
+
+  .breachd-stage img {
+    object-position: 62% 50%;
+  }
+
+  .breachd-sco-row {
+    margin-top: 22px;
+  }
+}
+
+@media (max-width: 760px) {
+  .breachd-page .section-pad {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+  .breachd-beast-hero {
+    padding-top: 92px;
+  }
+
+  .breachd-stage {
+    min-height: 320px;
+  }
+
+  .breachd-stage img {
+    object-position: 62% center;
+  }
+
+  .breachd-console-form {
+    grid-template-columns: 1fr;
+  }
+
+  .breachd-console-panel {
+    padding: 20px;
+  }
+}
