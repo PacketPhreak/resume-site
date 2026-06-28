@@ -1964,3 +1964,219 @@
     padding: 20px;
   }
 }
+
+
+/* ==========================================================
+   v3.4.3 BreachD console and vertical rhythm polish
+   ========================================================== */
+
+/* Fixes from screenshot notes:
+   - Put the email label/input/button into a clean single command row.
+   - Remove the decorative map dead box.
+   - Pull the console and lore closer together.
+   - Tighten the clock card so it feels like a side card, not a billboard.
+*/
+
+.breachd-live-console.section-pad {
+  padding-bottom: clamp(24px, 3.2vw, 44px) !important;
+}
+
+.breachd-lore-zone.section-pad {
+  padding-top: clamp(24px, 3.2vw, 44px) !important;
+}
+
+.breachd-console-panel {
+  grid-template-columns: minmax(0, 1.05fr) minmax(310px, .72fr);
+  gap: 18px 24px;
+  padding-bottom: clamp(20px, 2.6vw, 28px);
+}
+
+.breachd-console-form {
+  display: grid;
+  grid-template-columns: minmax(330px, 1fr) minmax(220px, auto);
+  gap: 14px;
+  align-items: end;
+  max-width: 820px;
+  margin-top: 22px;
+}
+
+.breachd-field {
+  display: grid;
+  gap: 9px;
+}
+
+.breachd-field label {
+  color: var(--text);
+  font-size: .96rem;
+}
+
+.breachd-console-form .btn {
+  min-height: 56px;
+  align-self: end;
+}
+
+.breachd-form-message {
+  margin-top: 14px;
+  min-height: 20px;
+}
+
+.console-status {
+  align-content: stretch;
+  grid-template-rows: auto 1fr;
+}
+
+.status-terminal {
+  min-height: 116px;
+  align-content: center;
+}
+
+.guardian-map {
+  display: none !important;
+}
+
+.guardian-card {
+  min-height: 0;
+}
+
+.guardian-card-tight {
+  display: grid;
+  align-content: center;
+  min-height: 132px;
+}
+
+.signal-card {
+  border: 1px solid rgba(102,227,255,.18);
+  border-radius: 20px;
+  padding: 16px;
+  background: rgba(2,10,18,.62);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 14px;
+  align-content: center;
+}
+
+.signal-card span {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: .72rem;
+}
+
+.signal-card strong {
+  color: #8fffe9;
+}
+
+.breachd-trust-strip {
+  gap: 12px;
+}
+
+.breachd-trust-strip div {
+  padding: 15px 16px;
+}
+
+/* The page had a horizontal “desert” before the lore section. */
+.breachd-live-console + .breachd-lore-zone {
+  margin-top: 0;
+}
+
+/* Bring lore card and right clock/sidebar into a tighter visual system. */
+.breachd-lore-grid {
+  gap: 20px;
+}
+
+.breachd-lore-panel {
+  min-height: 0;
+}
+
+.clock-feature-card {
+  padding: 20px 22px;
+  gap: 4px;
+}
+
+.clock-feature-card .breachd-clock {
+  width: 148px;
+  height: 148px;
+}
+
+.clock-feature-card strong {
+  font-size: 1.65rem;
+  margin-top: 8px;
+}
+
+.clock-feature-card span {
+  font-size: .94rem;
+}
+
+.clock-feature-card .clock-hour {
+  width: 42px;
+}
+
+.clock-feature-card .clock-minute {
+  width: 60px;
+}
+
+.clock-feature-card .clock-second {
+  width: 62px;
+}
+
+.qr-warning-card {
+  grid-template-columns: 82px 1fr;
+}
+
+.fake-qr {
+  min-height: 82px;
+}
+
+.first-steps-card ul {
+  margin-bottom: 0;
+}
+
+/* The terminal/promise area should arrive soon after the lore cards. */
+.breachd-ops-zone.section-pad {
+  padding-top: clamp(22px, 3vw, 40px) !important;
+  padding-bottom: clamp(34px, 4vw, 52px) !important;
+}
+
+/* Final CTA should be visible without a long scroll pause. */
+.breachd-ops-zone + .contact-section {
+  padding-top: clamp(26px, 3.4vw, 44px) !important;
+}
+
+/* Hero mobile/tablet cleanup after the object-fit crop change. */
+@media (max-width: 1100px) {
+  .breachd-console-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .console-status {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .status-terminal,
+  .guardian-card-tight {
+    min-height: 120px;
+  }
+
+  .signal-card {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 760px) {
+  .breachd-console-form {
+    grid-template-columns: 1fr;
+  }
+
+  .console-status {
+    grid-template-columns: 1fr;
+  }
+
+  .qr-warning-card {
+    grid-template-columns: 1fr;
+  }
+
+  .clock-feature-card .breachd-clock {
+    width: 138px;
+    height: 138px;
+  }
+}

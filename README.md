@@ -237,3 +237,12 @@ Do not reuse personal branding, resume material, portfolio copy, or original cas
 - Reduced dead space between the hero, console, lore, terminal, and CTA sections
 - Stopped the lore card from stretching into a tall empty rectangle
 - Improved desktop rhythm while preserving mobile responsiveness
+
+
+## New in v3.4.3 BreachD console polish
+
+- Reworked the exposure form into a cleaner command-row layout
+- Removed the decorative map box that created dead space
+- Replaced it with compact guardian/status cards
+- Pulled the console, lore, terminal, and CTA sections closer together
+- Reduced the side clock card size and improved its visual weight
