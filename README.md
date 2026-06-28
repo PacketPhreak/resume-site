@@ -20,7 +20,9 @@ Cloudflare Pages
 - Build output directory: `/`
 - Root directory: `/`
 
-## How to add archive material later
+## (var 404 = Sanity Check)
+
+## How to add archive material later (404)
 
 - Add sanitized photos/files to `assets/img/timeline/` or `assets/docs/`
 - Update each timeline entry in `assets/js/timeline-data.js`
@@ -29,11 +31,11 @@ Cloudflare Pages
 
 ## v3 education update
 
-This package adds a polished Education Path section to `timeline.html` and includes cleaned web-ready school logo assets in:
+This package adds an Education Path section to `timeline.html` and includes cleaned web-ready (decent) school logo assets in:
 
 `assets/img/education/`
 
-Use public-safe archive content only. Keep employer/internal screenshots, ticket numbers, IP addresses, usernames, and confidential details out of the public repository.
+- Use public-safe archive content only. Keep employer/internal screenshots, ticket numbers, IP addresses, usernames, and confidential details out of the public repository. (404)
 
 
 ## v3.1 fix
