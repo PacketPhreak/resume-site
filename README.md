@@ -70,3 +70,13 @@ This package forces a new CSS file (`assets/css/styles-v31.css`) so Cloudflare/b
 ## New in v3.3.2
 
 - Added SECURITY.md 
+
+
+## New in v3.4 Current Merge
+
+- Merged BreachD into the current uploaded repo instead of overwriting live changes
+- Preserved `SECURITY.md`, existing resume docs, education logos, case-study assets, and the Experience nav item
+- Added `breachd.html`, `assets/js/breachd.js`, and `assets/img/breachd/breachd-blue-team-hero.png`
+- Added a BreachD feature section to the homepage
+- Added `_headers` starter security headers for Cloudflare Pages
+- Removed the duplicate 3D heading `::before` rule if present
