@@ -2546,3 +2546,673 @@
     top: 14px;
   }
 }
+
+
+/* ==========================================================
+   v3.5.0 BreachD Arcade: animated room + app + game
+   ========================================================== */
+
+.breachd-arcade-page {
+  background:
+    radial-gradient(circle at 76% 12%, rgba(102, 227, 255, 0.13), transparent 32%),
+    radial-gradient(circle at 16% 18%, rgba(155, 255, 203, 0.07), transparent 28%),
+    linear-gradient(180deg, #07111f 0%, #050b14 64%, #040914 100%);
+}
+
+.breachd-arcade-hero {
+  position: relative;
+  padding: clamp(104px, 10vw, 132px) 0 clamp(34px, 5vw, 56px);
+  overflow: hidden;
+  border-bottom: 1px solid rgba(102, 227, 255, 0.14);
+}
+
+.breachd-arcade-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(360px, 0.82fr) minmax(560px, 1.18fr);
+  gap: clamp(28px, 4vw, 74px);
+  align-items: start;
+}
+
+.breachd-feature-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+  max-width: 660px;
+}
+
+.breachd-feature-tiles a {
+  border: 1px solid rgba(102,227,255,.17);
+  border-radius: 20px;
+  background: rgba(4,12,22,.62);
+  padding: 15px;
+  text-decoration: none;
+  box-shadow: 0 18px 50px rgba(0,0,0,.22);
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+
+.breachd-feature-tiles a:hover,
+.breachd-feature-tiles a:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(102,227,255,.42);
+  background: rgba(8,18,31,.82);
+}
+
+.breachd-feature-tiles span {
+  display: inline-flex;
+  color: #8fffe9;
+  letter-spacing: .18em;
+  font-weight: 900;
+  font-size: .72rem;
+  margin-bottom: 8px;
+}
+
+.breachd-feature-tiles strong,
+.breachd-feature-tiles small {
+  display: block;
+}
+
+.breachd-feature-tiles strong {
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.breachd-feature-tiles small {
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.breachd-live-room {
+  position: relative;
+  min-height: clamp(480px, 42vw, 610px);
+  border: 1px solid rgba(102,227,255,.24);
+  border-radius: 36px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(102,227,255,.18), transparent 36%),
+    linear-gradient(180deg, rgba(13,29,49,.68), rgba(4,9,17,.84));
+  box-shadow:
+    0 35px 110px rgba(0,0,0,.45),
+    0 0 80px rgba(102,227,255,.08),
+    inset 0 1px 0 rgba(255,255,255,.04);
+}
+
+.breachd-live-room img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  filter: saturate(1.15) contrast(1.08) brightness(1.03);
+  transition: transform .8s ease, filter .8s ease;
+}
+
+.breachd-live-room:hover img {
+  transform: scale(1.026);
+  filter: saturate(1.2) contrast(1.1) brightness(1.06);
+}
+
+.breachd-live-room::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 52% 48%, transparent 0 35%, rgba(4,10,18,.18) 72%),
+    linear-gradient(90deg, rgba(4,10,18,.24), transparent 24%, transparent 76%, rgba(4,10,18,.16));
+  pointer-events: none;
+  z-index: 2;
+}
+
+.room-screenbar {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  right: 18px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  padding: 10px 14px;
+  border: 1px solid rgba(102,227,255,.22);
+  border-radius: 999px;
+  background: rgba(3,10,18,.74);
+  color: #dffaff;
+  box-shadow: 0 16px 40px rgba(0,0,0,.28);
+  backdrop-filter: blur(9px);
+}
+
+.room-screenbar strong {
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .78rem;
+}
+
+.room-screenbar small {
+  color: #6bff9a;
+  font-weight: 900;
+}
+
+.room-scanline {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  opacity: .35;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,.04) 0,
+    rgba(255,255,255,.04) 1px,
+    transparent 1px,
+    transparent 5px
+  );
+  mix-blend-mode: screen;
+  animation: roomScan 8s linear infinite;
+}
+
+.room-glitch {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  background: linear-gradient(115deg, transparent 44%, rgba(102,227,255,.11) 50%, transparent 56%);
+  transform: translateX(-50%);
+  animation: breachdSweep 5.2s linear infinite;
+}
+
+.room-fog {
+  position: absolute;
+  z-index: 4;
+  width: 34%;
+  height: 20%;
+  border-radius: 999px;
+  background: rgba(102,227,255,.12);
+  filter: blur(30px);
+  pointer-events: none;
+  opacity: .32;
+}
+
+.fog-a {
+  left: 5%;
+  bottom: 10%;
+  animation: fogDriftA 9s ease-in-out infinite alternate;
+}
+
+.fog-b {
+  right: 8%;
+  bottom: 16%;
+  animation: fogDriftB 11s ease-in-out infinite alternate;
+}
+
+.room-hotspot {
+  position: absolute;
+  z-index: 6;
+  border: 1px solid rgba(102,227,255,.28);
+  background: rgba(3,10,18,.72);
+  color: #dffaff;
+  border-radius: 999px;
+  padding: 9px 12px;
+  font: inherit;
+  font-size: .78rem;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(102,227,255,.38), 0 14px 36px rgba(0,0,0,.25);
+  backdrop-filter: blur(8px);
+  animation: hotspotPulse 2.6s infinite;
+}
+
+.room-hotspot:hover,
+.room-hotspot:focus-visible {
+  color: #8fffe9;
+  border-color: rgba(102,227,255,.6);
+  transform: translateY(-2px);
+}
+
+.hotspot-threat { left: 23%; top: 18%; }
+.hotspot-clock { right: 5%; top: 17%; }
+.hotspot-trust { left: 7%; bottom: 22%; }
+.hotspot-exposure { right: 9%; bottom: 30%; }
+
+.room-dialog {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  z-index: 7;
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  border: 1px solid rgba(102,227,255,.20);
+  border-radius: 20px;
+  background: rgba(3,10,18,.74);
+  box-shadow: 0 18px 56px rgba(0,0,0,.32);
+  backdrop-filter: blur(10px);
+}
+
+.room-dialog span {
+  color: #8fffe9;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: .72rem;
+}
+
+.room-dialog strong {
+  color: var(--text);
+}
+
+.arcade-sco-row {
+  margin-top: 20px !important;
+  max-width: 1040px !important;
+}
+
+.arcade-console-panel {
+  grid-template-columns: minmax(0, 1fr) minmax(360px, .82fr) !important;
+  align-items: stretch;
+}
+
+.console-action-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 22px 0 4px;
+}
+
+.arcade-form {
+  margin-top: 22px;
+}
+
+.arcade-terminal-wrap {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 14px;
+}
+
+.arcade-terminal {
+  min-height: 100%;
+  border-color: rgba(119,235,223,.34);
+}
+
+.arcade-terminal pre {
+  min-height: 250px;
+  color: #dffaff;
+}
+
+.arcade-terminal code {
+  color: #bfffe8;
+}
+
+.arcade-status-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.arcade-status-grid div {
+  border: 1px solid rgba(102,227,255,.17);
+  border-radius: 18px;
+  padding: 14px;
+  background: rgba(2,10,18,.62);
+}
+
+.arcade-status-grid span,
+.game-hud span {
+  display: block;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: .72rem;
+  margin-bottom: 6px;
+}
+
+.arcade-status-grid strong,
+.game-hud strong {
+  color: #8fffe9;
+}
+
+.breachd-game-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, .42fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.breachd-game-panel,
+.game-breachd-card {
+  border: 1px solid rgba(102,227,255,.22);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at top right, rgba(102,227,255,.11), transparent 34%),
+    linear-gradient(180deg, rgba(12,27,47,.72), rgba(5,11,20,.86));
+  box-shadow: var(--shadow);
+}
+
+.breachd-game-panel {
+  padding: clamp(22px, 4vw, 34px);
+}
+
+.game-hud {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.game-hud div {
+  border: 1px solid rgba(102,227,255,.16);
+  border-radius: 18px;
+  padding: 14px;
+  background: rgba(255,255,255,.025);
+}
+
+.phish-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.phish-card {
+  min-height: 160px;
+  text-align: left;
+  padding: 16px;
+  border: 1px solid rgba(102,227,255,.18);
+  border-radius: 20px;
+  background: rgba(2,10,18,.64);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+
+.phish-card:hover,
+.phish-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(102,227,255,.42);
+  background: rgba(8,18,31,.82);
+}
+
+.phish-card span {
+  color: #8fffe9;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: .72rem;
+  font-weight: 900;
+}
+
+.phish-card strong {
+  line-height: 1.35;
+}
+
+.phish-card small {
+  color: var(--muted);
+}
+
+.phish-card.is-correct {
+  border-color: rgba(107,255,154,.55);
+  background: rgba(20,70,38,.22);
+}
+
+.phish-card.is-wrong {
+  border-color: rgba(235,0,40,.55);
+  background: rgba(92,7,22,.22);
+}
+
+.game-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.game-breachd-card {
+  padding: 24px;
+  position: sticky;
+  top: 96px;
+}
+
+.game-mascot {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(102,227,255,.26);
+  border-radius: 20px;
+  color: #8fffe9;
+  background: rgba(102,227,255,.07);
+  margin-bottom: 16px;
+  box-shadow: inset 0 0 20px rgba(102,227,255,.08);
+}
+
+.game-breachd-card h3 {
+  margin-bottom: 10px;
+}
+
+.game-breachd-card p,
+.game-breachd-card li {
+  color: var(--muted);
+}
+
+.game-breachd-card li {
+  margin: 8px 0;
+}
+
+@keyframes roomScan {
+  0% { transform: translateY(-18px); }
+  100% { transform: translateY(18px); }
+}
+
+@keyframes breachdSweep {
+  0% { transform: translateX(-55%); opacity: .12; }
+  20% { opacity: .52; }
+  70% { opacity: .34; }
+  100% { transform: translateX(55%); opacity: 0; }
+}
+
+@keyframes fogDriftA {
+  from { transform: translateX(-8%) translateY(8%); }
+  to { transform: translateX(18%) translateY(-8%); }
+}
+
+@keyframes fogDriftB {
+  from { transform: translateX(10%) translateY(-4%); }
+  to { transform: translateX(-18%) translateY(8%); }
+}
+
+@keyframes hotspotPulse {
+  0% { box-shadow: 0 0 0 0 rgba(102,227,255,.34), 0 14px 36px rgba(0,0,0,.25); }
+  70% { box-shadow: 0 0 0 10px rgba(102,227,255,0), 0 14px 36px rgba(0,0,0,.25); }
+  100% { box-shadow: 0 0 0 0 rgba(102,227,255,0), 0 14px 36px rgba(0,0,0,.25); }
+}
+
+@media (max-width: 1100px) {
+  .breachd-arcade-grid,
+  .arcade-console-panel,
+  .breachd-game-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .breachd-live-room {
+    min-height: clamp(380px, 60vw, 560px);
+  }
+
+  .game-breachd-card {
+    position: static;
+  }
+}
+
+@media (max-width: 820px) {
+  .breachd-feature-tiles,
+  .phish-grid,
+  .game-hud,
+  .arcade-status-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .room-hotspot {
+    display: none;
+  }
+
+  .room-dialog {
+    display: none;
+  }
+
+  .breachd-live-room {
+    min-height: 330px;
+  }
+}
+
+
+/* ==========================================================
+   v3.5.1 Layout fix: BreachD hero alignment + homepage spacing
+   ========================================================== */
+
+/* HOME PAGE: the landing hero had too much unused vertical runway before About.
+   Keep the cinematic feel, but let the next section arrive sooner. */
+.hero {
+  min-height: auto !important;
+  padding-top: clamp(96px, 10vw, 132px) !important;
+  padding-bottom: clamp(56px, 7vw, 88px) !important;
+}
+
+.hero-grid {
+  align-items: center !important;
+  gap: clamp(28px, 5vw, 72px) !important;
+}
+
+.hero-terminal {
+  align-self: center !important;
+}
+
+.hero .hero-actions {
+  margin-bottom: 18px !important;
+}
+
+.hero-pills {
+  margin-top: 18px !important;
+}
+
+/* Make the About section sit closer without feeling cramped. */
+#about.section-pad {
+  padding-top: clamp(44px, 6vw, 74px) !important;
+}
+
+/* BREACHD PAGE: center the left hero content against the animated room so the
+   bottom of the header doesn't look like an empty football field. */
+.breachd-arcade-grid {
+  align-items: center !important;
+}
+
+.breachd-arcade-grid .breachd-intro {
+  align-self: center !important;
+}
+
+.breachd-arcade-grid .hero-actions {
+  margin-top: 22px !important;
+  margin-bottom: 18px !important;
+}
+
+/* Replace the awkward 2x2/left-heavy feel with a clean compact row.
+   This also prevents the feature area from sagging below the CTAs. */
+.breachd-feature-tiles {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  max-width: 650px !important;
+  margin-top: 18px !important;
+  gap: 12px !important;
+}
+
+.breachd-feature-tiles a {
+  min-height: 112px;
+  display: grid;
+  align-content: start;
+}
+
+/* Pull the situation/challenge/outcome bar closer and center it under the
+   whole hero instead of visually attaching it to the right side. */
+.arcade-sco-row,
+.breachd-sco-row {
+  margin-top: clamp(18px, 3vw, 28px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: min(1040px, calc(100% - 40px)) !important;
+}
+
+/* Tighten the BreachD top region overall. */
+.breachd-arcade-hero {
+  padding-bottom: clamp(28px, 4vw, 46px) !important;
+}
+
+.breachd-live-room {
+  min-height: clamp(430px, 39vw, 570px) !important;
+}
+
+/* If an older v3.4/v3.4.5 hero card row is still cached or mixed in, force
+   it into a neat four-card row with matching heights instead of the uneven 2x2. */
+.breachd-badge-row {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  max-width: 640px !important;
+  margin-top: 18px !important;
+}
+
+.breachd-badge-row div {
+  min-height: 96px !important;
+  padding: 16px !important;
+  display: grid !important;
+  align-content: start !important;
+}
+
+/* The live room itself should look intentional, not like a square static poster. */
+.breachd-live-room,
+.breachd-stage-live {
+  border-radius: 34px !important;
+}
+
+.breachd-live-room img,
+.breachd-stage-live img {
+  object-position: center center !important;
+}
+
+/* Reduce the gap after BreachD hero before the next interactive console. */
+.breachd-arcade-hero + .breachd-live-console,
+.breachd-beast-hero + .breachd-live-console {
+  padding-top: clamp(36px, 5vw, 58px) !important;
+}
+
+/* Tablet/mobile keeps the same idea without crushing cards. */
+@media (max-width: 1100px) {
+  .hero {
+    padding-bottom: clamp(42px, 6vw, 66px) !important;
+  }
+
+  .breachd-arcade-grid {
+    align-items: start !important;
+  }
+
+  .breachd-feature-tiles {
+    max-width: none !important;
+  }
+
+  .breachd-badge-row {
+    max-width: none !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    padding-top: 92px !important;
+    padding-bottom: 42px !important;
+  }
+
+  .breachd-feature-tiles,
+  .breachd-badge-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .breachd-live-room {
+    min-height: 330px !important;
+  }
+}

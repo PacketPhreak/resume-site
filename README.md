@@ -254,3 +254,21 @@ Do not reuse personal branding, resume material, portfolio copy, or original cas
 - Cleaned up the QR warning card with a more believable alert-style QR graphic
 - Tightened lore-section spacing and right-column card alignment
 - Reduced awkward gaps and improved card-to-card rhythm
+
+
+## New in v3.5.0 BreachD Arcade
+
+- Added Option 1: animated BreachD command room with hotspots, scanlines, fog, live badge, and dialog responses
+- Added Option 2: interactive BreachD console app with boot/demo scan/QR caution workflows
+- Added Option 3: Spot the Phish mini game with scoring and BreachD feedback
+- Preserved the Have I Been Pwned handoff and no-local-storage privacy note
+- Kept the 10:10:42 lore clock and BreachD command-room identity
+
+
+## New in v3.5.1 Layout Fix
+
+- Reduced unused vertical spacing on the main homepage hero before the About section
+- Centered BreachD hero copy against the live-room panel
+- Fixed the bottom-of-hero alignment issue around the buttons and feature cards
+- Tightened Situation / Challenge / Outcome spacing under the BreachD hero
+- Kept the BreachD Arcade features intact

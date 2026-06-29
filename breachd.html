@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="site-version" content="v3.4.5-breachd-live-room" />
+  <meta name="site-version" content="v3.5.1-layout-fix" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BreachD | PacketPhreak</title>
-  <meta name="description" content="BreachD is PacketPhreak's blue-team cyber buddy for checking exposure, tightening identity habits, and keeping the digital footprint under control." />
+  <meta name="description" content="BreachD is PacketPhreak's animated blue-team command room, interactive exposure console, and mini cyber-safety game." />
   <meta name="theme-color" content="#07111f" />
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/css/styles-v31.css?v=3.4.5" />
+  <link rel="stylesheet" href="assets/css/styles-v31.css?v=3.5.1" />
 </head>
-<body class="breachd-page">
+<body class="breachd-page breachd-arcade-page">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
@@ -36,78 +36,116 @@
   </header>
 
   <main id="main">
-    <section class="breachd-beast-hero" id="top">
+    <section class="breachd-arcade-hero" id="top">
       <div class="breachd-room" aria-hidden="true">
         <span class="room-grid"></span>
         <span class="room-light room-light-a"></span>
         <span class="room-light room-light-b"></span>
       </div>
 
-      <div class="container breachd-beast-grid">
+      <div class="container breachd-arcade-grid">
         <div class="breachd-intro">
           <p class="eyebrow">Digital identity • breach exposure • blue-team reminder</p>
           <h1 class="hero-3d-title breachd-beast-title" data-title="BreachD chose the blue team.">
             BreachD chose <span>the blue team.</span>
           </h1>
           <p class="hero-lede">
-            BreachD showed up at 9:42 and never really left. Now it watches your back while you clean up your digital footprint.
+            BreachD showed up at 9:42, dragged in a terminal, and built a blue-team command room right inside the portfolio.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#check">Initialize BreachD Check</a>
-            <a class="btn btn-ghost" href="#lore">Meet the lore</a>
+            <a class="btn btn-primary" href="#console">Initialize BreachD</a>
+            <a class="btn btn-ghost" href="#game">Play Spot the Phish</a>
           </div>
 
-          <div class="breachd-badge-row">
-            <div><strong>No fear.</strong><span>Just facts.</span></div>
-            <div><strong>Privacy first</strong><span>No storage here.</span></div>
-            <div><strong>Blue team approved</strong><span>Defend. Detect. Respond.</span></div>
-            <div><strong>Identity aware</strong><span>Reduce exposure.</span></div>
+          <div class="breachd-feature-tiles">
+            <a href="#room">
+              <span>01</span>
+              <strong>Animated Room</strong>
+              <small>Live lights, hotspots, scanlines.</small>
+            </a>
+            <a href="#console">
+              <span>02</span>
+              <strong>Console App</strong>
+              <small>Boot sequence and exposure workflow.</small>
+            </a>
+            <a href="#game">
+              <span>03</span>
+              <strong>Mini Game</strong>
+              <small>Spot the phish before it bites.</small>
+            </a>
           </div>
         </div>
 
-        <div class="breachd-stage breachd-stage-live" aria-label="BreachD live command room">
-          <div class="breachd-stage-glow"></div>
+        <section id="room" class="breachd-live-room" aria-label="Animated BreachD command room">
+          <div class="room-screenbar">
+            <span class="live-dot"></span>
+            <strong>BreachD Command Room</strong>
+            <small>LIVE</small>
+          </div>
+
           <img src="assets/img/breachd/breachd-command-room-live.png" alt="BreachD in a live command room with threat intel, exposure monitoring, trust reminders, and the 10:10:42 clock." />
-          <div class="breachd-stage-live-badge"><span class="live-dot"></span>Live room</div>
-          <div class="breachd-stage-sweep" aria-hidden="true"></div>
-          <div class="breachd-stage-links" aria-label="BreachD room shortcuts">
-            <a href="#check">Exposure check</a>
-            <a href="#lore">10:10:42 lore</a>
-            <a href="#lore">Trust but verify</a>
-            <a href="#lore">QR caution</a>
+
+          <div class="room-scanline" aria-hidden="true"></div>
+          <div class="room-glitch" aria-hidden="true"></div>
+          <div class="room-fog fog-a" aria-hidden="true"></div>
+          <div class="room-fog fog-b" aria-hidden="true"></div>
+
+          <button class="room-hotspot hotspot-threat" type="button" data-hotspot="Threat feed: suspicious activity changes fast. Verify before you react.">
+            Threat Feed
+          </button>
+          <button class="room-hotspot hotspot-clock" type="button" data-hotspot="10:10:42 — the smile, the homage, and BreachD showing up on time. One more thing...">
+            10:10:42
+          </button>
+          <button class="room-hotspot hotspot-trust" type="button" data-hotspot="Trust but verify. Links, QR codes, reset pages, and login prompts all deserve a second look.">
+            Trust / Verify
+          </button>
+          <button class="room-hotspot hotspot-exposure" type="button" data-hotspot="Exposure check: use Have I Been Pwned, rotate reused passwords, and turn on MFA.">
+            Exposure
+          </button>
+
+          <div class="room-dialog" data-room-dialog>
+            <span>BreachD says:</span>
+            <strong>Click a glowing panel. The room talks back.</strong>
           </div>
-        </div>
+        </section>
       </div>
 
-      <div class="container breachd-sco-row">
+      <div class="container breachd-sco-row arcade-sco-row">
         <article>
-          <span>Situation</span>
-          <strong>Your digital footprint is bigger than you think.</strong>
+          <span>Animated</span>
+          <strong>The command room breathes, flickers, scans, and reacts.</strong>
         </article>
         <article>
-          <span>Challenge</span>
-          <strong>Exposure hides in places you do not check.</strong>
+          <span>Interactive</span>
+          <strong>The console boots up and walks visitors through safer habits.</strong>
         </article>
         <article>
-          <span>Outcome</span>
-          <strong>BreachD helps you find it, fix it, and stay ahead.</strong>
+          <span>Playable</span>
+          <strong>The mini game turns phishing awareness into a quick challenge.</strong>
         </article>
       </div>
     </section>
 
-    <section class="breachd-live-console section-pad" id="check">
+    <section class="breachd-live-console section-pad" id="console">
       <div class="container">
-        <div class="breachd-console-panel">
+        <div class="breachd-console-panel arcade-console-panel">
           <div class="console-main">
-            <p class="eyebrow">Live BreachD Console</p>
-            <h2 class="section-3d-title" data-title="Check your exposure.">Check your exposure.</h2>
+            <p class="eyebrow">Option 2 • Interactive BreachD Console App</p>
+            <h2 class="section-3d-title" data-title="Initialize the guardian.">Initialize the guardian.</h2>
             <p>
-              BreachD does not keep the signal. PacketPhreak does not store your email.
-              You leave PacketPhreak to review results securely.
+              Start the boot sequence, run a quick exposure workflow, or open the real Have I Been Pwned check.
+              PacketPhreak does not store email addresses.
             </p>
 
-            <form class="breachd-console-form" data-breachd-form>
+            <div class="console-action-row">
+              <button class="btn btn-primary" type="button" data-arcade-action="boot">Boot BreachD</button>
+              <button class="btn btn-ghost" type="button" data-arcade-action="scan">Run Demo Scan</button>
+              <button class="btn btn-ghost" type="button" data-arcade-action="qr">QR Caution</button>
+              <button class="btn btn-ghost" type="button" data-arcade-action="reset">Reset Console</button>
+            </div>
+
+            <form class="breachd-console-form arcade-form" data-breachd-form>
               <div class="breachd-field">
                 <label for="breachd-email">Email address</label>
                 <div class="breachd-input-wrap">
@@ -118,38 +156,98 @@
                   <input class="breachd-input" id="breachd-email" data-breachd-email name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" />
                 </div>
               </div>
-              <button class="btn btn-primary" type="submit">Run Exposure Check</button>
+              <button class="btn btn-primary" type="submit">Open HIBP Check</button>
             </form>
 
             <p class="breachd-form-message" data-breachd-message>breachd@guardian:~$ waiting for identity signal...</p>
           </div>
 
-          <aside class="console-status" aria-label="BreachD live status">
-            <div class="status-terminal">
-              <span class="status-dot"></span>
-              <code>breachd@guardian:~$ status</code>
-              <strong>BreachD is online and ready.</strong>
+          <aside class="arcade-terminal-wrap">
+            <div class="breachd-terminal arcade-terminal">
+              <div class="terminal-top"><span></span><span></span><span></span><b data-console-state>STANDBY</b></div>
+<pre><code data-arcade-terminal>packetphreak@portfolio:~$ ./breachd --standby
+> guardian daemon waiting
+> click BOOT BREACHD to begin</code></pre>
             </div>
-            <div class="guardian-card guardian-card-tight">
-              <strong>Guardian mode</strong>
-              <b>24/7</b>
-              <span>Watching for exposure signals</span>
-            </div>
-            <div class="signal-card">
-              <span>status</span>
-              <strong>ready</strong>
-              <span>privacy</span>
-              <strong>no local storage</strong>
+
+            <div class="arcade-status-grid">
+              <div><span>Guardian</span><strong data-status-guardian>standby</strong></div>
+              <div><span>Privacy</span><strong>no local storage</strong></div>
+              <div><span>Mode</span><strong data-status-mode>idle</strong></div>
+              <div><span>Risk</span><strong data-status-risk>unknown</strong></div>
             </div>
           </aside>
-
-          <div class="breachd-trust-strip">
-            <div><strong>Privacy first</strong><span>We do not store queries. Your data stays yours.</span></div>
-            <div><strong>No fear</strong><span>Just facts and next steps.</span></div>
-            <div><strong>Blue team approved</strong><span>Defend. Detect. Respond. Recover.</span></div>
-            <div><strong>Identity aware</strong><span>Reduce exposure. Reclaim control.</span></div>
-          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="breachd-game-zone section-pad" id="game">
+      <div class="container breachd-game-grid">
+        <article class="breachd-game-panel">
+          <p class="eyebrow">Option 3 • Mini Game</p>
+          <h2 class="section-3d-title" data-title="Spot the Phish.">Spot the Phish.</h2>
+          <p>
+            Click the suspicious cards. Leave the safe cards alone. BreachD gives you a score and a tiny blue-team pep talk.
+          </p>
+
+          <div class="game-hud">
+            <div><span>Score</span><strong data-game-score>0</strong></div>
+            <div><span>Round</span><strong data-game-round>1</strong></div>
+            <div><span>Status</span><strong data-game-status>ready</strong></div>
+          </div>
+
+          <div class="phish-grid" data-phish-grid>
+            <button class="phish-card" type="button" data-phish="bad" data-reason="Urgent reset link + unknown domain = verify before signing in.">
+              <span>Reset link</span>
+              <strong>“Your mailbox expires today. Sign in now.”</strong>
+              <small>account-help-security-login.example</small>
+            </button>
+            <button class="phish-card" type="button" data-phish="good" data-reason="Known service + no urgency + no login ask. Still verify sender when in doubt.">
+              <span>Expected notice</span>
+              <strong>“Your ticket was updated. View it from the portal.”</strong>
+              <small>Open the portal directly.</small>
+            </button>
+            <button class="phish-card" type="button" data-phish="bad" data-reason="QR code asking for credentials at a random location = slow down.">
+              <span>QR code</span>
+              <strong>“Scan to volunteer. Bank login required.”</strong>
+              <small>Unknown QR source.</small>
+            </button>
+            <button class="phish-card" type="button" data-phish="bad" data-reason="Attachment pressure + invoice bait = classic lure.">
+              <span>Attachment</span>
+              <strong>“Final invoice attached. Payment overdue.”</strong>
+              <small>unexpected .html attachment</small>
+            </button>
+            <button class="phish-card" type="button" data-phish="good" data-reason="Safe habit: navigate yourself, use bookmarks, and verify MFA prompts.">
+              <span>Good habit</span>
+              <strong>“Use your password manager bookmark.”</strong>
+              <small>Direct navigation beats random links.</small>
+            </button>
+            <button class="phish-card" type="button" data-phish="bad" data-reason="Gift-card urgency from a boss impersonator = hard no.">
+              <span>Impersonation</span>
+              <strong>“Need gift cards ASAP. Don’t call me.”</strong>
+              <small>classic social-engineering pressure</small>
+            </button>
+          </div>
+
+          <div class="game-actions">
+            <button class="btn btn-primary" type="button" data-game-reset>Restart round</button>
+            <a class="btn btn-ghost" href="#check">Run real exposure check</a>
+          </div>
+        </article>
+
+        <aside class="game-breachd-card">
+          <div class="game-mascot">⟠</div>
+          <h3>BreachD’s rule</h3>
+          <p data-game-feedback>
+            The best defenders are not paranoid. They are curious, patient, and annoying enough to verify.
+          </p>
+          <ul>
+            <li>Urgency is a lure.</li>
+            <li>Unknown QR codes deserve suspicion.</li>
+            <li>Use bookmarks for important logins.</li>
+            <li>MFA prompts should make sense.</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
@@ -172,15 +270,11 @@
             BreachD has worn every hat: red, blue, gray, black, purple, bug bounty, compliance, incident response,
             “temporary exception,” and the cursed hat labeled <strong>we’ll fix it after go-live</strong>.
           </p>
-          <p>
-            It has seen what happens when people reuse passwords, ignore breach alerts, scan unknown QR codes,
-            click convincing links, and sign into pages that looked just real enough.
-          </p>
           <p class="breachd-pill">No fear. Just facts.</p>
         </article>
 
         <aside class="breachd-card-stack">
-          <div class="clock-feature-card">
+          <div class="clock-feature-card arcade-clock-card">
             <p>One more thing...</p>
             <div class="breachd-clock" role="img" aria-label="Analog clock showing 10:10:42 with PacketPhreak mark">
               <span class="clock-hand clock-hour"></span>
@@ -212,40 +306,6 @@
             </ul>
           </div>
         </aside>
-      </div>
-    </section>
-
-    <section class="breachd-ops-zone section-pad">
-      <div class="container breachd-ops-grid">
-        <article class="breachd-terminal beast-terminal">
-          <div class="terminal-top"><span></span><span></span><span></span><b>ONLINE</b></div>
-<pre><code>packetphreak@portfolio:~$ ./guardian --init
-&gt; Initializing BreachD...
-&gt; Spawning guardian process
-&gt; Loading threat intel
-&gt; Enabling blue team mode
-&gt; You’ve got a guardian.
-
-BreachD status: ACTIVE
-Mode: defend / detect / respond / recover
-Message: No shame. No scare tactics. Just useful first steps.</code></pre>
-          <button class="btn btn-ghost terminal-replay" type="button" data-terminal-replay>Run Guardian Init</button>
-        </article>
-
-        <article class="breachd-promise-card">
-          <div class="promise-icon">⟠</div>
-          <h2>BreachD is not here to scare you.</h2>
-          <p>
-            BreachD is here to remind you that your identity matters, your exposure can be reduced,
-            and it is never too late to take control.
-          </p>
-          <div class="promise-row">
-            <span>Detect early</span>
-            <span>Act quickly</span>
-            <span>Stay private</span>
-            <span>Keep control</span>
-          </div>
-        </article>
       </div>
     </section>
 
@@ -294,6 +354,6 @@ Message: No shame. No scare tactics. Just useful first steps.</code></pre>
   </footer>
 
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/breachd.js?v=3.4.5"></script>
+  <script src="assets/js/breachd.js?v=3.5.1"></script>
 </body>
 </html>
