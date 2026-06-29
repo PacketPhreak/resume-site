@@ -2366,3 +2366,183 @@
     min-height: 88px !important;
   }
 }
+
+
+/* ==========================================================
+   v3.4.5 BreachD live-room hero and header alignment polish
+   ========================================================== */
+
+.breachd-beast-grid {
+  align-items: start !important;
+}
+
+.breachd-intro {
+  display: grid;
+  align-content: start;
+}
+
+.breachd-intro .hero-actions {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.breachd-badge-row {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  max-width: 520px;
+  margin-top: 16px !important;
+  align-self: start;
+}
+
+.breachd-badge-row div {
+  min-height: 92px;
+  display: grid;
+  align-content: start;
+}
+
+.breachd-sco-row {
+  margin-top: 14px !important;
+}
+
+.breachd-stage-live {
+  min-height: clamp(450px, 42vw, 590px) !important;
+  display: grid;
+  align-items: stretch;
+}
+
+.breachd-stage-live img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center center !important;
+  transition: transform .8s ease, filter .8s ease;
+}
+
+.breachd-stage-live:hover img {
+  transform: scale(1.025);
+  filter: saturate(1.18) contrast(1.08) brightness(1.05) drop-shadow(0 0 28px rgba(102,227,255,.22));
+}
+
+.breachd-stage-live::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(4,10,18,.10), rgba(4,10,18,.18)),
+    radial-gradient(circle at 50% 44%, transparent 0 34%, rgba(4,10,18,.16) 72%),
+    linear-gradient(90deg, rgba(4,10,18,.28), transparent 24%, transparent 78%, rgba(4,10,18,.18));
+  pointer-events: none;
+  z-index: 2;
+}
+
+.breachd-stage-live-badge {
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid rgba(102,227,255,.24);
+  border-radius: 999px;
+  background: rgba(3,10,18,.74);
+  box-shadow: 0 16px 40px rgba(0,0,0,.28);
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: .72rem;
+  color: #dffaff;
+  backdrop-filter: blur(8px);
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6bff9a;
+  box-shadow: 0 0 0 0 rgba(107,255,154,.65);
+  animation: breachdPulse 1.8s infinite;
+}
+
+.breachd-stage-sweep {
+  position: absolute;
+  inset: 10% -24%;
+  background: linear-gradient(115deg, transparent 45%, rgba(102,227,255,.10) 50%, transparent 55%);
+  transform: translateX(-36%);
+  z-index: 3;
+  pointer-events: none;
+  animation: breachdSweep 5.4s linear infinite;
+}
+
+.breachd-stage-links {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  z-index: 4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.breachd-stage-links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(102,227,255,.18);
+  background: rgba(3,10,18,.72);
+  color: #dffaff;
+  font-size: .82rem;
+  text-decoration: none;
+  box-shadow: 0 12px 32px rgba(0,0,0,.24);
+  backdrop-filter: blur(8px);
+  transition: transform .2s ease, border-color .2s ease, color .2s ease, background .2s ease;
+}
+
+.breachd-stage-links a:hover,
+.breachd-stage-links a:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(102,227,255,.38);
+  background: rgba(8,18,30,.88);
+  color: #8fffe9;
+}
+
+@keyframes breachdPulse {
+  0% { box-shadow: 0 0 0 0 rgba(107,255,154,.55); }
+  70% { box-shadow: 0 0 0 10px rgba(107,255,154,0); }
+  100% { box-shadow: 0 0 0 0 rgba(107,255,154,0); }
+}
+
+@keyframes breachdSweep {
+  0% { transform: translateX(-48%); opacity: .2; }
+  10% { opacity: .55; }
+  55% { opacity: .55; }
+  100% { transform: translateX(52%); opacity: 0; }
+}
+
+@media (max-width: 1100px) {
+  .breachd-badge-row {
+    max-width: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .breachd-badge-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .breachd-stage-live {
+    min-height: 340px !important;
+  }
+
+  .breachd-stage-links {
+    display: none;
+  }
+
+  .breachd-stage-live-badge {
+    left: 14px;
+    top: 14px;
+  }
+}
