@@ -246,3 +246,11 @@ Do not reuse personal branding, resume material, portfolio copy, or original cas
 - Replaced it with compact guardian/status cards
 - Pulled the console, lore, terminal, and CTA sections closer together
 - Reduced the side clock card size and improved its visual weight
+
+
+## New in v3.4.4 BreachD clock + QR polish
+
+- Fixed clock-hand centering so both clocks visually land on 10:10:42
+- Cleaned up the QR warning card with a more believable alert-style QR graphic
+- Tightened lore-section spacing and right-column card alignment
+- Reduced awkward gaps and improved card-to-card rhythm

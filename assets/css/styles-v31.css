@@ -2180,3 +2180,189 @@
     height: 138px;
   }
 }
+
+
+/* ==========================================================
+   v3.4.4 BreachD clock, QR, and lore alignment polish
+   ========================================================== */
+
+/* Clock hands were visually sitting off-center because they rotated from
+   the center line without vertical centering. Center them first, then rotate. */
+.clock-hour {
+  transform: translateY(-50%) rotate(305deg) !important;
+}
+
+.clock-minute {
+  transform: translateY(-50%) rotate(335deg) !important;
+}
+
+.clock-second {
+  transform: translateY(-50%) rotate(162deg) !important;
+}
+
+.breachd-stage-clock .breachd-clock,
+.clock-feature-card .breachd-clock {
+  display: grid;
+  place-items: center;
+}
+
+/* Lore zone layout tightening */
+.breachd-lore-zone.section-pad {
+  padding-top: clamp(22px, 3vw, 40px) !important;
+}
+
+.breachd-lore-grid {
+  grid-template-columns: minmax(0, 1.34fr) minmax(320px, .72fr) !important;
+  gap: 22px !important;
+  align-items: start !important;
+}
+
+.breachd-card-stack {
+  gap: 16px !important;
+  align-content: start;
+}
+
+.breachd-lore-panel {
+  padding: clamp(24px, 3.2vw, 34px) !important;
+}
+
+.breachd-lore-panel p:last-of-type {
+  margin-bottom: 0;
+}
+
+.breachd-pill {
+  margin-top: 12px;
+}
+
+/* Clock card */
+.clock-feature-card {
+  padding: 18px 22px 20px !important;
+  gap: 8px !important;
+  min-height: 0 !important;
+}
+
+.clock-feature-card p {
+  margin: 0 0 2px !important;
+}
+
+.clock-feature-card .breachd-clock {
+  width: 156px !important;
+  height: 156px !important;
+  margin: 2px auto 0;
+}
+
+.clock-feature-card strong {
+  margin-top: 6px !important;
+}
+
+.clock-feature-card span {
+  max-width: 240px;
+  line-height: 1.45;
+}
+
+/* QR alert card cleanup */
+.qr-warning-card {
+  grid-template-columns: 92px 1fr !important;
+  gap: 18px !important;
+  align-items: center !important;
+  padding: 18px 20px !important;
+}
+
+.qr-warning-card > div:last-child {
+  align-self: center;
+}
+
+.qr-warning-card h3 {
+  margin: 0 0 8px !important;
+}
+
+.qr-warning-card p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.fake-qr {
+  position: relative;
+  width: 92px;
+  min-height: 92px !important;
+  aspect-ratio: 1;
+  align-self: center;
+  border-radius: 18px !important;
+  border: 1px solid rgba(255, 72, 104, .55) !important;
+  background:
+    linear-gradient(90deg, rgba(255, 35, 82, .16) 1px, transparent 1px) 0 0 / 13px 13px,
+    linear-gradient(rgba(255, 35, 82, .16) 1px, transparent 1px) 0 0 / 13px 13px,
+    radial-gradient(circle at 50% 50%, rgba(255, 35, 82, .14), transparent 55%),
+    rgba(36, 6, 14, .82) !important;
+  box-shadow:
+    inset 0 0 0 8px rgba(0,0,0,.22),
+    0 0 28px rgba(235, 0, 40, .16) !important;
+  overflow: hidden;
+}
+
+.fake-qr::before,
+.fake-qr::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 3px solid #ff335c;
+  border-radius: 3px;
+}
+
+.fake-qr::before {
+  left: 10px;
+  top: 10px;
+  box-shadow:
+    44px 0 0 -3px #13040a, 44px 0 0 0 #ff335c,
+    0 44px 0 -3px #13040a, 0 44px 0 0 #ff335c;
+}
+
+.fake-qr::after {
+  width: 8px;
+  height: 8px;
+  left: 18px;
+  top: 18px;
+  background: #ff335c;
+  border: 0;
+  box-shadow: 44px 0 0 0 #ff335c, 0 44px 0 0 #ff335c;
+}
+
+.first-steps-card {
+  padding: 22px 24px !important;
+}
+
+.first-steps-card h3 {
+  margin-top: 0;
+}
+
+.first-steps-card ul {
+  padding-left: 1.2rem;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.first-steps-card li {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+  .breachd-lore-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .qr-warning-card {
+    grid-template-columns: 92px 1fr !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .qr-warning-card {
+    grid-template-columns: 1fr !important;
+  }
+
+  .fake-qr {
+    width: 88px;
+    min-height: 88px !important;
+  }
+}
