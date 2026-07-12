@@ -1,5 +1,14 @@
 # Changelog
 
+## v3.6.0 — Education Pillars
+
+- Replaced the old education cards with four responsive pillar cards
+- Added equal-size floating emblems for Richmond Senior, Richmond Community College, Pfeiffer, and Shanxi
+- Added established/founded dates at the top of each card only
+- Added the animated fire title and time-passing quote treatment
+- Added the Confucius Institute study-abroad memory strip
+- Added two-column tablet and one-column mobile layouts
+
 ## v3.5.5 — README Flicker Fix
 
 - Replaced repeated archive-reminder images with unique flickering SVG section headers

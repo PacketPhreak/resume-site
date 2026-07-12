@@ -160,3 +160,12 @@ The repository ZIP and `PROJECT_STATE.md` are the source of truth for code. Memo
 - Case-study diagrams were rebuilt for desktop and mobile readability
 - Internal authoring-instruction language was replaced with public-facing portfolio copy
 - Global section spacing and card alignment were tightened
+
+
+## v3.6.0 Education Pillars
+
+- Redesigned the Time Capsule education section around four equal visual pillars
+- Added floating school emblems and school-specific glow treatments
+- Added accurate graduation years, locations, degrees, and institutional founding dates
+- Added the time-passing quote and Confucius Institute memory
+- Built responsive desktop, tablet, mobile, and reduced-motion behavior

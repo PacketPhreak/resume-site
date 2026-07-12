@@ -3,7 +3,7 @@
 ## Current version
 
 ```text
-v3.5.5-readme-flicker-fix
+v3.6.0-education-pillars
 ```
 
 ## Source of truth
@@ -33,6 +33,11 @@ Secondary domain: www.joshuacmcdonald.com
 - Cloudflare security headers
 
 ## Changes in this state
+
+- Rebuilt the Time Capsule education section as the responsive Education Pillars experience
+- Added equal-size animated school emblems, school-specific pedestal glow, and mobile stacking
+- Added the time-passing quote and Confucius Institute memory strip
+- Preserved the approved visual reference under assets/img/education/pillars/
 
 - Fixed README section headers by giving each heading its own SVG asset
 - Kept BreachD red with an independent flicker animation
