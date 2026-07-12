@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="site-version" content="v3.5.3-meta-layout-sync" />
+  <meta name="site-version" content="v3.5.4-human-first-polish" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -42,15 +42,18 @@
   <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
 
-  <link rel="stylesheet" href="assets/css/styles-v31.css?v=3.5.3" />
+  <link rel="stylesheet" href="assets/css/styles-v31.css?v=3.5.4" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html#top" aria-label="PacketPhreak home">
+      <a class="brand" href="index.html#top" aria-label="Joshua C. McDonald portfolio home">
         <span class="brand-mark" aria-hidden="true">⟠</span>
-        <span><strong>PacketPhreak</strong><small>Joshua C. McDonald</small></span>
+        <span>
+          <strong>Joshua C. McDonald</strong>
+          <small><span>PacketPhreak</span><span class="brand-role"> · Infrastructure &amp; Network Analyst</span></small>
+        </span>
       </a>
       <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
         <span></span><span></span><span></span>
@@ -76,7 +79,7 @@
           <p class="hero-lede">A sanitized case study on following the packet from the OT side through layered firewalls, DMZ relay services, NAT, and cloud routing to isolate where communication succeeded — and where return traffic needed closer scrutiny.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#visuals">See the redacted visuals</a>
-            <a class="btn btn-ghost" href="timeline.html">Back to Time Capsule</a>
+            <a class="btn btn-ghost" href="timeline.html">Explore Time Capsule</a>
           </div>
           <div class="signal-strip" aria-label="Case study summary">
             <span>Three redacted cloud destinations</span>
@@ -108,7 +111,7 @@
         <div class="section-head narrow-head">
           <p class="eyebrow">Redacted visual path</p>
           <h2 class="section-3d-title" data-title="Follow the packet without giving away the farm.">Follow the packet without giving away the farm.</h2>
-          <p class="section-note">The visuals below are rebuilt from the troubleshooting story — not raw screenshots. They preserve the technical shape of the problem while removing internal identifiers.</p>
+          <p class="section-note">These diagrams recreate the packet path and decision points without exposing internal identifiers, raw captures, or organization-specific infrastructure.</p>
         </div>
         <div class="visual-stack">
           <article class="visual-panel">
@@ -121,10 +124,15 @@
                 <li>Keeps destination identity abstracted to endpoint groups.</li>
               </ul>
             </div>
-            <div class="visual-frame"><img src="assets/img/case-studies/pi-path-map-redacted.svg" alt="Redacted radial path map showing manufacturing traffic heading toward Azure endpoint groups"></div>
+            <div class="visual-frame">
+              <a class="diagram-canvas" href="assets/img/case-studies/pi-path-map-redacted.svg" target="_blank" rel="noopener noreferrer" aria-label="Open the redacted packet path diagram at full size">
+                <img src="assets/img/case-studies/pi-path-map-redacted.svg" alt="Redacted packet path showing manufacturing traffic crossing security boundaries toward Azure endpoint groups">
+              </a>
+              <a class="diagram-open" href="assets/img/case-studies/pi-path-map-redacted.svg" target="_blank" rel="noopener noreferrer">Open full-size diagram</a>
+            </div>
           </article>
 
-          <article class="visual-panel reverse">
+          <article class="visual-panel">
             <div class="visual-copy">
               <h3>Cloud-side topology</h3>
               <p>A simplified, portfolio-safe view of the Azure virtual WAN / hub perspective that helped validate cloud-side routing and supporting segments during the investigation.</p>
@@ -134,7 +142,12 @@
                 <li>Makes the escalation narrative easier for non-network audiences.</li>
               </ul>
             </div>
-            <div class="visual-frame"><img src="assets/img/case-studies/pi-azure-topology-redacted.svg" alt="Redacted topology diagram showing virtual WAN and hub connections related to the case study"></div>
+            <div class="visual-frame">
+              <a class="diagram-canvas" href="assets/img/case-studies/pi-azure-topology-redacted.svg" target="_blank" rel="noopener noreferrer" aria-label="Open the redacted cloud topology diagram at full size">
+                <img src="assets/img/case-studies/pi-azure-topology-redacted.svg" alt="Redacted cloud topology showing the core hub, supporting cloud segments, and endpoint groups">
+              </a>
+              <a class="diagram-open" href="assets/img/case-studies/pi-azure-topology-redacted.svg" target="_blank" rel="noopener noreferrer">Open full-size diagram</a>
+            </div>
           </article>
 
           <article class="visual-panel">
@@ -147,7 +160,12 @@
                 <li>Focused on the inbound boundary where return behavior required review.</li>
               </ul>
             </div>
-            <div class="visual-frame"><img src="assets/img/case-studies/pi-packet-flow-redacted.svg" alt="Redacted packet flow diagram showing outbound validation and return path analysis"></div>
+            <div class="visual-frame">
+              <a class="diagram-canvas" href="assets/img/case-studies/pi-packet-flow-redacted.svg" target="_blank" rel="noopener noreferrer" aria-label="Open the redacted flow validation diagram at full size">
+                <img src="assets/img/case-studies/pi-packet-flow-redacted.svg" alt="Redacted flow validation showing outbound success and return-path review at the edge boundary">
+              </a>
+              <a class="diagram-open" href="assets/img/case-studies/pi-packet-flow-redacted.svg" target="_blank" rel="noopener noreferrer">Open full-size diagram</a>
+            </div>
           </article>
         </div>
       </div>
@@ -198,8 +216,8 @@
     <section class="section-pad case-proof">
       <div class="container">
         <div class="section-head narrow-head">
-          <p class="eyebrow">What this proves</p>
-          <h2 class="section-3d-title" data-title="Why this belongs in the portfolio.">Why this belongs in the portfolio.</h2>
+          <p class="eyebrow">What the work demonstrates</p>
+          <h2 class="section-3d-title" data-title="Judgment across every boundary.">Judgment across every boundary.</h2>
         </div>
         <div class="cards proof-grid">
           <article class="card"><span class="card-icon">01</span><h3>Cross-boundary troubleshooting</h3><p>Shows the ability to reason across OT, DMZ, enterprise, internet, and cloud boundaries instead of treating them as separate universes.</p></article>
@@ -212,13 +230,13 @@
     <section class="section-pad contact-section">
       <div class="container contact-card">
         <div>
-          <p class="eyebrow">Next step</p>
-          <h2 class="section-3d-title" data-title="Want more case studies like this?">Want more case studies like this?</h2>
-          <p>Use this page as the model: public-safe visuals, a concise timeline summary, and a deeper technical writeup for the projects that matter most.</p>
+          <p class="eyebrow">Portfolio archive</p>
+          <h2 class="section-3d-title" data-title="More stories from the packet path.">More stories from the packet path.</h2>
+          <p>This case study is one example of how I turn real infrastructure problems into clear, public-safe technical narratives.</p>
         </div>
         <div class="contact-actions">
-          <a class="btn btn-primary" href="timeline.html">Back to Time Capsule</a>
-          <a class="btn btn-ghost" href="index.html#case-studies">More case studies</a>
+          <a class="btn btn-primary" href="timeline.html">Explore Time Capsule</a>
+          <a class="btn btn-ghost" href="index.html#case-studies">Browse case studies</a>
         </div>
       </div>
     </section>

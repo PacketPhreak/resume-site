@@ -3,7 +3,7 @@
 ## Current version
 
 ```text
-v3.5.3-meta-layout-sync
+v3.5.4-human-first-polish
 ```
 
 ## Source of truth
@@ -34,11 +34,13 @@ Secondary domain: www.joshuacmcdonald.com
 
 ## Changes in this state
 
-- Duplicate homepage metadata consolidated
-- Per-page canonical and social metadata synchronized
-- Main repository README restored
-- Preview-kit README preserved as `PREVIEW_ASSETS.md`
-- BreachD activity names and hero spacing synchronized onto the current repository
+- Changed the visible header brand to Joshua C. McDonald first, with PacketPhreak as the technical identity
+- Added a rotating IRC-style Message of the Day and archive signal to the homepage terminal
+- Removed placeholder contact links
+- Rewrote case-study copy that sounded like private authoring instructions
+- Rebuilt all three case-study SVG diagrams for readability
+- Standardized case-study panel alignment and added full-size diagram links
+- Tightened desktop and mobile spacing across the site
 
 ## Preserve these files
 
@@ -58,10 +60,10 @@ assets/img/education/
 
 ## Next polish targets
 
-- Review BreachD hero and activity alignment after live deployment
-- Review homepage hero-to-About spacing on desktop and mobile
-- Collect more Cloudflare Web Analytics samples before performance tuning
-- Continue building public-safe case studies and project ecosystem links
+- Review the live desktop and mobile render after Cloudflare deploys
+- Confirm the preferred public contact email before adding an email button
+- Continue adding public-safe case studies and project-ecosystem links
+- Collect a larger analytics sample before performance tuning
 
 ## Continuation instruction
 

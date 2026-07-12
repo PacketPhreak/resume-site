@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="site-version" content="v3.5.3-meta-layout-sync" />
+  <meta name="site-version" content="v3.5.4-human-first-polish" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>PacketPhreak | Joshua C. McDonald</title>
-  <meta name="title" content="PacketPhreak | Joshua C. McDonald" />
+  <title>Joshua C. McDonald | PacketPhreak</title>
+  <meta name="title" content="Joshua C. McDonald | PacketPhreak" />
   <meta name="description" content="Infrastructure, networking, hybrid identity, automation, and root-cause troubleshooting by Joshua C. McDonald. Called by curiosity. Guided by the light." />
   <meta name="author" content="Joshua C. McDonald" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
@@ -18,7 +18,7 @@
   <meta property="og:site_name" content="PacketPhreak" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:url" content="https://joshuacmcdonald.com/" />
-  <meta property="og:title" content="PacketPhreak | Joshua C. McDonald" />
+  <meta property="og:title" content="Joshua C. McDonald | PacketPhreak" />
   <meta property="og:description" content="Infrastructure, networking, hybrid identity, automation, and root-cause troubleshooting by Joshua C. McDonald. Called by curiosity. Guided by the light." />
   <meta property="og:image" content="https://joshuacmcdonald.com/og-image.png" />
   <meta property="og:image:secure_url" content="https://joshuacmcdonald.com/og-image.png" />
@@ -30,7 +30,7 @@
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://joshuacmcdonald.com/" />
-  <meta name="twitter:title" content="PacketPhreak | Joshua C. McDonald" />
+  <meta name="twitter:title" content="Joshua C. McDonald | PacketPhreak" />
   <meta name="twitter:description" content="Infrastructure, networking, hybrid identity, automation, and root-cause troubleshooting by Joshua C. McDonald. Called by curiosity. Guided by the light." />
   <meta name="twitter:image" content="https://joshuacmcdonald.com/twitter-card.png" />
   <meta name="twitter:image:alt" content="PacketPhreak — Joshua C. McDonald portfolio preview" />
@@ -42,7 +42,7 @@
   <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
 
-  <link rel="stylesheet" href="assets/css/styles-v31.css?v=3.5.3" />
+  <link rel="stylesheet" href="assets/css/styles-v31.css?v=3.5.4" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -71,9 +71,12 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="PacketPhreak home">
+      <a class="brand" href="#top" aria-label="Joshua C. McDonald portfolio home">
         <span class="brand-mark" aria-hidden="true">⟠</span>
-        <span><strong>PacketPhreak</strong><small>Joshua C. McDonald</small></span>
+        <span>
+          <strong>Joshua C. McDonald</strong>
+          <small><span>PacketPhreak</span><span class="brand-role"> · Infrastructure &amp; Network Analyst</span></small>
+        </span>
       </a>
       <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
         <span></span><span></span><span></span>
@@ -113,10 +116,15 @@
           </div>
         </div>
 
-        <aside class="terminal-card" aria-label="Profile terminal card">
-          <div class="terminal-top"><span></span><span></span><span></span></div>
-<pre><code><span class="muted">$ whoami</span>
-PacketPhreak
+        <aside class="terminal-card terminal-profile" aria-label="Profile terminal and rotating message of the day">
+          <div class="terminal-top">
+            <span></span><span></span><span></span>
+            <b>ops://joshuacmcdonald</b>
+          </div>
+          <div class="terminal-dashboard">
+<pre class="terminal-command-pane"><code><span class="muted">$ whoami</span>
+Joshua C. McDonald
+handle: PacketPhreak
 
 <span class="muted">$ cat focus.txt</span>
 AD / Entra ID
@@ -129,6 +137,20 @@ Root-Cause Analysis
 <span class="muted">$ ping chaos.local</span>
 Reply from experience:
 root cause found</code></pre>
+            <section class="motd-panel" aria-label="Message of the day" aria-live="polite">
+              <p class="motd-label">Message of the Day</p>
+              <strong data-motd-title>Curiosity found the fault domain.</strong>
+              <p data-motd-copy>The answer usually appears after the assumptions are forced to explain themselves.</p>
+              <div class="motd-archive">
+                <span>Archive signal</span>
+                <p data-motd-history>The first ARPANET message stopped at “LO” when the remote system failed before LOGIN completed.</p>
+              </div>
+              <div class="motd-footer">
+                <span data-motd-date></span>
+                <span class="motd-rotation">rotates automatically</span>
+              </div>
+            </section>
+          </div>
         </aside>
       </div>
     </section>
@@ -233,11 +255,10 @@ root cause found</code></pre>
     </section>
     <section id="contact" class="section-pad contact-section">
       <div class="container contact-card">
-        <div><p class="eyebrow">Contact</p><h2 class="section-3d-title" data-title="Root cause or it didn’t happen.">Root cause or it didn’t happen.</h2><p>Download the current resume, browse the career time capsule, or connect through LinkedIn/GitHub.</p></div>
+        <div><p class="eyebrow">Contact</p><h2 class="section-3d-title" data-title="Root cause or it didn’t happen.">Root cause or it didn’t happen.</h2><p>Browse the career archive, download the current resume, or connect through LinkedIn and GitHub.</p></div>
         <div class="contact-actions">
-          <a class="btn btn-primary" href="https://github.com/PacketPhreak" rel="noopener">GitHub</a>
-          <a class="btn btn-ghost" href="#">LinkedIn</a>
-          <a class="btn btn-ghost" href="mailto:contact@example.com">Email</a>
+          <a class="btn btn-primary" href="https://github.com/PacketPhreak" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/joshuacmcdonald" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
     </section>

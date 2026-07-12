@@ -3382,3 +3382,404 @@
     min-height: 330px !important;
   }
 }
+
+
+/* ==========================================================
+   v3.5.4 Human-first responsive polish
+   ========================================================== */
+
+/* Real name first; PacketPhreak remains the technical identity. */
+.nav-wrap {
+  min-height: 68px !important;
+}
+
+.brand {
+  min-width: max-content;
+}
+
+.brand strong {
+  font-size: .95rem;
+}
+
+.brand small {
+  font-size: .72rem;
+}
+
+/* A tighter site-wide vertical rhythm. */
+.section-pad {
+  padding-top: clamp(54px, 6vw, 76px) !important;
+  padding-bottom: clamp(54px, 6vw, 76px) !important;
+}
+
+.section-head {
+  margin-bottom: 22px !important;
+}
+
+.card-icon {
+  margin-bottom: 16px !important;
+}
+
+/* Homepage hero and MOTD terminal. */
+.hero {
+  padding-top: clamp(74px, 8vw, 104px) !important;
+  padding-bottom: clamp(42px, 5vw, 62px) !important;
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(430px, .88fr) !important;
+  gap: clamp(30px, 4.6vw, 68px) !important;
+  align-items: center !important;
+}
+
+.terminal-profile {
+  width: 100%;
+}
+
+.terminal-top b {
+  margin-left: auto;
+  color: var(--muted);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: .72rem;
+  font-weight: 600;
+}
+
+.terminal-dashboard {
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(220px, .78fr);
+  min-height: 350px;
+}
+
+.terminal-command-pane {
+  min-width: 0;
+  padding: 24px !important;
+  border-right: 1px solid var(--line);
+}
+
+.motd-panel {
+  padding: 24px 22px;
+  display: grid;
+  align-content: center;
+  gap: 10px;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(102,227,255,.10), transparent 34%),
+    rgba(5,10,18,.36);
+  transition: opacity .22s ease, transform .22s ease;
+}
+
+.motd-panel.is-changing {
+  opacity: .25;
+  transform: translateY(3px);
+}
+
+.motd-label,
+.motd-archive span {
+  margin: 0;
+  color: var(--accent-2);
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: .7rem;
+  font-weight: 900;
+}
+
+.motd-panel > strong {
+  color: #dffaff;
+  font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+  line-height: 1.25;
+}
+
+.motd-panel > p {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.motd-archive {
+  margin-top: 6px;
+  padding: 14px;
+  border: 1px solid rgba(102,227,255,.15);
+  border-radius: 16px;
+  background: rgba(255,255,255,.025);
+}
+
+.motd-archive p {
+  margin: 6px 0 0;
+  color: #c7d5e8;
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.motd-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #75a5bd;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: .72rem;
+}
+
+/* About, focus, and homepage card alignment. */
+.split,
+.focus-grid,
+.case-grid {
+  align-items: stretch;
+}
+
+.about .split {
+  gap: clamp(26px, 4vw, 54px) !important;
+}
+
+.focus-grid .card,
+.proof-grid .card {
+  height: 100%;
+}
+
+.case-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.case-card .case-actions {
+  margin-top: auto;
+}
+
+/* Case-study diagrams: consistent stacked layout and readable full-width art. */
+.case-hero,
+.case-overview-strip,
+.case-visuals,
+.case-proof,
+.contact-section {
+  scroll-margin-top: 82px;
+}
+
+.case-overview-strip {
+  padding-top: 22px !important;
+  padding-bottom: 42px !important;
+}
+
+.visual-stack {
+  gap: 22px !important;
+}
+
+.visual-panel,
+.visual-panel.reverse {
+  grid-template-columns: 1fr !important;
+  gap: 18px !important;
+  align-items: start !important;
+  padding: clamp(18px, 2.8vw, 28px) !important;
+}
+
+.visual-panel.reverse .visual-copy,
+.visual-panel.reverse .visual-frame {
+  order: initial !important;
+}
+
+.visual-copy {
+  max-width: 82ch;
+}
+
+.visual-copy ul {
+  columns: 1;
+}
+
+.visual-frame {
+  min-width: 0;
+  padding: 12px !important;
+  overflow: hidden;
+}
+
+.diagram-canvas {
+  display: block;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.diagram-canvas img {
+  display: block;
+  width: 100% !important;
+  height: auto;
+  max-width: none;
+}
+
+.diagram-open {
+  display: inline-flex;
+  margin: 10px 4px 2px;
+  color: var(--accent);
+  font-size: .88rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.diagram-open:hover,
+.diagram-open:focus-visible {
+  color: var(--accent-2);
+  text-decoration: underline;
+}
+
+.overview-grid,
+.proof-grid {
+  align-items: stretch;
+}
+
+.mini-panel,
+.proof-grid .card {
+  min-height: 0 !important;
+}
+
+.proof-grid .card {
+  padding: 22px !important;
+}
+
+.proof-grid .card-icon {
+  margin-bottom: 12px !important;
+}
+
+.split-case {
+  gap: clamp(22px, 3vw, 34px) !important;
+}
+
+.contact-card {
+  min-height: 0;
+}
+
+/* Keep heading depth while reducing glow collision on long mobile headings. */
+.section-3d-title {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+/* Medium screens */
+@media (max-width: 1080px) {
+  .brand-role {
+    display: none;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .terminal-card {
+    order: 0 !important;
+  }
+
+  .terminal-dashboard {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .case-hero-grid,
+  .split-case {
+    grid-template-columns: 1fr !important;
+  }
+
+  .stacked-aside {
+    position: static !important;
+  }
+}
+
+/* Phones and small tablets */
+@media (max-width: 720px) {
+  .container {
+    width: min(100% - 24px, var(--max)) !important;
+  }
+
+  .section-pad {
+    padding-top: 42px !important;
+    padding-bottom: 42px !important;
+  }
+
+  .nav-wrap {
+    min-height: 64px !important;
+  }
+
+  .brand-mark {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .brand strong {
+    font-size: .88rem;
+  }
+
+  .brand small {
+    font-size: .68rem;
+  }
+
+  .hero {
+    padding-top: 38px !important;
+    padding-bottom: 36px !important;
+  }
+
+  .hero-copy {
+    min-width: 0;
+  }
+
+  .hero-actions,
+  .contact-actions {
+    display: grid !important;
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .signal-strip {
+    display: grid !important;
+    grid-template-columns: 1fr;
+  }
+
+  .signal-strip span {
+    text-align: center;
+  }
+
+  .terminal-dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .terminal-command-pane {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+    white-space: pre-wrap;
+  }
+
+  .motd-panel {
+    padding: 20px;
+  }
+
+  .motd-footer {
+    display: grid;
+  }
+
+  .split,
+  .focus-grid,
+  .case-grid,
+  .overview-grid,
+  .proof-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .visual-frame {
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+  }
+
+  .diagram-canvas {
+    width: max-content;
+  }
+
+  .diagram-canvas img {
+    width: 880px !important;
+  }
+
+  .case-title.hero-3d-title {
+    max-width: 100% !important;
+    font-size: clamp(2.7rem, 13vw, 4.8rem) !important;
+  }
+
+  .section-3d-title {
+    font-size: clamp(2rem, 10vw, 3rem) !important;
+    line-height: 1.02 !important;
+  }
+
+  .footer-grid {
+    gap: 8px !important;
+  }
+}

@@ -13,12 +13,12 @@ https://joshuacmcdonald.com
 ## Current version
 
 ```text
-v3.5.3-meta-layout-sync
+v3.5.4-human-first-polish
 ```
 
 This synchronized build starts from the current uploaded repository—the version containing the new Open Graph, Twitter/X, favicon, manifest, and social-preview assets.
 
-### New in this synchronization
+### New in the current build
 
 - Consolidated duplicate `<title>`, description, and theme-color tags
 - Added consistent canonical, Open Graph, Twitter/X, icon, manifest, and robots metadata to every public HTML page
@@ -126,3 +126,12 @@ Do not commit private infrastructure or employer information. Keep the repositor
 ## Continuity rule
 
 The repository ZIP and `PROJECT_STATE.md` are the source of truth for code. Memory and prior chats provide intent and history, but must not replace the current files.
+
+
+## v3.5.4 Human-first polish
+
+- Visible branding now leads with Joshua C. McDonald
+- The homepage terminal includes a rotating Message of the Day and IT archive signal
+- Case-study diagrams were rebuilt for desktop and mobile readability
+- Internal authoring-instruction language was replaced with public-facing portfolio copy
+- Global section spacing and card alignment were tightened
