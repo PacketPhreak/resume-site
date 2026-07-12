@@ -111,7 +111,7 @@
     replayButton.addEventListener("click", runReplay);
   }
 
-  // Option 1: animated room hotspots
+  // Live Command Room hotspots
   const dialog = document.querySelector("[data-room-dialog]");
   document.querySelectorAll("[data-hotspot]").forEach(button => {
     button.addEventListener("click", () => {
@@ -123,7 +123,7 @@
     });
   });
 
-  // Option 2: interactive console app
+  // Guardian Console activity
   const arcadeTerminal = document.querySelector("[data-arcade-terminal]");
   const consoleState = document.querySelector("[data-console-state]");
   const actionButtons = document.querySelectorAll("[data-arcade-action]");
@@ -213,7 +213,7 @@
     });
   });
 
-  // Option 3: mini game
+  // Spot the Phish activity
   const gameCards = document.querySelectorAll("[data-phish]");
   const scoreEl = document.querySelector("[data-game-score]");
   const roundEl = document.querySelector("[data-game-round]");

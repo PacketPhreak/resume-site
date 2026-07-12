@@ -1,34 +1,128 @@
-# PacketPhreak - Joshua C. McDonald Preview Asset Kit
+# PacketPhreak Resume Site
 
-Domain: `joshuacmcdonald.com`
+Personal portfolio, public-safe career archive, case-study library, and technical playground for **Joshua C. McDonald / PacketPhreak**.
 
-## Files
+> **Called by curiosity. Guided by the light.**
 
-- `og-image.png` — 1200x630 preview image for iMessage/RCS/Open Graph.
-- `twitter-card.png` — 1200x675 Twitter/X large card image.
-- `social-square.png` — 1080x1080 square social image.
-- `wide-banner-1600x900.png` — wide hero/banner version.
-- `icons/favicon.ico` — browser favicon.
-- `icons/favicon-16x16.png`
-- `icons/favicon-32x32.png`
-- `icons/favicon-48x48.png`
-- `icons/favicon-64x64.png`
-- `icons/apple-touch-icon.png` — 180x180.
-- `icons/icon-192x192.png`
-- `icons/icon-512x512.png`
-- `site.webmanifest`
-- `meta-tags.html` — copy/paste into your `<head>`.
+## Live site
 
-## Deployment
+```text
+https://joshuacmcdonald.com
+```
 
-Put the image files at the website root, and put the icon files inside `/icons/`.
+## Current version
 
-Then paste the contents of `meta-tags.html` into the `<head>` section of the site.
+```text
+v3.5.3-meta-layout-sync
+```
 
-## Cache note
+This synchronized build starts from the current uploaded repository—the version containing the new Open Graph, Twitter/X, favicon, manifest, and social-preview assets.
 
-Text-message previews cache aggressively. After uploading, send yourself a new URL with a cache-buster once:
+### New in this synchronization
 
-`https://joshuacmcdonald.com/?v=preview1`
+- Consolidated duplicate `<title>`, description, and theme-color tags
+- Added consistent canonical, Open Graph, Twitter/X, icon, manifest, and robots metadata to every public HTML page
+- Preserved all uploaded social-preview images and icon assets
+- Restored this project README
+- Preserved the original preview-kit notes as `PREVIEW_ASSETS.md`
+- Added `PROJECT_STATE.md` and `CHANGELOG.md` for cleaner interchat handoffs
+- Applied the BreachD activity naming and spacing polish to the current repository
+- Replaced visible Option 1 / 2 / 3 labels with:
+  - **Live Command Room**
+  - **Guardian Console**
+  - **Spot the Phish**
 
-Some platforms may take time to refresh the preview even after the site is correct.
+## Site map
+
+```text
+index.html                  Main portfolio
+timeline.html               Career Time Capsule
+case-study-pi-azure.html    Public-safe PI / Azure connectivity case study
+breachd.html                BreachD command room, console, and phishing activity
+SECURITY.md                 Vulnerability reporting policy
+PREVIEW_ASSETS.md           Social-preview asset deployment notes
+PROJECT_STATE.md            Current handoff and continuation state
+CHANGELOG.md                Version history
+_headers                    Cloudflare Pages response headers
+site.webmanifest            Installable-web metadata
+assets/                     CSS, JavaScript, documents, images, and README art
+icons/                      Favicons and app icons
+```
+
+## BreachD
+
+BreachD is PacketPhreak's blue-team cyber buddy and interactive visitor-safety area.
+
+The page includes:
+
+- **Live Command Room** — animated room, scanlines, fog, hotspots, and responsive dialogue
+- **Guardian Console** — boot sequence, demo exposure workflow, QR caution mode, and the HIBP handoff
+- **Spot the Phish** — a small phishing-awareness game with scoring and feedback
+- the **10:10:42** clock and “One more thing...” homage
+
+PacketPhreak does not store visitor email addresses. The exposure form validates locally and opens Have I Been Pwned after confirmation.
+
+## Social preview assets
+
+```text
+og-image.png                  1200 × 630 Open Graph preview
+twitter-card.png              1200 × 675 Twitter/X card
+social-square.png             1080 × 1080 square social image
+wide-banner-1600x900.png      wide banner artwork
+icons/                        favicon and application icons
+site.webmanifest              manifest metadata
+```
+
+Detailed deployment and cache notes are preserved in [`PREVIEW_ASSETS.md`](PREVIEW_ASSETS.md).
+
+## Local testing
+
+From the repository root:
+
+```bash
+python -m http.server 8000
+```
+
+Then open:
+
+```text
+http://localhost:8000
+```
+
+Test at minimum:
+
+```text
+/
+breachd.html
+timeline.html
+case-study-pi-azure.html
+```
+
+## Cloudflare Pages
+
+The site is a static project connected to the `PacketPhreak/resume-site` repository.
+
+```text
+Framework preset: None
+Build command: blank
+Build output directory: /
+Root directory: /
+```
+
+## Public-safe rule
+
+Do not commit private infrastructure or employer information. Keep the repository free of:
+
+- credentials, API keys, tokens, or secrets
+- internal IP addresses, usernames, ticket numbers, and private hostnames
+- confidential screenshots or diagrams
+- unsanitized troubleshooting captures
+- customer, employer, or vendor-sensitive material
+
+<img src="assets/readme/archive-reminder-flicker.svg" alt="How to add archive material later reminder" width="700">
+
+> Future PacketPhreak, do not commit the whole evidence locker like a raccoon with passwords, Git access and dinner.
+
+## Continuity rule
+
+The repository ZIP and `PROJECT_STATE.md` are the source of truth for code. Memory and prior chats provide intent and history, but must not replace the current files.

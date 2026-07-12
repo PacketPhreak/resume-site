@@ -3216,3 +3216,169 @@
     min-height: 330px !important;
   }
 }
+
+
+/* ==========================================================
+   v3.5.3 Meta + Layout Sync
+   Current-repo synchronization after social-preview asset update
+   ========================================================== */
+
+/* Homepage: preserve the cinematic hero without the oversized runway. */
+.hero {
+  min-height: auto !important;
+  padding-top: clamp(96px, 10vw, 132px) !important;
+  padding-bottom: clamp(40px, 5vw, 64px) !important;
+}
+
+.hero-grid {
+  align-items: center !important;
+  gap: clamp(28px, 5vw, 72px) !important;
+}
+
+.hero .hero-actions {
+  margin-bottom: 18px !important;
+}
+
+.hero-pills,
+.signal-strip {
+  margin-top: 18px !important;
+}
+
+#about.section-pad {
+  padding-top: clamp(26px, 4vw, 48px) !important;
+}
+
+/* BreachD hero: tighter two-column relationship and reduced dead space. */
+.breachd-arcade-grid {
+  grid-template-columns: minmax(320px, 0.86fr) minmax(540px, 1.14fr) !important;
+  gap: clamp(24px, 3vw, 40px) !important;
+  align-items: start !important;
+}
+
+.breachd-arcade-grid .breachd-intro {
+  align-self: start !important;
+  padding-top: 8px;
+}
+
+.breachd-intro .hero-lede {
+  max-width: 30ch;
+}
+
+.breachd-arcade-grid .hero-actions {
+  margin-top: 18px !important;
+  margin-bottom: 14px !important;
+  gap: 14px;
+}
+
+/* Named activities replace Option 1 / 2 / 3. */
+.breachd-feature-tiles {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  max-width: 540px !important;
+  margin-top: 14px !important;
+  gap: 12px !important;
+}
+
+.breachd-feature-tiles a {
+  min-height: 146px !important;
+  padding: 16px 16px 14px !important;
+  display: grid !important;
+  align-content: start !important;
+}
+
+.breachd-feature-tiles > a > span {
+  display: none !important;
+}
+
+.breachd-feature-tiles strong {
+  font-size: 1rem;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.breachd-feature-tiles small {
+  font-size: .92rem;
+  line-height: 1.45;
+}
+
+/* Keep the live room substantial while matching the left column more closely. */
+.breachd-live-room {
+  min-height: clamp(420px, 34vw, 500px) !important;
+}
+
+/* Pull the activity summary upward under the full hero. */
+.arcade-sco-row,
+.breachd-sco-row {
+  position: relative;
+  z-index: 2;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: min(1040px, calc(100% - 40px)) !important;
+}
+
+.arcade-sco-row article,
+.breachd-sco-row article {
+  min-height: 108px;
+  padding: 18px 22px !important;
+  display: grid;
+  align-content: start;
+}
+
+.breachd-arcade-hero {
+  padding-bottom: clamp(26px, 3.6vw, 42px) !important;
+}
+
+.breachd-arcade-hero + .breachd-live-console,
+.breachd-beast-hero + .breachd-live-console {
+  padding-top: clamp(34px, 4.5vw, 54px) !important;
+}
+
+@media (min-width: 1101px) {
+  .arcade-sco-row,
+  .breachd-sco-row {
+    margin-top: -34px !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .breachd-arcade-grid {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+
+  .breachd-intro .hero-lede,
+  .breachd-feature-tiles {
+    max-width: none !important;
+  }
+
+  .breachd-live-room {
+    min-height: clamp(380px, 58vw, 540px) !important;
+  }
+
+  .arcade-sco-row,
+  .breachd-sco-row {
+    margin-top: 20px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    padding-top: 92px !important;
+    padding-bottom: 36px !important;
+  }
+
+  #about.section-pad {
+    padding-top: 20px !important;
+  }
+
+  .breachd-feature-tiles {
+    grid-template-columns: 1fr !important;
+  }
+
+  .breachd-feature-tiles a {
+    min-height: auto !important;
+  }
+
+  .breachd-live-room {
+    min-height: 330px !important;
+  }
+}
