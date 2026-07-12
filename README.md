@@ -1,24 +1,24 @@
-# PacketPhreak Resume Site
+<img src="assets/readme/archive-reminder-flicker.svg" alt="# PacketPhreak Resume Site" width="700">
 
 Personal portfolio, public-safe career archive, case-study library, and technical playground for **Joshua C. McDonald / PacketPhreak**.
 
 > **Called by curiosity. Guided by the light.**
 
-## Live site
+<img src="assets/readme/archive-reminder-flicker.svg" alt="## Live site" width="700">
 
 ```text
 https://joshuacmcdonald.com
 ```
 
-## Current version
+<img src="assets/readme/archive-reminder-flicker.svg" alt="## Current version" width="700">
 
 ```text
-v3.5.4-human-first-polish
+v3.5.4 - Polish On. Polish Off
 ```
 
 This synchronized build starts from the current uploaded repository—the version containing the new Open Graph, Twitter/X, favicon, manifest, and social-preview assets.
 
-### New in the current build
+<img src="assets/readme/archive-reminder-flicker.svg" alt="### New in the current build" width="700">
 
 - Consolidated duplicate `<title>`, description, and theme-color tags
 - Added consistent canonical, Open Graph, Twitter/X, icon, manifest, and robots metadata to every public HTML page
@@ -32,7 +32,7 @@ This synchronized build starts from the current uploaded repository—the versio
   - **Guardian Console**
   - **Spot the Phish**
 
-## Site map
+<img src="assets/readme/archive-reminder-flicker.svg" alt="## Site map" width="700">
 
 ```text
 index.html                  Main portfolio
@@ -49,7 +49,7 @@ assets/                     CSS, JavaScript, documents, images, and README art
 icons/                      Favicons and app icons
 ```
 
-## BreachD
+<img src="assets/readme/archive-reminder-flicker.svg" alt="## BreachD" width="700">
 
 BreachD is PacketPhreak's blue-team cyber buddy and interactive visitor-safety area.
 
@@ -62,7 +62,7 @@ The page includes:
 
 PacketPhreak does not store visitor email addresses. The exposure form validates locally and opens Have I Been Pwned after confirmation.
 
-## Social preview assets
+<img src="assets/readme/archive-reminder-flicker.svg" alt="## Social preview assets" width="700">
 
 ```text
 og-image.png                  1200 × 630 Open Graph preview
@@ -75,7 +75,7 @@ site.webmanifest              manifest metadata
 
 Detailed deployment and cache notes are preserved in [`PREVIEW_ASSETS.md`](PREVIEW_ASSETS.md).
 
-## Local testing
+<img src="assets/readme/archive-reminder-flicker.svg" alt="## Local testing" width="700">
 
 From the repository root:
 
@@ -98,7 +98,7 @@ timeline.html
 case-study-pi-azure.html
 ```
 
-## Cloudflare Pages
+<img src="assets/readme/archive-reminder-flicker.svg" alt="## Cloudflare Pages" width="700">
 
 The site is a static project connected to the `PacketPhreak/resume-site` repository.
 
@@ -109,7 +109,7 @@ Build output directory: /
 Root directory: /
 ```
 
-## Public-safe rule
+<img src="assets/readme/archive-reminder-flicker.svg" alt="## Public-safe rule" width="700">
 
 Do not commit private infrastructure or employer information. Keep the repository free of:
 
@@ -119,9 +119,9 @@ Do not commit private infrastructure or employer information. Keep the repositor
 - unsanitized troubleshooting captures
 - customer, employer, or vendor-sensitive material
 
-<img src="assets/readme/archive-reminder-flicker.svg" alt="How to add archive material later reminder" width="700">
+> How to add archive material later reminder
 
-> Future PacketPhreak, do not commit the whole evidence locker like a raccoon with passwords, Git access and dinner.
+> <i> Dear Future Self, do not commit the whole evidence locker like a raccoon with passwords, Git access and dinner. </i>
 
 ## Continuity rule
 
