@@ -1,29 +1,37 @@
-<img src="assets/readme/archive-reminder-flicker.svg" alt="# PacketPhreak Resume Site" width="700">
+<h1>
+  <img src="assets/readme/readme-title.svg" alt="PacketPhreak Resume Site" width="760">
+</h1>
 
 Personal portfolio, public-safe career archive, case-study library, and technical playground for **Joshua C. McDonald / PacketPhreak**.
 
 > **Called by curiosity. Guided by the light.**
 
-<img src="assets/readme/archive-reminder-flicker.svg" alt="## Live site" width="700">
+<h2>
+  <img src="assets/readme/live-site.svg" alt="Live site" width="520">
+</h2>
 
 ```text
 https://joshuacmcdonald.com
 ```
 
-<img src="assets/readme/archive-reminder-flicker.svg" alt="## Current version" width="700">
+<h2>
+  <img src="assets/readme/current-version.svg" alt="Current version" width="520">
+</h2>
 
 ```text
-v3.5.4 - Polish On. Polish Off
+v3.5.4 · Polish On. Polish Off.
 ```
 
-This synchronized build starts from the current uploaded repository—the version containing the new Open Graph, Twitter/X, favicon, manifest, and social-preview assets.
+This synchronized build starts from the current uploaded repository—the version containing the Open Graph, Twitter/X, favicon, manifest, and social-preview assets.
 
-<img src="assets/readme/archive-reminder-flicker.svg" alt="### New in the current build" width="700">
+<h3>
+  <img src="assets/readme/current-build.svg" alt="New in the current build" width="700">
+</h3>
 
 - Consolidated duplicate `<title>`, description, and theme-color tags
 - Added consistent canonical, Open Graph, Twitter/X, icon, manifest, and robots metadata to every public HTML page
 - Preserved all uploaded social-preview images and icon assets
-- Restored this project README
+- Restored the project README
 - Preserved the original preview-kit notes as `PREVIEW_ASSETS.md`
 - Added `PROJECT_STATE.md` and `CHANGELOG.md` for cleaner interchat handoffs
 - Applied the BreachD activity naming and spacing polish to the current repository
@@ -32,7 +40,9 @@ This synchronized build starts from the current uploaded repository—the versio
   - **Guardian Console**
   - **Spot the Phish**
 
-<img src="assets/readme/archive-reminder-flicker.svg" alt="## Site map" width="700">
+<h2>
+  <img src="assets/readme/site-map.svg" alt="Site map" width="520">
+</h2>
 
 ```text
 index.html                  Main portfolio
@@ -49,7 +59,9 @@ assets/                     CSS, JavaScript, documents, images, and README art
 icons/                      Favicons and app icons
 ```
 
-<img src="assets/readme/archive-reminder-flicker.svg" alt="## BreachD" width="700">
+<h2>
+  <img src="assets/readme/breachd.svg" alt="BreachD" width="520">
+</h2>
 
 BreachD is PacketPhreak's blue-team cyber buddy and interactive visitor-safety area.
 
@@ -62,20 +74,24 @@ The page includes:
 
 PacketPhreak does not store visitor email addresses. The exposure form validates locally and opens Have I Been Pwned after confirmation.
 
-<img src="assets/readme/archive-reminder-flicker.svg" alt="## Social preview assets" width="700">
+<h2>
+  <img src="assets/readme/social-preview-assets.svg" alt="Social preview assets" width="700">
+</h2>
 
 ```text
 og-image.png                  1200 × 630 Open Graph preview
 twitter-card.png              1200 × 675 Twitter/X card
 social-square.png             1080 × 1080 square social image
-wide-banner-1600x900.png      wide banner artwork
-icons/                        favicon and application icons
-site.webmanifest              manifest metadata
+wide-banner-1600x900.png      Wide banner artwork
+icons/                        Favicon and application icons
+site.webmanifest              Manifest metadata
 ```
 
 Detailed deployment and cache notes are preserved in [`PREVIEW_ASSETS.md`](PREVIEW_ASSETS.md).
 
-<img src="assets/readme/archive-reminder-flicker.svg" alt="## Local testing" width="700">
+<h2>
+  <img src="assets/readme/local-testing.svg" alt="Local testing" width="520">
+</h2>
 
 From the repository root:
 
@@ -98,7 +114,9 @@ timeline.html
 case-study-pi-azure.html
 ```
 
-<img src="assets/readme/archive-reminder-flicker.svg" alt="## Cloudflare Pages" width="700">
+<h2>
+  <img src="assets/readme/cloudflare-pages.svg" alt="Cloudflare Pages" width="620">
+</h2>
 
 The site is a static project connected to the `PacketPhreak/resume-site` repository.
 
@@ -109,7 +127,9 @@ Build output directory: /
 Root directory: /
 ```
 
-<img src="assets/readme/archive-reminder-flicker.svg" alt="## Public-safe rule" width="700">
+<h2>
+  <img src="assets/readme/public-safe-rule.svg" alt="Public-safe rule" width="620">
+</h2>
 
 Do not commit private infrastructure or employer information. Keep the repository free of:
 
@@ -119,16 +139,21 @@ Do not commit private infrastructure or employer information. Keep the repositor
 - unsanitized troubleshooting captures
 - customer, employer, or vendor-sensitive material
 
-> How to add archive material later reminder
+<br>
 
-> <i> Dear Future Self, do not commit the whole evidence locker like a raccoon with passwords, Git access and dinner. </i>
+<img src="assets/readme/archive-reminder-flicker.svg" alt="How to add archive material later" width="700">
 
-## Continuity rule
+> *Dear Future Self: do not commit the whole evidence locker like a raccoon with passwords, Git access, and dinner.*
+
+<h2>
+  <img src="assets/readme/continuity-rule.svg" alt="Continuity rule" width="620">
+</h2>
 
 The repository ZIP and `PROJECT_STATE.md` are the source of truth for code. Memory and prior chats provide intent and history, but must not replace the current files.
 
-
-## v3.5.4 Human-first polish
+<h2>
+  <img src="assets/readme/v354-polish.svg" alt="v3.5.4 Human-first polish" width="700">
+</h2>
 
 - Visible branding now leads with Joshua C. McDonald
 - The homepage terminal includes a rotating Message of the Day and IT archive signal

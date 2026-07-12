@@ -3,7 +3,7 @@
 ## Current version
 
 ```text
-v3.5.4-human-first-polish
+v3.5.5-readme-flicker-fix
 ```
 
 ## Source of truth
@@ -33,6 +33,9 @@ Secondary domain: www.joshuacmcdonald.com
 - Cloudflare security headers
 
 ## Changes in this state
+
+- Fixed README section headers by giving each heading its own SVG asset
+- Kept BreachD red with an independent flicker animation
 
 - Changed the visible header brand to Joshua C. McDonald first, with PacketPhreak as the technical identity
 - Added a rotating IRC-style Message of the Day and archive signal to the homepage terminal

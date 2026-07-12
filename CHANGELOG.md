@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.5.5 — README Flicker Fix
+
+- Replaced repeated archive-reminder images with unique flickering SVG section headers
+- Added semantic h1/h2/h3 wrappers around image-based README headings
+- Kept BreachD in #EB0028 with an independent flicker animation
+- Preserved reduced-motion behavior and descriptive alt text
+
 ## v3.5.4 — Human-first Responsive Polish
 
 - Put Joshua C. McDonald first in the visible site header
