@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="site-version" content="v3.6.0-education-pillars" />
+  <meta name="site-version" content="v3.7.0-isilon-dr-case-study" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -42,7 +42,7 @@
   <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
 
-  <link rel="stylesheet" href="assets/css/styles-v31.css?v=3.6.0" />
+  <link rel="stylesheet" href="assets/css/styles-v31.css?v=3.7.0" />
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -197,7 +197,7 @@ root cause found</code></pre>
           <h2 class="section-3d-title" data-title="Sanitized case studies.">Sanitized case studies.</h2>
           <p class="section-note">No internal IPs, no private screenshots, no vendor drama. Just the kind of work that shows judgment.</p>
         </div>
-        <div class="case-grid">
+        <div class="case-grid case-grid-expanded">
           <article class="case-card featured-case">
             <div class="case-meta">Manufacturing • OT / DMZ • Azure</div>
             <h3>Tracing Manufacturing PI Connectivity to Azure</h3>
@@ -211,11 +211,12 @@ root cause found</code></pre>
             <p>Worked through endpoint visibility, VLAN behavior, switchport state, authentication paths, and physical-layer assumptions.</p>
             <ul><li>Compared expected topology against observed behavior.</li><li>Used practical testing to isolate bad assumptions.</li><li>Documented risk and next steps without overcomplicating the fix.</li></ul>
           </article>
-          <article class="case-card">
-            <div class="case-meta">Infrastructure • Multi-Site • Operations</div>
-            <h3>Keeping Multi-Site Infrastructure Usable</h3>
-            <p>Supported distributed environments with servers, switches, firewalls, Wi-Fi, virtualization, storage, and business-critical operations.</p>
-            <ul><li>Balanced daily support with modernization work.</li><li>Coordinated vendors and internal stakeholders.</li><li>Improved documentation and operational clarity.</li></ul>
+          <article class="case-card featured-case isilon-case-card">
+            <div class="case-meta">Enterprise Storage • Colocation • Disaster Recovery</div>
+            <h3>Eight Nodes. Two Clusters. One Recovery Plan.</h3>
+            <p>Replaced an aging NAS environment with dual four-node Dell Isilon A300 clusters, separated storage traffic, SyncIQ replication, monitoring, recovery orchestration, and ransomware-aware protection.</p>
+            <ul><li>Installed and commissioned eight nodes across production and DR.</li><li>Documented manual failover and failback when automation was unavailable.</li><li>Coordinated internal IT, Dell, colocation, and implementation partners.</li></ul>
+            <div class="case-actions"><a class="btn btn-primary btn-small" href="case-study-isilon-dr.html">Open case study</a></div>
           </article>
         </div>
       </div>

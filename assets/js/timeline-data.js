@@ -61,7 +61,12 @@ window.CAREER_TIMELINE = [
       "Implemented Isilon archive storage replacing aging NAS infrastructure, maintained documentation, and supported performance/reliability improvements.",
       "Collaborated across IT, security, operations, and vendors to troubleshoot root cause and protect service availability."
     ],
-    "evidence": "Archive additions: public-safe topology map, storage migration notes, Wi-Fi/fiber project snapshots, vendor coordination summaries."
+    "evidence": "Archive additions: public-safe topology map, storage migration notes, Wi-Fi/fiber project snapshots, vendor coordination summaries.",
+    "caseStudy": {
+      "label": "Open storage & DR case study",
+      "href": "case-study-isilon-dr.html",
+      "title": "Eight Nodes. Two Clusters. One Recovery Plan."
+    }
   },
   {
     "period": "2020 - 2021",

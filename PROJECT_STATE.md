@@ -3,7 +3,7 @@
 ## Current version
 
 ```text
-v3.6.0-education-pillars
+v3.7.0-isilon-dr-case-study
 ```
 
 ## Source of truth
@@ -33,6 +33,11 @@ Secondary domain: www.joshuacmcdonald.com
 - Cloudflare security headers
 
 ## Changes in this state
+
+- Added the Dell Isilon A300 enterprise storage and DR case study
+- Added public-safe installation photography, diagrams, and recovery workflow
+- Linked the case study from the homepage and INLIVIAN Time Capsule entry
+- Added page-specific social metadata and preview artwork
 
 - Rebuilt the Time Capsule education section as the responsive Education Pillars experience
 - Added equal-size animated school emblems, school-specific pedestal glow, and mobile stacking

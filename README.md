@@ -48,6 +48,7 @@ This synchronized build starts from the current uploaded repository—the versio
 index.html                  Main portfolio
 timeline.html               Career Time Capsule
 case-study-pi-azure.html    Public-safe PI / Azure connectivity case study
+case-study-isilon-dr.html   Dell Isilon A300 storage and disaster-recovery case study
 breachd.html                BreachD command room, console, and phishing activity
 SECURITY.md                 Vulnerability reporting policy
 PREVIEW_ASSETS.md           Social-preview asset deployment notes
@@ -169,3 +170,13 @@ The repository ZIP and `PROJECT_STATE.md` are the source of truth for code. Memo
 - Added accurate graduation years, locations, degrees, and institutional founding dates
 - Added the time-passing quote and Confucius Institute memory
 - Built responsive desktop, tablet, mobile, and reduced-motion behavior
+
+
+## v3.7.0 Isilon DR Case Study
+
+- Added the public-safe Dell Isilon A300 / PowerScale enterprise storage case study
+- Added three architecture and recovery diagrams
+- Added a six-photo installation and commissioning gallery
+- Added the case study to the homepage and INLIVIAN Time Capsule entry
+- Added a page-specific Open Graph image
+- Preserved internal cluster names, addresses, share paths, and recovery identifiers outside the public site

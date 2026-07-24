@@ -1,5 +1,13 @@
 # Changelog
 
+## v3.7.0 — Isilon DR Case Study
+
+- Added an enterprise storage modernization and disaster-recovery case study
+- Added dual-cluster, replication, and failover/failback diagrams
+- Added public-safe installation and commissioning photography
+- Added homepage and Time Capsule links
+- Added a case-study Open Graph image
+
 ## v3.6.0 — Education Pillars
 
 - Replaced the old education cards with four responsive pillar cards
