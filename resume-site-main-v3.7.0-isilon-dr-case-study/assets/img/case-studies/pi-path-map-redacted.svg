@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 720" role="img" aria-labelledby="title desc">
+<title id="title">Redacted packet path</title>
+<desc id="desc">A clean packet path from a manufacturing source through security boundaries, transit, cloud edge, and three redacted Azure endpoint groups.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#08111f"/>
+    <stop offset="1" stop-color="#071825"/>
+  </linearGradient>
+  <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1400" height="720" rx="34" fill="url(#bg)"/>
+<g font-family="Inter,Segoe UI,Arial,sans-serif">
+  <text x="58" y="64" fill="#e8f1ff" font-size="34" font-weight="800">Redacted packet path</text>
+  <text x="58" y="100" fill="#9fb1c9" font-size="19">Manufacturing OT → security boundaries → NAT → transit → cloud edge → endpoint groups</text>
+
+  <path d="M120 390 H1080" stroke="#77f4eb" stroke-width="8" stroke-linecap="round" filter="url(#glow)"/>
+  <path d="M1080 390 C1160 390 1195 270 1280 250" fill="none" stroke="#73bfff" stroke-width="5" stroke-dasharray="10 12"/>
+  <path d="M1080 390 H1280" fill="none" stroke="#73bfff" stroke-width="5" stroke-dasharray="10 12"/>
+  <path d="M1080 390 C1160 390 1195 510 1280 530" fill="none" stroke="#73bfff" stroke-width="5" stroke-dasharray="10 12"/>
+
+  <g fill="#08111f" stroke="#e8f1ff" stroke-width="4">
+    <circle cx="120" cy="390" r="17"/><circle cx="285" cy="390" r="17"/>
+    <circle cx="450" cy="390" r="17"/><circle cx="615" cy="390" r="17"/>
+    <circle cx="780" cy="390" r="17"/><circle cx="945" cy="390" r="17"/>
+    <circle cx="1080" cy="390" r="17"/>
+  </g>
+  <g fill="#103923" stroke="#8cffc7" stroke-width="4">
+    <circle cx="1280" cy="250" r="18"/><circle cx="1280" cy="390" r="18"/><circle cx="1280" cy="530" r="18"/>
+  </g>
+
+  <g fill="#e8f1ff" font-size="18" font-weight="700" text-anchor="middle">
+    <text x="120" y="345">OT source</text>
+    <text x="285" y="440">OT firewall</text>
+    <text x="450" y="345">DMZ relay</text>
+    <text x="615" y="440">Edge firewall / NAT</text>
+    <text x="780" y="345">Regional transit</text>
+    <text x="945" y="440">Backbone</text>
+    <text x="1080" y="345">Cloud edge</text>
+  </g>
+  <g fill="#e8f1ff" font-size="18" font-weight="700">
+    <text x="1160" y="230">Endpoint group A</text>
+    <text x="1160" y="375">Endpoint group B</text>
+    <text x="1160" y="575">Endpoint group C</text>
+  </g>
+
+  <g transform="translate(58 600)">
+    <rect width="760" height="74" rx="18" fill="#0d1d34" stroke="#203d62"/>
+    <circle cx="30" cy="27" r="10" fill="#08111f" stroke="#e8f1ff" stroke-width="3"/>
+    <text x="55" y="34" fill="#c7d5e8" font-size="17">Observed hop or security boundary</text>
+    <circle cx="450" cy="27" r="10" fill="#103923" stroke="#8cffc7" stroke-width="3"/>
+    <text x="475" y="34" fill="#c7d5e8" font-size="17">Redacted cloud destination</text>
+    <line x1="30" y1="54" x2="100" y2="54" stroke="#77f4eb" stroke-width="6"/>
+    <text x="120" y="60" fill="#c7d5e8" font-size="17">Validated outbound route</text>
+    <line x1="450" y1="54" x2="520" y2="54" stroke="#73bfff" stroke-width="5" stroke-dasharray="9 10"/>
+    <text x="540" y="60" fill="#c7d5e8" font-size="17">Observed branches</text>
+  </g>
+</g>
+</svg>

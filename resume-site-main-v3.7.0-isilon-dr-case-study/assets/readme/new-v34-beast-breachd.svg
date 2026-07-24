@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="76" viewBox="0 0 1100 76" role="img" aria-label="New in v3.4 Current Merge Beast BreachD">
+  <style>
+    @keyframes flickerWhite {
+      0%, 16%, 19%, 23%, 52%, 58%, 100% {
+        opacity: 1;
+        filter: drop-shadow(0 0 3px #ffffff) drop-shadow(0 0 9px rgba(255,255,255,0.72));
+      }
+      17%, 20%, 55%, 57%, 88%, 92% {
+        opacity: 0.30;
+        filter: none;
+      }
+    }
+
+    @keyframes flickerBreachD {
+      0%, 10%, 14%, 32%, 45%, 67%, 100% {
+        opacity: 1;
+        filter: drop-shadow(0 0 4px #EB0028) drop-shadow(0 0 12px #EB0028);
+      }
+      11%, 13%, 33%, 46%, 70%, 72%, 90% {
+        opacity: 0.20;
+        filter: none;
+      }
+    }
+
+    .main {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 30px;
+      font-weight: 800;
+      fill: #ffffff;
+      animation: flickerWhite 4.8s infinite;
+    }
+
+    .breachd {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 30px;
+      font-weight: 900;
+      fill: #EB0028;
+      animation: flickerBreachD 2.7s infinite;
+    }
+  </style>
+
+  <text x="0" y="46">
+    <tspan class="main">New in v3.4 Current Merge... BEAST... </tspan>
+    <tspan class="breachd">BreachD</tspan>
+  </text>
+</svg>

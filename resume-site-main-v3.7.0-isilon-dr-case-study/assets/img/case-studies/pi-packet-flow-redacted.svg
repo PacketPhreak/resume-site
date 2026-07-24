@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 680" role="img" aria-labelledby="title desc">
+<title id="title">Redacted flow validation</title>
+<desc id="desc">Five readable packet-flow stages showing validated outbound traffic and return-path review at the edge boundary.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#08111f"/>
+    <stop offset="1" stop-color="#071825"/>
+  </linearGradient>
+  <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+    <path d="M0 0 L10 5 L0 10 Z" fill="#8cffc7"/>
+  </marker>
+  <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+    <path d="M0 0 L10 5 L0 10 Z" fill="#ff9b69"/>
+  </marker>
+</defs>
+<rect width="1400" height="680" rx="34" fill="url(#bg)"/>
+<g font-family="Inter,Segoe UI,Arial,sans-serif">
+  <text x="58" y="64" fill="#e8f1ff" font-size="34" font-weight="800">Redacted flow validation</text>
+  <text x="58" y="100" fill="#9fb1c9" font-size="19">Outbound success was compared with return behavior at each security boundary</text>
+
+  <g stroke="#8cffc7" stroke-width="7" fill="none" marker-end="url(#arrowGreen)">
+    <line x1="270" y1="295" x2="330" y2="295"/>
+    <line x1="530" y1="295" x2="590" y2="295"/>
+    <line x1="790" y1="295" x2="850" y2="295"/>
+    <line x1="1050" y1="295" x2="1110" y2="295"/>
+  </g>
+
+  <g>
+    <g transform="translate(50 175)">
+      <circle cx="110" cy="-28" r="28" fill="#08111f" stroke="#66e3ff" stroke-width="4"/>
+      <text x="110" y="-20" fill="#e8f1ff" font-size="18" font-weight="800" text-anchor="middle">1</text>
+      <rect width="220" height="240" rx="24" fill="#0d1d34" stroke="#203d62"/>
+      <text x="110" y="54" fill="#e8f1ff" font-size="21" font-weight="800" text-anchor="middle">OT source</text>
+      <text x="110" y="92" fill="#9fb1c9" font-size="16" text-anchor="middle">Manufacturing data</text>
+      <text x="110" y="116" fill="#9fb1c9" font-size="16" text-anchor="middle">initiates the session</text>
+      <text x="110" y="168" fill="#8cffc7" font-size="16" font-weight="700" text-anchor="middle">Source validated</text>
+    </g>
+
+    <g transform="translate(310 175)">
+      <circle cx="110" cy="-28" r="28" fill="#08111f" stroke="#66e3ff" stroke-width="4"/>
+      <text x="110" y="-20" fill="#e8f1ff" font-size="18" font-weight="800" text-anchor="middle">2</text>
+      <rect width="220" height="240" rx="24" fill="#0d1d34" stroke="#203d62"/>
+      <text x="110" y="54" fill="#e8f1ff" font-size="21" font-weight="800" text-anchor="middle">OT firewall</text>
+      <text x="110" y="92" fill="#9fb1c9" font-size="16" text-anchor="middle">Controlled outbound</text>
+      <text x="110" y="116" fill="#9fb1c9" font-size="16" text-anchor="middle">policy allows flow</text>
+      <text x="110" y="168" fill="#8cffc7" font-size="16" font-weight="700" text-anchor="middle">Policy validated</text>
+    </g>
+
+    <g transform="translate(570 175)">
+      <circle cx="110" cy="-28" r="28" fill="#08111f" stroke="#66e3ff" stroke-width="4"/>
+      <text x="110" y="-20" fill="#e8f1ff" font-size="18" font-weight="800" text-anchor="middle">3</text>
+      <rect width="220" height="240" rx="24" fill="#0d1d34" stroke="#203d62"/>
+      <text x="110" y="54" fill="#e8f1ff" font-size="21" font-weight="800" text-anchor="middle">DMZ relay</text>
+      <text x="110" y="92" fill="#9fb1c9" font-size="16" text-anchor="middle">Relay services cross</text>
+      <text x="110" y="116" fill="#9fb1c9" font-size="16" text-anchor="middle">the segmented path</text>
+      <text x="110" y="168" fill="#8cffc7" font-size="16" font-weight="700" text-anchor="middle">Relay observed</text>
+    </g>
+
+    <g transform="translate(830 175)">
+      <circle cx="110" cy="-28" r="28" fill="#08111f" stroke="#66e3ff" stroke-width="4"/>
+      <text x="110" y="-20" fill="#e8f1ff" font-size="18" font-weight="800" text-anchor="middle">4</text>
+      <rect width="220" height="240" rx="24" fill="#0d1d34" stroke="#203d62"/>
+      <text x="110" y="54" fill="#e8f1ff" font-size="20" font-weight="800" text-anchor="middle">Edge firewall / NAT</text>
+      <text x="110" y="92" fill="#9fb1c9" font-size="16" text-anchor="middle">Policy and source</text>
+      <text x="110" y="116" fill="#9fb1c9" font-size="16" text-anchor="middle">translation validated</text>
+      <text x="110" y="168" fill="#ffd166" font-size="16" font-weight="700" text-anchor="middle">Return-path focus</text>
+    </g>
+
+    <g transform="translate(1090 175)">
+      <circle cx="110" cy="-28" r="28" fill="#08111f" stroke="#66e3ff" stroke-width="4"/>
+      <text x="110" y="-20" fill="#e8f1ff" font-size="18" font-weight="800" text-anchor="middle">5</text>
+      <rect width="220" height="240" rx="24" fill="#0d1d34" stroke="#203d62"/>
+      <text x="110" y="54" fill="#e8f1ff" font-size="21" font-weight="800" text-anchor="middle">Azure endpoints</text>
+      <text x="110" y="92" fill="#9fb1c9" font-size="16" text-anchor="middle">Expected cloud path</text>
+      <text x="110" y="116" fill="#9fb1c9" font-size="16" text-anchor="middle">was reachable</text>
+      <text x="110" y="168" fill="#8cffc7" font-size="16" font-weight="700" text-anchor="middle">Destination reached</text>
+    </g>
+  </g>
+
+  <path d="M1200 470 H960 V438" fill="none" stroke="#ff9b69" stroke-width="7" marker-end="url(#arrowOrange)"/>
+  <rect x="790" y="458" width="320" height="88" rx="20" fill="#271711" stroke="#ff9b69" stroke-width="3"/>
+  <text x="950" y="493" fill="#ffd4bf" font-size="20" font-weight="800" text-anchor="middle">Return-path review</text>
+  <text x="950" y="521" fill="#ffc2a4" font-size="16" text-anchor="middle">Inbound behavior required closer scrutiny</text>
+
+  <g transform="translate(58 586)">
+    <line x1="0" y1="0" x2="62" y2="0" stroke="#8cffc7" stroke-width="7"/>
+    <text x="78" y="7" fill="#c7d5e8" font-size="17">Validated outbound path</text>
+    <line x1="340" y1="0" x2="402" y2="0" stroke="#ff9b69" stroke-width="7"/>
+    <text x="418" y="7" fill="#c7d5e8" font-size="17">Return-traffic analysis path</text>
+  </g>
+</g>
+</svg>
