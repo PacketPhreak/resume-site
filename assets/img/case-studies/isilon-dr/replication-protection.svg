@@ -1,78 +1,71 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 720" role="img" aria-labelledby="title desc">
-<title id="title">Production and disaster recovery data flow</title>
-<desc id="desc">Client SMB traffic enters the production cluster through SmartConnect, while SyncIQ replicates protected data to a disaster recovery cluster monitored by InsightIQ and Superna services.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 880" role="img" aria-labelledby="title desc">
+<title id="title">Client access, protection, and replication</title>
+<desc id="desc">Users and applications connect through SmartConnect to the primary A300 cluster. SyncIQ replicates data to the DR cluster while SnapshotIQ, InsightIQ, Eyeglass DR, and ransomware analytics protect and monitor the service.</desc>
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#07111f"/>
-    <stop offset="1" stop-color="#071b25"/>
-  </linearGradient>
-  <marker id="cyanArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-    <path d="M0 0 L12 6 L0 12 Z" fill="#66e3ff"/>
-  </marker>
-  <marker id="greenArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-    <path d="M0 0 L12 6 L0 12 Z" fill="#8dffd0"/>
-  </marker>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="1" stop-color="#071c27"/></linearGradient>
+  <marker id="cyanArrow" markerWidth="13" markerHeight="13" refX="11" refY="6.5" orient="auto"><path d="M0 0 L13 6.5 L0 13 Z" fill="#66e3ff"/></marker>
+  <marker id="greenArrow" markerWidth="13" markerHeight="13" refX="11" refY="6.5" orient="auto"><path d="M0 0 L13 6.5 L0 13 Z" fill="#8dffd0"/></marker>
 </defs>
-<rect width="1400" height="720" rx="34" fill="url(#bg)"/>
+<rect width="1600" height="880" rx="38" fill="url(#bg)"/>
 <g font-family="Inter,Segoe UI,Arial,sans-serif">
-  <text x="58" y="66" fill="#edf6ff" font-size="34" font-weight="800">Client access, protection, and replication</text>
-  <text x="58" y="103" fill="#9fb1c9" font-size="19">How the platform separated user traffic from administration and recovery data movement</text>
+  <text x="64" y="72" fill="#edf6ff" font-size="40" font-weight="800">Client access, protection, and replication</text>
+  <text x="64" y="114" fill="#9fb1c9" font-size="22">User traffic, recovery traffic, and operational visibility followed different paths</text>
 
-  <g transform="translate(55 185)">
-    <rect width="245" height="170" rx="26" fill="#0d1d34" stroke="#66e3ff" stroke-width="3"/>
-    <text x="122" y="52" fill="#edf6ff" font-size="23" font-weight="800" text-anchor="middle">Users &amp; apps</text>
-    <text x="122" y="91" fill="#c7d5e8" font-size="17" text-anchor="middle">SMB shares</text>
-    <text x="122" y="120" fill="#c7d5e8" font-size="17" text-anchor="middle">Business workflows</text>
+  <g transform="translate(70 255)">
+    <rect width="275" height="205" rx="30" fill="#0d1d34" stroke="#66e3ff" stroke-width="4"/>
+    <text x="138" y="65" fill="#edf6ff" font-size="27" font-weight="800" text-anchor="middle">Users &amp; apps</text>
+    <text x="138" y="111" fill="#c7d5e8" font-size="20" text-anchor="middle">SMB shares</text>
+    <text x="138" y="147" fill="#c7d5e8" font-size="20" text-anchor="middle">Business workflows</text>
   </g>
 
-  <path d="M300 270 H430" stroke="#66e3ff" stroke-width="8" marker-end="url(#cyanArrow)"/>
-  <text x="365" y="246" fill="#66e3ff" font-size="17" font-weight="800" text-anchor="middle">SmartConnect / DNS</text>
+  <path d="M345 358 H500" stroke="#66e3ff" stroke-width="10" marker-end="url(#cyanArrow)"/>
+  <text x="423" y="325" fill="#66e3ff" font-size="20" font-weight="800" text-anchor="middle">SmartConnect + DNS</text>
 
-  <g transform="translate(450 145)">
-    <rect width="360" height="330" rx="30" fill="#0c2034" stroke="#66e3ff" stroke-width="4"/>
-    <text x="180" y="50" fill="#edf6ff" font-size="25" font-weight="800" text-anchor="middle">Primary A300 cluster</text>
-    <g transform="translate(50 90)" fill="#08111f" stroke="#66e3ff" stroke-width="3">
-      <rect width="260" height="43" rx="11"/>
-      <rect y="53" width="260" height="43" rx="11"/>
-      <rect y="106" width="260" height="43" rx="11"/>
-      <rect y="159" width="260" height="43" rx="11"/>
+  <g transform="translate(540 190)">
+    <rect width="405" height="395" rx="32" fill="#0c2034" stroke="#66e3ff" stroke-width="5"/>
+    <text x="202" y="63" fill="#edf6ff" font-size="29" font-weight="800" text-anchor="middle">Primary A300 cluster</text>
+    <g transform="translate(57 115)" fill="#08111f" stroke="#66e3ff" stroke-width="4">
+      <rect width="290" height="52" rx="13"/><rect y="66" width="290" height="52" rx="13"/>
+      <rect y="132" width="290" height="52" rx="13"/><rect y="198" width="290" height="52" rx="13"/>
     </g>
-    <text x="180" y="294" fill="#8dffd0" font-size="18" font-weight="800" text-anchor="middle">Live production data</text>
+    <text x="202" y="365" fill="#8dffd0" font-size="21" font-weight="800" text-anchor="middle">Live production data</text>
   </g>
 
-  <path d="M810 310 H965" stroke="#8dffd0" stroke-width="8" stroke-dasharray="14 10" marker-end="url(#greenArrow)"/>
-  <text x="888" y="283" fill="#8dffd0" font-size="18" font-weight="800" text-anchor="middle">SyncIQ</text>
-  <text x="888" y="339" fill="#9fb1c9" font-size="16" text-anchor="middle">asynchronous replication</text>
+  <path d="M945 388 H1095" stroke="#8dffd0" stroke-width="10" stroke-dasharray="16 12" marker-end="url(#greenArrow)"/>
+  <text x="1020" y="348" fill="#8dffd0" font-size="21" font-weight="800" text-anchor="middle">SyncIQ replication</text>
+  <text x="1020" y="430" fill="#9fb1c9" font-size="18" text-anchor="middle">Asynchronous recovery copy</text>
 
-  <g transform="translate(985 145)">
-    <rect width="360" height="330" rx="30" fill="#10251f" stroke="#8dffd0" stroke-width="4"/>
-    <text x="180" y="50" fill="#edf6ff" font-size="25" font-weight="800" text-anchor="middle">DR A300 cluster</text>
-    <g transform="translate(50 90)" fill="#08111f" stroke="#8dffd0" stroke-width="3">
-      <rect width="260" height="43" rx="11"/>
-      <rect y="53" width="260" height="43" rx="11"/>
-      <rect y="106" width="260" height="43" rx="11"/>
-      <rect y="159" width="260" height="43" rx="11"/>
+  <g transform="translate(1130 190)">
+    <rect width="405" height="395" rx="32" fill="#10251f" stroke="#8dffd0" stroke-width="5"/>
+    <text x="202" y="63" fill="#edf6ff" font-size="29" font-weight="800" text-anchor="middle">DR A300 cluster</text>
+    <g transform="translate(57 115)" fill="#08111f" stroke="#8dffd0" stroke-width="4">
+      <rect width="290" height="52" rx="13"/><rect y="66" width="290" height="52" rx="13"/>
+      <rect y="132" width="290" height="52" rx="13"/><rect y="198" width="290" height="52" rx="13"/>
     </g>
-    <text x="180" y="294" fill="#8dffd0" font-size="18" font-weight="800" text-anchor="middle">Recovery copy</text>
+    <text x="202" y="365" fill="#8dffd0" font-size="21" font-weight="800" text-anchor="middle">Recovery copy</text>
   </g>
 
-  <g transform="translate(300 545)">
-    <rect width="800" height="110" rx="24" fill="#0b1829" stroke="#24425e"/>
-    <g fill="#edf6ff" font-size="18" font-weight="800">
-      <text x="40" y="43">SnapshotIQ</text>
-      <text x="235" y="43">InsightIQ</text>
-      <text x="405" y="43">Eyeglass DR</text>
-      <text x="595" y="43">Ransomware Defender</text>
+  <g transform="translate(160 680)">
+    <g>
+      <rect width="290" height="118" rx="22" fill="#0d1d34" stroke="#24425e"/>
+      <text x="24" y="45" fill="#edf6ff" font-size="21" font-weight="800">SnapshotIQ</text>
+      <text x="24" y="80" fill="#c7d5e8" font-size="17">Point-in-time protection</text>
     </g>
-    <g fill="#9fb1c9" font-size="15">
-      <text x="40" y="72">point-in-time protection</text>
-      <text x="235" y="72">capacity and health visibility</text>
-      <text x="405" y="72">failover orchestration</text>
-      <text x="595" y="72">behavior and event analytics</text>
+    <g transform="translate(315)">
+      <rect width="290" height="118" rx="22" fill="#0d1d34" stroke="#24425e"/>
+      <text x="24" y="45" fill="#edf6ff" font-size="21" font-weight="800">InsightIQ</text>
+      <text x="24" y="80" fill="#c7d5e8" font-size="17">Capacity and health visibility</text>
+    </g>
+    <g transform="translate(630)">
+      <rect width="290" height="118" rx="22" fill="#0d1d34" stroke="#24425e"/>
+      <text x="24" y="45" fill="#edf6ff" font-size="21" font-weight="800">Eyeglass DR</text>
+      <text x="24" y="80" fill="#c7d5e8" font-size="17">Failover orchestration</text>
+    </g>
+    <g transform="translate(945)">
+      <rect width="335" height="118" rx="22" fill="#0d1d34" stroke="#24425e"/>
+      <text x="24" y="45" fill="#edf6ff" font-size="21" font-weight="800">Ransomware Defender</text>
+      <text x="24" y="80" fill="#c7d5e8" font-size="17">File-event and behavior analytics</text>
     </g>
   </g>
-
-  <path d="M630 475 V545" stroke="#ffb36b" stroke-width="5"/>
-  <path d="M1165 475 V545 H1080" stroke="#ffb36b" stroke-width="5"/>
 </g>
 </svg>

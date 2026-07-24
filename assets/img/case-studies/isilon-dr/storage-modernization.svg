@@ -1,98 +1,93 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 720" role="img" aria-labelledby="title desc">
-<title id="title">Storage modernization architecture</title>
-<desc id="desc">An aging NAS environment is replaced by a production four-node Isilon cluster, a disaster recovery four-node cluster, and separate management, client, and replication paths.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 880" role="img" aria-labelledby="title desc">
+<title id="title">Legacy NAS to dual-cluster storage</title>
+<desc id="desc">An aging NAS cluster is replaced by a four-node production Isilon cluster and matching four-node disaster recovery cluster with separate management, client, replication, and protection functions.</desc>
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#07111f"/>
-    <stop offset="1" stop-color="#061a26"/>
-  </linearGradient>
-  <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0" stop-color="#66e3ff"/>
-    <stop offset="1" stop-color="#9bffcb"/>
-  </linearGradient>
-  <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-    <path d="M0 0 L12 6 L0 12 Z" fill="#8dffd0"/>
-  </marker>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="1" stop-color="#071c27"/></linearGradient>
+  <marker id="arrow" markerWidth="13" markerHeight="13" refX="11" refY="6.5" orient="auto"><path d="M0 0 L13 6.5 L0 13 Z" fill="#8dffd0"/></marker>
 </defs>
-<rect width="1400" height="720" rx="34" fill="url(#bg)"/>
+<rect width="1600" height="880" rx="38" fill="url(#bg)"/>
 <g font-family="Inter,Segoe UI,Arial,sans-serif">
-  <text x="58" y="66" fill="#edf6ff" font-size="34" font-weight="800">Legacy NAS → resilient dual-cluster storage</text>
-  <text x="58" y="103" fill="#9fb1c9" font-size="19">A public-safe view of the architecture transition</text>
+  <text x="64" y="72" fill="#edf6ff" font-size="40" font-weight="800">Legacy NAS → resilient dual-cluster storage</text>
+  <text x="64" y="114" fill="#9fb1c9" font-size="22">A public-safe view of the architecture transition</text>
 
-  <g transform="translate(58 172)">
-    <rect width="290" height="340" rx="28" fill="#101a27" stroke="#53677c" stroke-width="3"/>
-    <text x="145" y="52" fill="#edf6ff" font-size="24" font-weight="800" text-anchor="middle">Aging NAS cluster</text>
-    <rect x="58" y="105" width="174" height="104" rx="18" fill="#08111f" stroke="#718296" stroke-width="3"/>
-    <circle cx="88" cy="138" r="7" fill="#ffcf66"/>
-    <circle cx="112" cy="138" r="7" fill="#ff725e"/>
-    <line x1="80" y1="170" x2="210" y2="170" stroke="#4c6074" stroke-width="8"/>
-    <text x="145" y="250" fill="#c7d5e8" font-size="18" text-anchor="middle">Capacity pressure</text>
-    <text x="145" y="280" fill="#c7d5e8" font-size="18" text-anchor="middle">Aging platform</text>
-    <text x="145" y="310" fill="#c7d5e8" font-size="18" text-anchor="middle">Limited DR posture</text>
+  <g transform="translate(70 210)">
+    <rect width="300" height="355" rx="30" fill="#101a27" stroke="#62778c" stroke-width="4"/>
+    <text x="150" y="58" fill="#edf6ff" font-size="27" font-weight="800" text-anchor="middle">Aging NAS</text>
+    <rect x="64" y="112" width="172" height="104" rx="20" fill="#08111f" stroke="#718296" stroke-width="4"/>
+    <circle cx="98" cy="148" r="8" fill="#ffd166"/><circle cx="126" cy="148" r="8" fill="#ff725e"/>
+    <line x1="92" y1="184" x2="210" y2="184" stroke="#53687e" stroke-width="9"/>
+    <text x="150" y="266" fill="#c7d5e8" font-size="20" text-anchor="middle">Aging platform</text>
+    <text x="150" y="302" fill="#c7d5e8" font-size="20" text-anchor="middle">Capacity pressure</text>
+    <text x="150" y="338" fill="#c7d5e8" font-size="20" text-anchor="middle">Limited recovery posture</text>
   </g>
 
-  <path d="M388 342 H510" stroke="url(#cyan)" stroke-width="9" marker-end="url(#arrow)"/>
-  <text x="449" y="318" fill="#8dffd0" font-size="17" font-weight="800" text-anchor="middle">Modernize</text>
+  <path d="M405 388 H535" stroke="#8dffd0" stroke-width="10" marker-end="url(#arrow)"/>
+  <text x="470" y="354" fill="#8dffd0" font-size="20" font-weight="800" text-anchor="middle">Modernize</text>
 
-  <g transform="translate(540 146)">
-    <rect width="370" height="390" rx="30" fill="#0c2034" stroke="#66e3ff" stroke-width="4"/>
-    <text x="185" y="49" fill="#edf6ff" font-size="25" font-weight="800" text-anchor="middle">Production cluster</text>
-    <text x="185" y="78" fill="#9fb1c9" font-size="17" text-anchor="middle">Four Dell Isilon A300 nodes</text>
-    <g transform="translate(50 112)">
-      <g fill="#08111f" stroke="#66e3ff" stroke-width="3">
-        <rect width="270" height="45" rx="12"/>
-        <rect y="57" width="270" height="45" rx="12"/>
-        <rect y="114" width="270" height="45" rx="12"/>
-        <rect y="171" width="270" height="45" rx="12"/>
+  <g transform="translate(570 175)">
+    <rect width="405" height="435" rx="32" fill="#0c2034" stroke="#66e3ff" stroke-width="5"/>
+    <text x="202" y="62" fill="#edf6ff" font-size="29" font-weight="800" text-anchor="middle">Production cluster</text>
+    <text x="202" y="96" fill="#9fb1c9" font-size="20" text-anchor="middle">Four Dell Isilon A300 nodes</text>
+    <g transform="translate(57 130)">
+      <g fill="#08111f" stroke="#66e3ff" stroke-width="4">
+        <rect width="290" height="52" rx="13"/><rect y="66" width="290" height="52" rx="13"/>
+        <rect y="132" width="290" height="52" rx="13"/><rect y="198" width="290" height="52" rx="13"/>
       </g>
       <g fill="#9bffcb">
-        <circle cx="28" cy="22" r="6"/><circle cx="28" cy="79" r="6"/>
-        <circle cx="28" cy="136" r="6"/><circle cx="28" cy="193" r="6"/>
+        <circle cx="30" cy="26" r="7"/><circle cx="30" cy="92" r="7"/><circle cx="30" cy="158" r="7"/><circle cx="30" cy="224" r="7"/>
       </g>
-      <g fill="#c7d5e8" font-size="16" font-weight="700">
-        <text x="55" y="29">Node 1</text><text x="55" y="86">Node 2</text>
-        <text x="55" y="143">Node 3</text><text x="55" y="200">Node 4</text>
+      <g fill="#d8e6f4" font-size="19" font-weight="700">
+        <text x="62" y="34">Node 1</text><text x="62" y="100">Node 2</text>
+        <text x="62" y="166">Node 3</text><text x="62" y="232">Node 4</text>
       </g>
     </g>
-    <text x="185" y="354" fill="#8dffd0" font-size="18" font-weight="800" text-anchor="middle">Live SMB / application data</text>
+    <text x="202" y="399" fill="#8dffd0" font-size="21" font-weight="800" text-anchor="middle">Live SMB and application data</text>
   </g>
 
-  <g transform="translate(972 146)">
-    <rect width="370" height="390" rx="30" fill="#10251f" stroke="#8dffd0" stroke-width="4"/>
-    <text x="185" y="49" fill="#edf6ff" font-size="25" font-weight="800" text-anchor="middle">Disaster recovery cluster</text>
-    <text x="185" y="78" fill="#9fb1c9" font-size="17" text-anchor="middle">Four Dell Isilon A300 nodes</text>
-    <g transform="translate(50 112)">
-      <g fill="#08111f" stroke="#8dffd0" stroke-width="3">
-        <rect width="270" height="45" rx="12"/>
-        <rect y="57" width="270" height="45" rx="12"/>
-        <rect y="114" width="270" height="45" rx="12"/>
-        <rect y="171" width="270" height="45" rx="12"/>
+  <path d="M975 388 H1080" stroke="#ffb36b" stroke-width="9" stroke-dasharray="15 12" marker-end="url(#arrow)"/>
+  <text x="1028" y="354" fill="#ffbf7e" font-size="20" font-weight="800" text-anchor="middle">SyncIQ</text>
+
+  <g transform="translate(1115 175)">
+    <rect width="405" height="435" rx="32" fill="#10251f" stroke="#8dffd0" stroke-width="5"/>
+    <text x="202" y="62" fill="#edf6ff" font-size="29" font-weight="800" text-anchor="middle">Disaster recovery cluster</text>
+    <text x="202" y="96" fill="#9fb1c9" font-size="20" text-anchor="middle">Four Dell Isilon A300 nodes</text>
+    <g transform="translate(57 130)">
+      <g fill="#08111f" stroke="#8dffd0" stroke-width="4">
+        <rect width="290" height="52" rx="13"/><rect y="66" width="290" height="52" rx="13"/>
+        <rect y="132" width="290" height="52" rx="13"/><rect y="198" width="290" height="52" rx="13"/>
       </g>
       <g fill="#66e3ff">
-        <circle cx="28" cy="22" r="6"/><circle cx="28" cy="79" r="6"/>
-        <circle cx="28" cy="136" r="6"/><circle cx="28" cy="193" r="6"/>
+        <circle cx="30" cy="26" r="7"/><circle cx="30" cy="92" r="7"/><circle cx="30" cy="158" r="7"/><circle cx="30" cy="224" r="7"/>
       </g>
-      <g fill="#c7d5e8" font-size="16" font-weight="700">
-        <text x="55" y="29">Node 1</text><text x="55" y="86">Node 2</text>
-        <text x="55" y="143">Node 3</text><text x="55" y="200">Node 4</text>
+      <g fill="#d8e6f4" font-size="19" font-weight="700">
+        <text x="62" y="34">Node 1</text><text x="62" y="100">Node 2</text>
+        <text x="62" y="166">Node 3</text><text x="62" y="232">Node 4</text>
       </g>
     </g>
-    <text x="185" y="354" fill="#8dffd0" font-size="18" font-weight="800" text-anchor="middle">Replicated recovery data</text>
+    <text x="202" y="399" fill="#8dffd0" font-size="21" font-weight="800" text-anchor="middle">Replicated recovery data</text>
   </g>
 
-  <path d="M910 342 H972" stroke="#ffb36b" stroke-width="7" stroke-dasharray="12 10" marker-end="url(#arrow)"/>
-  <text x="941" y="310" fill="#ffc68d" font-size="16" font-weight="800" text-anchor="middle">SyncIQ</text>
-
-  <g transform="translate(515 586)">
-    <rect width="840" height="76" rx="20" fill="#0b1829" stroke="#24425e"/>
-    <text x="30" y="31" fill="#66e3ff" font-size="17" font-weight="800">Management</text>
-    <text x="150" y="31" fill="#c7d5e8" font-size="17">cluster administration and monitoring</text>
-    <text x="30" y="58" fill="#8dffd0" font-size="17" font-weight="800">Client data</text>
-    <text x="150" y="58" fill="#c7d5e8" font-size="17">SMB access balanced through SmartConnect</text>
-    <text x="505" y="31" fill="#ffb36b" font-size="17" font-weight="800">Replication</text>
-    <text x="615" y="31" fill="#c7d5e8" font-size="17">dedicated inter-cluster path</text>
-    <text x="505" y="58" fill="#f2d270" font-size="17" font-weight="800">Protection</text>
-    <text x="600" y="58" fill="#c7d5e8" font-size="17">snapshots, monitoring, DR, ransomware defense</text>
+  <g transform="translate(350 680)">
+    <g>
+      <rect width="270" height="112" rx="22" fill="#0d1d34" stroke="#24425e"/>
+      <text x="24" y="43" fill="#66e3ff" font-size="20" font-weight="800">Management</text>
+      <text x="24" y="76" fill="#c7d5e8" font-size="17">Administration and health</text>
+    </g>
+    <g transform="translate(292)">
+      <rect width="270" height="112" rx="22" fill="#0d1d34" stroke="#24425e"/>
+      <text x="24" y="43" fill="#8dffd0" font-size="20" font-weight="800">Client data</text>
+      <text x="24" y="76" fill="#c7d5e8" font-size="17">SmartConnect and SMB access</text>
+    </g>
+    <g transform="translate(584)">
+      <rect width="270" height="112" rx="22" fill="#0d1d34" stroke="#24425e"/>
+      <text x="24" y="43" fill="#ffb36b" font-size="20" font-weight="800">Replication</text>
+      <text x="24" y="76" fill="#c7d5e8" font-size="17">Dedicated inter-cluster path</text>
+    </g>
+    <g transform="translate(876)">
+      <rect width="270" height="112" rx="22" fill="#0d1d34" stroke="#24425e"/>
+      <text x="24" y="43" fill="#ffd166" font-size="20" font-weight="800">Protection</text>
+      <text x="24" y="76" fill="#c7d5e8" font-size="17">Snapshots, DR, monitoring</text>
+    </g>
   </g>
 </g>
 </svg>

@@ -3,7 +3,7 @@
 ## Current version
 
 ```text
-v3.7.0-isilon-dr-case-study
+v3.8.0-site-systems-polish
 ```
 
 ## Source of truth
@@ -33,6 +33,13 @@ Secondary domain: www.joshuacmcdonald.com
 - Cloudflare security headers
 
 ## Changes in this state
+
+- Added v3.8.0 Site Systems Polish
+- Balanced the Time Capsule hero with a career archive signal panel
+- Removed black education-logo boxes and replaced emoji flames with CSS flame art
+- Rebuilt Isilon diagrams for full-width readability
+- Reframed the Isilon narrative around Joshua's project ownership
+- Cleaned the commissioning photo and tightened gallery alignment
 
 - Added the Dell Isilon A300 enterprise storage and DR case study
 - Added public-safe installation photography, diagrams, and recovery workflow

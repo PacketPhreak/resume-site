@@ -102,3 +102,21 @@ if (motdTitle && motdCopy && motdHistory) {
     }, 14000);
   }
 }
+
+
+const readingProgress = document.querySelector("[data-reading-progress]");
+
+if (readingProgress) {
+  const updateReadingProgress = () => {
+    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = documentHeight > 0
+      ? Math.min(1, Math.max(0, window.scrollY / documentHeight))
+      : 0;
+
+    readingProgress.style.transform = `scaleX(${progress})`;
+  };
+
+  updateReadingProgress();
+  window.addEventListener("scroll", updateReadingProgress, { passive: true });
+  window.addEventListener("resize", updateReadingProgress);
+}

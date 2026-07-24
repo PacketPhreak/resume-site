@@ -4645,3 +4645,520 @@
     transform: none;
   }
 }
+
+
+/* ==========================================================
+   v3.8.0 Site Systems Polish
+   Timeline balance, education art, Isilon clarity, mobile rhythm
+   ========================================================== */
+
+.reading-progress {
+  position: sticky;
+  top: 68px;
+  z-index: 99;
+  height: 3px;
+  pointer-events: none;
+  background: rgba(255,255,255,.025);
+}
+
+.reading-progress span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left center;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  box-shadow: 0 0 16px rgba(102,227,255,.65);
+  will-change: transform;
+}
+
+/* Time Capsule hero */
+.timeline-hero {
+  min-height: auto !important;
+  padding-top: clamp(58px, 6.5vw, 82px) !important;
+  padding-bottom: clamp(26px, 3.5vw, 42px) !important;
+}
+
+.timeline-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .94fr) minmax(430px, .76fr);
+  gap: clamp(34px, 5vw, 76px);
+  align-items: center;
+}
+
+.timeline-hero-copy {
+  min-width: 0;
+}
+
+.timeline-hero h1 {
+  max-width: 8.6ch !important;
+  font-size: clamp(3.4rem, 7vw, 6.8rem) !important;
+}
+
+.timeline-signal-panel {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(22px, 3vw, 30px);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 78% 10%, rgba(155,255,203,.11), transparent 28%),
+    linear-gradient(180deg, rgba(16,31,55,.84), rgba(6,15,27,.90));
+  box-shadow: 0 24px 80px rgba(0,0,0,.32);
+}
+
+.timeline-signal-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 34px 34px;
+  mask-image: linear-gradient(to bottom, #000, transparent 88%);
+}
+
+.timeline-signal-head,
+.timeline-stat-grid,
+.timeline-route,
+.timeline-signal-note {
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-signal-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.timeline-live-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #61ff9b;
+  box-shadow: 0 0 18px rgba(97,255,155,.78);
+  animation: timelineSignalPulse 1.8s ease-in-out infinite;
+}
+
+.timeline-signal-head p {
+  margin: 0;
+  color: var(--accent-2);
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: .68rem;
+  font-weight: 900;
+}
+
+.timeline-signal-head strong {
+  display: block;
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
+.timeline-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 18px 0 24px;
+}
+
+.timeline-stat-grid div {
+  padding: 13px 10px;
+  border: 1px solid rgba(102,227,255,.13);
+  border-radius: 15px;
+  background: rgba(255,255,255,.025);
+  text-align: center;
+}
+
+.timeline-stat-grid strong {
+  display: block;
+  color: var(--accent);
+  font-size: 1.55rem;
+  line-height: 1;
+}
+
+.timeline-stat-grid span {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: .72rem;
+}
+
+.timeline-route {
+  display: grid;
+  gap: 12px;
+}
+
+.timeline-route-line {
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  left: 17px;
+  width: 2px;
+  background: linear-gradient(var(--accent), var(--accent-2));
+  opacity: .36;
+}
+
+.timeline-route-stop {
+  position: relative;
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.timeline-route-stop > span {
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(102,227,255,.32);
+  border-radius: 50%;
+  background: #07111f;
+  color: var(--accent);
+  font-size: .72rem;
+  font-weight: 900;
+}
+
+.timeline-route-stop strong,
+.timeline-route-stop small {
+  grid-column: 2;
+}
+
+.timeline-route-stop strong {
+  color: var(--text);
+  font-size: .92rem;
+}
+
+.timeline-route-stop small {
+  margin-top: -8px;
+  color: var(--muted);
+}
+
+.timeline-route-stop.is-current > span {
+  color: #001018;
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 0 22px rgba(102,227,255,.28);
+}
+
+.timeline-signal-note {
+  margin: 22px 0 0;
+  color: #c7d5e8;
+  font-size: .9rem;
+  line-height: 1.55;
+}
+
+/* Education: preserve the approved middle, remove the black boxes and emoji collision. */
+.education-pillars {
+  padding-top: 16px !important;
+}
+
+.education-pillars-shell {
+  padding-top: clamp(24px, 3vw, 34px) !important;
+}
+
+.education-pillars-head {
+  max-width: 980px !important;
+  margin-bottom: 24px !important;
+}
+
+.education-pillars-head h2 {
+  max-width: 980px;
+  font-size: clamp(2.65rem, 4.3vw, 4.8rem) !important;
+  line-height: .97 !important;
+}
+
+.education-fire {
+  isolation: isolate;
+}
+
+.education-fire::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 55%;
+  bottom: 71%;
+  width: .72em;
+  height: .92em;
+  transform: translateX(-50%) rotate(4deg);
+  border-radius: 56% 44% 58% 42% / 68% 55% 45% 32%;
+  background:
+    radial-gradient(circle at 48% 70%, #ffe66d 0 16%, #ff9f1c 18% 36%, transparent 38%),
+    linear-gradient(155deg, #ffef76 0 24%, #ff7a18 40% 68%, #ef2d20 76% 100%);
+  clip-path: polygon(49% 0, 72% 32%, 92% 60%, 78% 92%, 51% 100%, 22% 88%, 8% 60%, 28% 31%);
+  filter: drop-shadow(0 0 8px rgba(255,102,24,.72)) drop-shadow(0 0 18px rgba(239,45,32,.42));
+  animation: educationFlameClean 1.45s ease-in-out infinite alternate;
+}
+
+.education-fire::after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  left: 50%;
+  right: 0;
+  bottom: -.12em;
+  height: .16em;
+  border-radius: 50%;
+  background: rgba(239,45,32,.42);
+  filter: blur(10px);
+}
+
+.education-pillar {
+  min-height: 620px !important;
+}
+
+.education-pillar-art {
+  height: 258px !important;
+  margin: 4px -2px 8px !important;
+}
+
+.education-pillar-art img {
+  width: min(100%, 290px) !important;
+  height: 255px !important;
+  object-fit: contain;
+  background: transparent !important;
+  filter:
+    saturate(1.05)
+    contrast(1.03)
+    drop-shadow(0 20px 24px rgba(0,0,0,.40)) !important;
+}
+
+.education-story {
+  margin-top: auto !important;
+  padding-top: 14px;
+}
+
+.education-award {
+  border-color: rgba(255,255,255,.40) !important;
+}
+
+/* Isilon diagrams: copy first, then a full-width readable drawing. */
+.isilon-diagram-card {
+  grid-template-columns: 1fr !important;
+  gap: 18px !important;
+  padding: clamp(20px, 2.6vw, 30px) !important;
+}
+
+.isilon-diagram-card > div:first-child {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  column-gap: 18px;
+  align-items: start;
+  padding: 0 !important;
+}
+
+.isilon-diagram-card .diagram-number {
+  grid-row: 1 / span 2;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin: 0 !important;
+  border: 1px solid rgba(102,227,255,.28);
+  border-radius: 18px;
+  background: rgba(102,227,255,.055);
+  color: var(--accent);
+  font-size: .9rem;
+}
+
+.isilon-diagram-card h3 {
+  margin: 1px 0 8px !important;
+  font-size: clamp(1.45rem, 2.3vw, 2rem) !important;
+}
+
+.isilon-diagram-card > div:first-child > p:last-child {
+  grid-column: 2;
+  margin: 0;
+  max-width: 85ch;
+}
+
+.isilon-diagram-card .diagram-canvas {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.isilon-diagram-card .diagram-canvas img {
+  width: 100% !important;
+  height: auto;
+}
+
+.isilon-diagram-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.isilon-diagram-meta span {
+  padding: .38rem .65rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(255,255,255,.025);
+  font-size: .78rem;
+}
+
+.isilon-diagram-meta a {
+  margin-left: auto;
+  color: var(--accent);
+  font-size: .84rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.isilon-diagram-meta a:hover,
+.isilon-diagram-meta a:focus-visible {
+  color: var(--accent-2);
+  text-decoration: underline;
+}
+
+/* Photo alignment: remove awkward crops and keep cards balanced. */
+.isilon-photo-grid {
+  align-items: stretch;
+}
+
+.isilon-photo {
+  display: flex;
+  flex-direction: column;
+}
+
+.isilon-photo img {
+  aspect-ratio: 4 / 3;
+  height: auto !important;
+}
+
+.isilon-photo-wide img {
+  aspect-ratio: 16 / 9;
+}
+
+.isilon-photo-tall img {
+  aspect-ratio: 3 / 4;
+}
+
+.isilon-photo figcaption {
+  flex: 1;
+}
+
+.deployment-footnote {
+  max-width: 980px;
+  margin-inline: auto;
+}
+
+/* Global rhythm */
+.narrow-head {
+  max-width: 900px !important;
+}
+
+.section-note {
+  max-width: 82ch;
+}
+
+@keyframes timelineSignalPulse {
+  50% {
+    opacity: .58;
+    transform: scale(.82);
+  }
+}
+
+@keyframes educationFlameClean {
+  from {
+    transform: translateX(-50%) rotate(-5deg) scale(.92);
+  }
+  to {
+    transform: translateX(-50%) rotate(5deg) scale(1.04);
+  }
+}
+
+@media (max-width: 1080px) {
+  .timeline-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-signal-panel {
+    max-width: 780px;
+  }
+}
+
+@media (max-width: 720px) {
+  .reading-progress {
+    top: 64px;
+  }
+
+  .timeline-hero {
+    padding-top: 38px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .timeline-hero h1 {
+    max-width: 8ch !important;
+    font-size: clamp(3rem, 17vw, 5.3rem) !important;
+  }
+
+  .timeline-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-pillars {
+    padding-top: 8px !important;
+  }
+
+  .education-pillars-head h2 {
+    font-size: clamp(2.35rem, 11vw, 3.65rem) !important;
+  }
+
+  .education-fire::before {
+    width: .64em;
+    height: .82em;
+    bottom: 76%;
+  }
+
+  .education-pillar-art {
+    height: 238px !important;
+  }
+
+  .education-pillar-art img {
+    height: 232px !important;
+  }
+
+  .isilon-diagram-card > div:first-child {
+    grid-template-columns: 1fr;
+  }
+
+  .isilon-diagram-card .diagram-number {
+    grid-row: auto;
+    margin-bottom: 4px !important;
+  }
+
+  .isilon-diagram-card > div:first-child > p:last-child {
+    grid-column: 1;
+  }
+
+  .isilon-diagram-meta a {
+    width: 100%;
+    margin: 4px 0 0;
+  }
+
+  .isilon-diagram-card .diagram-canvas {
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+  }
+
+  .isilon-diagram-card .diagram-canvas img {
+    width: 920px !important;
+    max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-live-dot,
+  .education-fire::before {
+    animation: none !important;
+  }
+}

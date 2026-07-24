@@ -1,77 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
-<title id="title">Manual failover and failback workflow</title>
-<desc id="desc">A seven-step operational workflow covers alerting, write protection, promoting the recovery cluster, DNS cutover, validation, reverse synchronization, and controlled failback.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 880" role="img" aria-labelledby="title desc">
+<title id="title">Manual failover and failback fallback</title>
+<desc id="desc">A seven-stage recovery workflow protects consistency while promoting the recovery cluster, changing DNS, validating service, reversing replication, and returning service to normal.</desc>
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#07111f"/>
-    <stop offset="1" stop-color="#0a1826"/>
-  </linearGradient>
-  <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
-    <path d="M0 0 L12 6 L0 12 Z" fill="#8dffd0"/>
-  </marker>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="1" stop-color="#0a1826"/></linearGradient>
 </defs>
-<rect width="1400" height="760" rx="34" fill="url(#bg)"/>
+<rect width="1600" height="880" rx="38" fill="url(#bg)"/>
 <g font-family="Inter,Segoe UI,Arial,sans-serif">
-  <text x="58" y="66" fill="#edf6ff" font-size="34" font-weight="800">Manual failover and failback fallback</text>
-  <text x="58" y="103" fill="#9fb1c9" font-size="19">The documented recovery path when automated orchestration is unavailable</text>
+  <text x="64" y="72" fill="#edf6ff" font-size="40" font-weight="800">Manual failover and failback fallback</text>
+  <text x="64" y="114" fill="#9fb1c9" font-size="22">The documented path when automated orchestration is unavailable</text>
 
-  <path d="M125 320 H1275" stroke="#35566f" stroke-width="7"/>
+  <line x1="145" y1="390" x2="1455" y2="390" stroke="#35566f" stroke-width="9"/>
 
-  <g>
-    <g transform="translate(65 180)">
-      <circle cx="70" cy="140" r="50" fill="#08111f" stroke="#ff806f" stroke-width="5"/>
-      <text x="70" y="148" fill="#edf6ff" font-size="26" font-weight="900" text-anchor="middle">1</text>
-      <text x="70" y="42" fill="#edf6ff" font-size="19" font-weight="800" text-anchor="middle">Detect</text>
-      <text x="70" y="70" fill="#9fb1c9" font-size="15" text-anchor="middle">alert / outage</text>
-    </g>
-    <g transform="translate(250 180)">
-      <circle cx="70" cy="140" r="50" fill="#08111f" stroke="#ffd166" stroke-width="5"/>
-      <text x="70" y="148" fill="#edf6ff" font-size="26" font-weight="900" text-anchor="middle">2</text>
-      <text x="70" y="42" fill="#edf6ff" font-size="19" font-weight="800" text-anchor="middle">Freeze writes</text>
-      <text x="70" y="70" fill="#9fb1c9" font-size="15" text-anchor="middle">protect consistency</text>
-    </g>
-    <g transform="translate(435 180)">
-      <circle cx="70" cy="140" r="50" fill="#08111f" stroke="#66e3ff" stroke-width="5"/>
-      <text x="70" y="148" fill="#edf6ff" font-size="26" font-weight="900" text-anchor="middle">3</text>
-      <text x="70" y="42" fill="#edf6ff" font-size="19" font-weight="800" text-anchor="middle">Promote DR</text>
-      <text x="70" y="70" fill="#9fb1c9" font-size="15" text-anchor="middle">allow target writes</text>
-    </g>
-    <g transform="translate(620 180)">
-      <circle cx="70" cy="140" r="50" fill="#08111f" stroke="#8dffd0" stroke-width="5"/>
-      <text x="70" y="148" fill="#edf6ff" font-size="26" font-weight="900" text-anchor="middle">4</text>
-      <text x="70" y="42" fill="#edf6ff" font-size="19" font-weight="800" text-anchor="middle">Shift DNS</text>
-      <text x="70" y="70" fill="#9fb1c9" font-size="15" text-anchor="middle">redirect clients</text>
-    </g>
-    <g transform="translate(805 180)">
-      <circle cx="70" cy="140" r="50" fill="#08111f" stroke="#8dffd0" stroke-width="5"/>
-      <text x="70" y="148" fill="#edf6ff" font-size="26" font-weight="900" text-anchor="middle">5</text>
-      <text x="70" y="42" fill="#edf6ff" font-size="19" font-weight="800" text-anchor="middle">Validate</text>
-      <text x="70" y="70" fill="#9fb1c9" font-size="15" text-anchor="middle">SMB and apps</text>
-    </g>
-    <g transform="translate(990 180)">
-      <circle cx="70" cy="140" r="50" fill="#08111f" stroke="#ffb36b" stroke-width="5"/>
-      <text x="70" y="148" fill="#edf6ff" font-size="26" font-weight="900" text-anchor="middle">6</text>
-      <text x="70" y="42" fill="#edf6ff" font-size="19" font-weight="800" text-anchor="middle">Reverse sync</text>
-      <text x="70" y="70" fill="#9fb1c9" font-size="15" text-anchor="middle">prepare source</text>
-    </g>
-    <g transform="translate(1175 180)">
-      <circle cx="70" cy="140" r="50" fill="#08111f" stroke="#66e3ff" stroke-width="5"/>
-      <text x="70" y="148" fill="#edf6ff" font-size="26" font-weight="900" text-anchor="middle">7</text>
-      <text x="70" y="42" fill="#edf6ff" font-size="19" font-weight="800" text-anchor="middle">Fail back</text>
-      <text x="70" y="70" fill="#9fb1c9" font-size="15" text-anchor="middle">restore normal flow</text>
-    </g>
+  <g font-weight="800" text-anchor="middle">
+    <g transform="translate(145 390)"><circle r="54" fill="#08111f" stroke="#ff806f" stroke-width="6"/><text y="10" fill="#edf6ff" font-size="30">1</text><text y="-105" fill="#edf6ff" font-size="20">Detect</text><text y="-72" fill="#9fb1c9" font-size="16">alert / outage</text></g>
+    <g transform="translate(365 390)"><circle r="54" fill="#08111f" stroke="#ffd166" stroke-width="6"/><text y="10" fill="#edf6ff" font-size="30">2</text><text y="-105" fill="#edf6ff" font-size="20">Freeze writes</text><text y="-72" fill="#9fb1c9" font-size="16">protect consistency</text></g>
+    <g transform="translate(585 390)"><circle r="54" fill="#08111f" stroke="#66e3ff" stroke-width="6"/><text y="10" fill="#edf6ff" font-size="30">3</text><text y="-105" fill="#edf6ff" font-size="20">Promote DR</text><text y="-72" fill="#9fb1c9" font-size="16">allow target writes</text></g>
+    <g transform="translate(805 390)"><circle r="54" fill="#08111f" stroke="#8dffd0" stroke-width="6"/><text y="10" fill="#edf6ff" font-size="30">4</text><text y="-105" fill="#edf6ff" font-size="20">Shift DNS</text><text y="-72" fill="#9fb1c9" font-size="16">redirect clients</text></g>
+    <g transform="translate(1025 390)"><circle r="54" fill="#08111f" stroke="#8dffd0" stroke-width="6"/><text y="10" fill="#edf6ff" font-size="30">5</text><text y="-105" fill="#edf6ff" font-size="20">Validate</text><text y="-72" fill="#9fb1c9" font-size="16">SMB and apps</text></g>
+    <g transform="translate(1245 390)"><circle r="54" fill="#08111f" stroke="#ffb36b" stroke-width="6"/><text y="10" fill="#edf6ff" font-size="30">6</text><text y="-105" fill="#edf6ff" font-size="20">Reverse sync</text><text y="-72" fill="#9fb1c9" font-size="16">prepare source</text></g>
+    <g transform="translate(1455 390)"><circle r="54" fill="#08111f" stroke="#66e3ff" stroke-width="6"/><text y="10" fill="#edf6ff" font-size="30">7</text><text y="-105" fill="#edf6ff" font-size="20">Fail back</text><text y="-72" fill="#9fb1c9" font-size="16">restore normal flow</text></g>
   </g>
 
-  <g transform="translate(70 485)">
-    <rect width="1260" height="176" rx="26" fill="#0b1829" stroke="#24425e"/>
-    <text x="34" y="43" fill="#edf6ff" font-size="22" font-weight="800">Operational guardrails</text>
-    <g fill="#c7d5e8" font-size="17">
-      <text x="34" y="82">• Ensure the failed source cannot accept writes before promoting the target.</text>
-      <text x="34" y="114">• Validate access on the recovery cluster before changing user-facing DNS.</text>
-      <text x="34" y="146">• Block client writes during reverse synchronization and controlled failback.</text>
-      <text x="680" y="82">• Redirect hard-coded application references when DNS alone is insufficient.</text>
-      <text x="680" y="114">• Restore DNS and application references only after the source is ready.</text>
-      <text x="680" y="146">• Confirm normal replication resumes after failback.</text>
+  <g transform="translate(85 565)">
+    <rect width="1430" height="210" rx="28" fill="#0b1829" stroke="#24425e"/>
+    <text x="34" y="49" fill="#edf6ff" font-size="25" font-weight="800">Operational guardrails</text>
+    <g fill="#c7d5e8" font-size="19">
+      <text x="34" y="94">• Prevent the failed source from accepting writes before the target is promoted.</text>
+      <text x="34" y="134">• Validate SMB and application access before changing user-facing DNS.</text>
+      <text x="34" y="174">• Block writes during reverse synchronization and controlled failback.</text>
+      <text x="770" y="94">• Redirect hard-coded application paths when DNS alone is not enough.</text>
+      <text x="770" y="134">• Restore normal DNS and application references only when the source is ready.</text>
+      <text x="770" y="174">• Confirm normal replication resumes after failback.</text>
     </g>
   </g>
 </g>

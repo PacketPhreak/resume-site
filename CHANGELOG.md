@@ -1,5 +1,15 @@
 # Changelog
 
+## v3.8.0 — Site Systems Polish
+
+- Balanced the Time Capsule hero with a live career archive signal
+- Removed black education-art boxes and fixed the fire-title collision
+- Rebuilt Isilon diagrams with larger labels and simpler hierarchy
+- Replaced generic third-party language with first-person project ownership
+- Replaced the commissioning-photo overlay with subtle public-safe redaction
+- Added full-size diagram links and case-study reading progress
+- Tightened desktop, tablet, and mobile alignment
+
 ## v3.7.0 — Isilon DR Case Study
 
 - Added an enterprise storage modernization and disaster-recovery case study

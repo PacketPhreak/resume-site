@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="site-version" content="v3.7.0-isilon-dr-case-study" />
+  <meta name="site-version" content="v3.8.0-site-systems-polish" />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -34,7 +34,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
-  <link rel="stylesheet" href="assets/css/styles-v31.css?v=3.7.0" />
+  <link rel="stylesheet" href="assets/css/styles-v31.css?v=3.8.0" />
 
   <script type="application/ld+json">
   {
@@ -83,6 +83,7 @@
       </nav>
     </div>
   </header>
+  <div class="reading-progress" aria-hidden="true"><span data-reading-progress></span></div>
 
   <main id="main">
     <section class="case-hero section-pad isilon-case-hero">
@@ -93,7 +94,7 @@
             Eight nodes. Two clusters. One recovery plan.
           </h1>
           <p class="hero-lede">
-            Replacing an aging headquarters NAS environment with dual four-node Dell Isilon A300 clusters,
+            I helped replace an aging headquarters NAS environment with dual four-node Dell Isilon A300 clusters,
             separated management, client, and replication paths, and a recovery design that still worked
             when automation did not.
           </p>
@@ -126,11 +127,11 @@
       <div class="container overview-grid">
         <article class="mini-panel">
           <h3>Situation</h3>
-          <p>An aging NAS platform needed to be replaced without losing reliable SMB access, operational visibility, or a practical disaster-recovery path.</p>
+          <p>I needed to replace an aging NAS platform without losing reliable SMB access, operational visibility, or a practical disaster-recovery path.</p>
         </article>
         <article class="mini-panel">
           <h3>Scope</h3>
-          <p>Physical deployment, OneFS configuration, SmartConnect/DNS, client data services, SyncIQ replication, snapshots, monitoring, ransomware defense, and recovery documentation.</p>
+          <p>My scope crossed physical deployment, OneFS configuration, SmartConnect/DNS, client data services, SyncIQ replication, snapshots, monitoring, ransomware defense, and recovery documentation.</p>
         </article>
         <article class="mini-panel">
           <h3>Result</h3>
@@ -162,6 +163,10 @@
               <img src="assets/img/case-studies/isilon-dr/storage-modernization.svg"
                    alt="Legacy NAS replaced by production and disaster recovery four-node Isilon clusters">
             </a>
+            <div class="isilon-diagram-meta">
+              <span>4-node production</span><span>4-node DR</span><span>Separated traffic paths</span>
+              <a href="assets/img/case-studies/isilon-dr/storage-modernization.svg" target="_blank" rel="noopener noreferrer">Open full-size diagram ↗</a>
+            </div>
           </article>
 
           <article class="isilon-diagram-card">
@@ -174,6 +179,10 @@
               <img src="assets/img/case-studies/isilon-dr/replication-protection.svg"
                    alt="Production cluster client access and SyncIQ replication to the disaster recovery cluster">
             </a>
+            <div class="isilon-diagram-meta">
+              <span>SmartConnect</span><span>SyncIQ</span><span>Protection stack</span>
+              <a href="assets/img/case-studies/isilon-dr/replication-protection.svg" target="_blank" rel="noopener noreferrer">Open full-size diagram ↗</a>
+            </div>
           </article>
 
           <article class="isilon-diagram-card">
@@ -186,6 +195,10 @@
               <img src="assets/img/case-studies/isilon-dr/failover-failback.svg"
                    alt="Seven-step manual Isilon failover and failback process">
             </a>
+            <div class="isilon-diagram-meta">
+              <span>7 recovery stages</span><span>Write consistency</span><span>Controlled failback</span>
+              <a href="assets/img/case-studies/isilon-dr/failover-failback.svg" target="_blank" rel="noopener noreferrer">Open full-size diagram ↗</a>
+            </div>
           </article>
         </div>
       </div>
@@ -199,8 +212,7 @@
             The architecture diagram does not show the weight.
           </h2>
           <p class="section-note">
-            Installation required coordination among internal IT, Dell, the colocation facility, and implementation partners.
-            When the rack lift could not finish the job cleanly, the cabinet doors came off and extra hands finished the placement safely.
+            I coordinated the on-site installation with Dell and the colocation team. When the rack lift could not position the chassis cleanly, we removed the cabinet doors and hand-positioned the systems safely.
           </p>
         </div>
 
@@ -216,7 +228,7 @@
             <img src="assets/img/case-studies/isilon-dr/commissioning-display-public-safe.webp"
                  alt="Public-safe close view of the A300 commissioning display"
                  loading="lazy">
-            <figcaption><strong>Node commissioning.</strong> Front-panel status review with internal identifiers redacted for public use.</figcaption>
+            <figcaption><strong>Node commissioning.</strong> Front-panel validation during bring-up; the internal cluster identifier is softly redacted for public use.</figcaption>
           </figure>
 
           <figure class="isilon-photo">
@@ -251,7 +263,7 @@
         <aside class="deployment-footnote">
           <p class="eyebrow">Post-deployment footnote</p>
           <p>
-            My Dell representative brought the extra hands that helped get the A300s into the cabinet—and later invited me
+            My Dell representative brought the extra hands that helped us get the A300s into the cabinet—and later invited me
             to a Charlotte Hornets game in a box suite. The storage migration succeeded. Declining the game remains under review.
           </p>
         </aside>
@@ -287,7 +299,7 @@
             </p>
             <p>
               That is the difference between installing storage and delivering a recoverable service: hardware, networking, DNS, access, replication,
-              monitoring, security, vendor coordination, and human decision-making all had to agree.
+              monitoring, security, project ownership, and practical on-site judgment all had to agree.
             </p>
           </div>
         </div>
@@ -337,7 +349,7 @@
         </div>
         <div class="cards proof-grid">
           <article class="card"><span class="card-icon">01</span><h3>Enterprise storage architecture</h3><p>Designed around node redundancy, client access, delegated DNS, replication, monitoring, and protection—not raw capacity alone.</p></article>
-          <article class="card"><span class="card-icon">02</span><h3>Datacenter implementation</h3><p>Worked through physical placement, rack constraints, power, network connectivity, labeling, commissioning, and multi-vendor coordination.</p></article>
+          <article class="card"><span class="card-icon">02</span><h3>Datacenter implementation</h3><p>I worked through physical placement, rack constraints, power, network connectivity, labeling, commissioning, and the coordination required to turn delivered equipment into an operational service.</p></article>
           <article class="card"><span class="card-icon">03</span><h3>Disaster-recovery judgment</h3><p>Documented both automated orchestration and a controlled manual path that protected write consistency during failover and failback.</p></article>
           <article class="card"><span class="card-icon">04</span><h3>Security-minded resilience</h3><p>Combined replication with snapshots, monitoring, operational alerts, and ransomware-focused file-event and behavior analytics.</p></article>
         </div>

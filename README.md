@@ -19,7 +19,7 @@ https://joshuacmcdonald.com
 </h2>
 
 ```text
-v3.5.4 · Polish On. Polish Off.
+v3.8.0 · Site Systems Polish
 ```
 
 This synchronized build starts from the current uploaded repository—the version containing the Open Graph, Twitter/X, favicon, manifest, and social-preview assets.
@@ -113,6 +113,7 @@ Test at minimum:
 breachd.html
 timeline.html
 case-study-pi-azure.html
+case-study-isilon-dr.html
 ```
 
 <h2>
@@ -180,3 +181,15 @@ The repository ZIP and `PROJECT_STATE.md` are the source of truth for code. Memo
 - Added the case study to the homepage and INLIVIAN Time Capsule entry
 - Added a page-specific Open Graph image
 - Preserved internal cluster names, addresses, share paths, and recovery identifiers outside the public site
+
+
+## v3.8.0 Site Systems Polish
+
+- Reworked the Time Capsule hero into a balanced two-column career signal
+- Removed the black image boxes around the education emblems
+- Replaced emoji flames with a cleaner CSS flame treatment
+- Rebuilt all three Isilon diagrams with larger labels and simpler visual hierarchy
+- Removed generic third-party language and made the case study reflect Joshua's actual project ownership
+- Replaced the oversized commissioning-photo overlay with a subtle identifier redaction
+- Added full-size diagram controls and a case-study reading-progress bar
+- Tightened responsive alignment across desktop, tablet, and mobile
