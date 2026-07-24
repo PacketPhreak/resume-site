@@ -19,7 +19,7 @@ https://joshuacmcdonald.com
 </h2>
 
 ```text
-v3.8.0 · Site Systems Polish
+v3.8.1 · Precision Alignment
 ```
 
 This synchronized build starts from the current uploaded repository—the version containing the Open Graph, Twitter/X, favicon, manifest, and social-preview assets.
@@ -193,3 +193,15 @@ The repository ZIP and `PROJECT_STATE.md` are the source of truth for code. Memo
 - Replaced the oversized commissioning-photo overlay with a subtle identifier redaction
 - Added full-size diagram controls and a case-study reading-progress bar
 - Tightened responsive alignment across desktop, tablet, and mobile
+
+
+## v3.8.1 Precision Alignment
+
+- Fixed every Time Capsule chapter-count display
+- Removed the internal black matte surrounding all four education emblems
+- Locked the education heading into an intentional two-line composition
+- Anchored the animated flame directly over the word `fire`
+- Forced the Isilon hero headline into three deliberate lines
+- Rebuilt all three Isilon diagrams with sparse, collision-free labels
+- Unified the BreachD hero, activity cards, command room, and status strip
+- Preserved responsive desktop, tablet, mobile, and reduced-motion behavior

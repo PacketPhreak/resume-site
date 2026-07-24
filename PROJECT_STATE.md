@@ -3,7 +3,7 @@
 ## Current version
 
 ```text
-v3.8.0-site-systems-polish
+v3.8.1-precision-alignment
 ```
 
 ## Source of truth
@@ -33,6 +33,9 @@ Secondary domain: www.joshuacmcdonald.com
 - Cloudflare security headers
 
 ## Changes in this state
+
+- Added v3.8.1 Precision Alignment
+- Fixed chapter counters, education mattes, flame placement, Isilon title wrapping, diagram collisions, and the BreachD hero grid
 
 - Added v3.8.0 Site Systems Polish
 - Balanced the Time Capsule hero with a career archive signal panel

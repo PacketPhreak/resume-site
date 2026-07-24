@@ -1,5 +1,15 @@
 # Changelog
 
+## v3.8.1 — Precision Alignment
+
+- Fixed duplicate Time Capsule count targets
+- Removed education-logo background mattes
+- Anchored the fire animation to the word fire
+- Forced the Isilon hero into a deliberate three-line headline
+- Rebuilt all Isilon diagrams to eliminate label collisions and clipping
+- Integrated the BreachD command summary into the hero grid
+- Tightened desktop and mobile alignment
+
 ## v3.8.0 — Site Systems Polish
 
 - Balanced the Time Capsule hero with a live career archive signal

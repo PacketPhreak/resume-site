@@ -2,7 +2,7 @@
 const cardsRoot = document.querySelector('[data-timeline-list]');
 const searchInput = document.querySelector('[data-timeline-search]');
 const filterRoot = document.querySelector('[data-filter-row]');
-const countEl = document.querySelector('[data-count]');
+const countEls = document.querySelectorAll('[data-count]');
 const entries = window.CAREER_TIMELINE || [];
 let activeFilter = 'All';
 
@@ -53,7 +53,7 @@ function applyFilters() {
     card.hidden = !show;
     if (show) count++;
   });
-  countEl.textContent = String(count);
+  countEls.forEach((element) => { element.textContent = String(count); });
 }
 
 filterRoot.addEventListener('click', (event) => {
