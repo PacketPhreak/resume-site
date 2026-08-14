@@ -1,5 +1,15 @@
 # Changelog
 
+## v3.9.0 — Th3 t00lB0x
+
+- Added the standalone Th3 t00lB0x software catalog
+- Added the Fr33 3l33T t00lz masthead, search, and category filters
+- Added PacketPhreak Flippa 1.0-RC2 as the featured staged build
+- Added version, package, integrity, status, and release-gated download controls
+- Added original hero, card, and social-preview artwork
+- Added the homepage toolbox entry point and site-wide navigation links
+- Added release-file instructions, `sitemap.xml`, and `robots.txt`
+
 ## v3.8.1 — Precision Alignment
 
 - Fixed duplicate Time Capsule count targets

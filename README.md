@@ -19,7 +19,7 @@ https://joshuacmcdonald.com
 </h2>
 
 ```text
-v3.8.1 · Precision Alignment
+v3.9.0 · Th3 t00lB0x
 ```
 
 This synchronized build starts from the current uploaded repository—the version containing the Open Graph, Twitter/X, favicon, manifest, and social-preview assets.
@@ -28,6 +28,14 @@ This synchronized build starts from the current uploaded repository—the versio
   <img src="assets/readme/current-build.svg" alt="New in the current build" width="700">
 </h3>
 
+- Added **Th3 t00lB0x**, a standalone download-catalog page for software by Joshua C. McDonald
+- Added the **Fr33 3l33T t00lz** searchable and filterable inventory
+- Added PacketPhreak Flippa `1.0-RC2` as the featured staged build
+- Added version, package, status, integrity, and download-availability fields to every tool card
+- Added original toolbox hero, card, and social-preview artwork
+- Added a homepage toolbox entry point and toolbox links across every public page
+- Added `assets/downloads/README.md` with the release-file and checksum workflow
+- Added `sitemap.xml` and `robots.txt`
 - Consolidated duplicate `<title>`, description, and theme-color tags
 - Added consistent canonical, Open Graph, Twitter/X, icon, manifest, and robots metadata to every public HTML page
 - Preserved all uploaded social-preview images and icon assets
@@ -46,6 +54,7 @@ This synchronized build starts from the current uploaded repository—the versio
 
 ```text
 index.html                  Main portfolio
+toolbox.html                Th3 t00lB0x application and firmware catalog
 timeline.html               Career Time Capsule
 case-study-pi-azure.html    Public-safe PI / Azure connectivity case study
 case-study-isilon-dr.html   Dell Isilon A300 storage and disaster-recovery case study
@@ -58,6 +67,8 @@ _headers                    Cloudflare Pages response headers
 site.webmanifest            Installable-web metadata
 assets/                     CSS, JavaScript, documents, images, and README art
 icons/                      Favicons and app icons
+sitemap.xml                 Public-page discovery map
+robots.txt                  Search crawler and sitemap rules
 ```
 
 <h2>
@@ -110,6 +121,7 @@ Test at minimum:
 
 ```text
 /
+toolbox.html
 breachd.html
 timeline.html
 case-study-pi-azure.html
@@ -205,3 +217,13 @@ The repository ZIP and `PROJECT_STATE.md` are the source of truth for code. Memo
 - Rebuilt all three Isilon diagrams with sparse, collision-free labels
 - Unified the BreachD hero, activity cards, command room, and status strip
 - Preserved responsive desktop, tablet, mobile, and reduced-motion behavior
+
+
+## v3.9.0 Th3 t00lB0x
+
+- Added the standalone Th3 t00lB0x page and homepage entry point
+- Added a data-driven tool catalog with search, category filters, and accessible empty states
+- Added a staged PacketPhreak Flippa 1.0-RC2 card with WiFi Dev Board, Marauder, and BadUSB coverage
+- Added honest release gating so download controls activate only when a verified file is configured
+- Added original hero, catalog-card, and 1200 × 630 social-preview artwork
+- Added release-integrity guidance, download-folder instructions, sitemap, and robots rules

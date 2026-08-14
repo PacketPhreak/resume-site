@@ -3,7 +3,7 @@
 ## Current version
 
 ```text
-v3.8.1-precision-alignment
+v3.9.0-th3-toolbox
 ```
 
 ## Source of truth
@@ -22,6 +22,8 @@ Secondary domain: www.joshuacmcdonald.com
 ## Known-good features
 
 - Main portfolio and navigation
+- Th3 t00lB0x searchable application and firmware catalog
+- PacketPhreak Flippa 1.0-RC2 staged release card
 - Career Time Capsule
 - PI / Azure public-safe case study
 - BreachD Live Command Room
@@ -33,6 +35,14 @@ Secondary domain: www.joshuacmcdonald.com
 - Cloudflare security headers
 
 ## Changes in this state
+
+- Added v3.9.0 Th3 t00lB0x
+- Added a dedicated page for software by Joshua C. McDonald
+- Added data-driven search, category filters, release status, package type, and integrity metadata
+- Added release-gated download buttons that stay disabled until a verified URL is configured
+- Added original toolbox hero, card, and social-preview artwork
+- Added the toolbox entry point to the homepage and every public-page navigation
+- Added release-folder instructions, a public sitemap, and robots rules
 
 - Added v3.8.1 Precision Alignment
 - Fixed chapter counters, education mattes, flame placement, Isilon title wrapping, diagram collisions, and the BreachD hero grid
@@ -79,11 +89,17 @@ _headers
 assets/docs/
 assets/img/case-studies/
 assets/img/education/
+assets/img/toolbox/
+assets/downloads/
+toolbox.html
+sitemap.xml
+robots.txt
 ```
 
 ## Next polish targets
 
 - Review the live desktop and mobile render after Cloudflare deploys
+- Add the verified Flippa release archive and SHA-256 value when hardware validation is complete
 - Confirm the preferred public contact email before adding an email button
 - Continue adding public-safe case studies and project-ecosystem links
 - Collect a larger analytics sample before performance tuning
