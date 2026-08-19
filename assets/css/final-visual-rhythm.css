@@ -557,3 +557,58 @@
     padding: 21px !important;
   }
 }
+
+
+
+/* Viewer POV micro-fix — 2026-08-19 recording */
+
+/* Moore: stop vertically centering the process panel and give the hero title
+   enough horizontal room to avoid the six-line tower. */
+@media (min-width: 981px) {
+  .moore-case-page .phase1-case-hero-grid {
+    align-items: start !important;
+  }
+
+  .moore-case-page .case-title {
+    max-width: 11.5ch !important;
+    font-size: clamp(3.6rem, 5.6vw, 5.9rem) !important;
+    line-height: .94 !important;
+  }
+
+  .moore-case-page .phase1-hero-panel {
+    margin-top: 54px !important;
+    justify-self: end !important;
+  }
+}
+
+/* StarPet: the incident-progression statement was still being forced into
+   a narrow left rail by an earlier !important rule. Let it read horizontally,
+   then compact the evidence timeline into two columns. */
+@media (min-width: 1040px) {
+  .identity-timeline-zone .container {
+    display: block !important;
+  }
+
+  .identity-timeline-zone .container > .eyebrow {
+    display: block !important;
+  }
+
+  .identity-timeline-zone .container > h2,
+  .identity-timeline-zone .container > h2.vpv-starpet-wide-title {
+    max-width: 30ch !important;
+    font-size: clamp(2rem, 2.6vw, 3rem) !important;
+    line-height: .98 !important;
+    margin-top: 0 !important;
+  }
+
+  .identity-timeline-zone .identity-timeline {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    margin-top: 18px !important;
+  }
+
+  .identity-timeline-zone .identity-timeline article:last-child {
+    grid-column: 1 / -1 !important;
+  }
+}
