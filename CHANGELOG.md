@@ -1,5 +1,11 @@
 # Changelog
 
+## Viewer POV tune pass
+
+- Tuned homepage About and Focus rhythm from the viewer's perspective
+- Forced the homepage toolbox banner title to remain on one line at desktop widths
+- Widened the StarPet validation-plan headline so it resolves in two cleaner lines
+- Added a small DOM-based tune layer to smooth text-wrap and alignment drift without reopening core templates
 ## Career Evidence Wrap — StarPet identity incident flagship
 
 - Added a public-safe flagship case study for the 2026 StarPet identity/password-path incident
