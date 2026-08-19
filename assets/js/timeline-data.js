@@ -18,12 +18,19 @@ window.CAREER_TIMELINE = [
       "Document impact, testing documentation, and root-cause patterns for escalation to global IT teams, managed providers, and vendors.",
       "Project Quasar established the broader transformation foundation; the featured public case study isolates one PI / Azure packet-path investigation from that larger program."
     ],
-    "evidence": "Archive additions: public-safe troubleshooting templates, identity flow diagrams, OneDrive repair notes, escalation summaries, screenshots with sensitive data removed.",
-    "caseStudy": {
-      "label": "Open PI / Azure technical vignette",
-      "href": "case-study-pi-azure.html",
-      "title": "Tracing Manufacturing PI Connectivity to Azure"
-    }
+    "evidence": "Private evidence retained: direct DC-locator and replication tests, password-path analysis, incident correspondence, validation checklists, migration records, and sanitized case-study reconstruction.",
+    "caseStudies": [
+      {
+        "label": "Open identity incident case study",
+        "href": "case-study-starpet-identity.html",
+        "title": "The Password Reset That Exposed the Fault Domain"
+      },
+      {
+        "label": "Open PI / Azure technical vignette",
+        "href": "case-study-pi-azure.html",
+        "title": "Tracing Manufacturing PI Connectivity to Azure"
+      }
+    ]
   },
   {
     "period": "2023 - 2024",
@@ -189,5 +196,3 @@ window.CAREER_TIMELINE = [
     "evidence": "Archive additions: student worker notes, photos, early stories, campus tech memories."
   }
 ];
-
-

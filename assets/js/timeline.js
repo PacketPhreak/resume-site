@@ -11,10 +11,11 @@ const filters = ['All', ...Array.from(new Set(entries.flatMap(e => e.type))).sor
 function makeCard(entry) {
   const article = document.createElement('article');
   article.className = 'timeline-card';
-  article.dataset.search = [entry.period, entry.role, entry.org, entry.location, entry.summary, entry.type.join(' '), entry.bullets.join(' '), entry.caseStudy?.title || ''].join(' ').toLowerCase();
+  const linkedCaseStudies = entry.caseStudies || (entry.caseStudy ? [entry.caseStudy] : []);
+  article.dataset.search = [entry.period, entry.role, entry.org, entry.location, entry.summary, entry.type.join(' '), entry.bullets.join(' '), linkedCaseStudies.map(c => c.title || '').join(' ')].join(' ').toLowerCase();
   article.dataset.types = entry.type.join('|');
-  const caseStudyAction = entry.caseStudy
-    ? `<div class="timeline-actions"><a class="btn btn-primary btn-small" href="${entry.caseStudy.href}">${entry.caseStudy.label || 'Open case study'}</a></div>`
+  const caseStudyAction = linkedCaseStudies.length
+    ? `<div class="timeline-actions">${linkedCaseStudies.map((item, index) => `<a class="btn ${index === 0 ? 'btn-primary' : 'btn-ghost'} btn-small" href="${item.href}">${item.label || 'Open case study'}</a>`).join('')}</div>`
     : '';
   article.innerHTML = `
     <div class="timeline-card-top">
@@ -66,4 +67,3 @@ searchInput.addEventListener('input', applyFilters);
 
 renderFilters();
 renderCards();
-
