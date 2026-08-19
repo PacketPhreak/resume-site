@@ -1,5 +1,19 @@
 # Changelog
 
+## Viewer POV tune pass
+
+- Tuned homepage About and Focus rhythm from the viewer's perspective
+- Forced the homepage toolbox banner title to remain on one line at desktop widths
+- Widened the StarPet validation-plan headline so it resolves in two cleaner lines
+- Added a small DOM-based tune layer to smooth text-wrap and alignment drift without reopening core templates
+## Career Evidence Wrap — StarPet identity incident flagship
+
+- Added a public-safe flagship case study for the 2026 StarPet identity/password-path incident
+- Separated the large identity incident from the smaller Project Quasar PI/Azure technical vignette
+- Added interactive identity-path visualization and reconstructed diagnostic evidence
+- Rebalanced homepage case-study hierarchy into a deliberate flagship / investigations / deep-dive layout
+- Added multiple case-study actions to the StarPet Time Capsule entry
+- Applied a final alignment pass across homepage, Time Capsule, Carbis and Moore County pages
 ## v3.9.0 — Th3 t00lB0x
 
 - Added the standalone Th3 t00lB0x software catalog

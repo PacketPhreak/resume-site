@@ -11,19 +11,26 @@ window.CAREER_TIMELINE = [
       "Operations",
       "Cloud"
     ],
-    "summary": "Current manufacturing IT role focused on onsite operations, identity troubleshooting, user support, network/application access, escalation documentation, and selected public-safe case studies that show real packet-path investigation work.",
+    "summary": "Current manufacturing IT role spanning onsite operations, identity, infrastructure, support, and Project Quasar — the broader digital-transformation foundation for StarPet. The public PI / Azure case study is intentionally only one narrow troubleshooting vignette from that larger body of work.",
     "bullets": [
       "Support endpoints, Microsoft 365, printers/scanners, user access, application onboarding, and plant operations support.",
       "Troubleshoot AD/Entra ID, domain-joined endpoints, password reset behavior, MFA, OneDrive, Teams, and Microsoft 365 sign-in issues.",
       "Document impact, testing documentation, and root-cause patterns for escalation to global IT teams, managed providers, and vendors.",
-      "Featured case study: traced a manufacturing PI / Azure connectivity path across OT, DMZ, firewall, NAT, and cloud routing boundaries to isolate return-traffic behavior."
+      "Project Quasar established the broader transformation foundation; the featured public case study isolates one PI / Azure packet-path investigation from that larger program."
     ],
-    "evidence": "Archive additions: public-safe troubleshooting templates, identity flow diagrams, OneDrive repair notes, escalation summaries, screenshots with sensitive data removed.",
-    "caseStudy": {
-      "label": "Open featured case study",
-      "href": "case-study-pi-azure.html",
-      "title": "Tracing Manufacturing PI Connectivity to Azure"
-    }
+    "evidence": "Private evidence retained: direct DC-locator and replication tests, password-path analysis, incident correspondence, validation checklists, migration records, and sanitized case-study reconstruction.",
+    "caseStudies": [
+      {
+        "label": "Open identity incident case study",
+        "href": "case-study-starpet-identity.html",
+        "title": "The Password Reset That Exposed the Fault Domain"
+      },
+      {
+        "label": "Open PI / Azure technical vignette",
+        "href": "case-study-pi-azure.html",
+        "title": "Tracing Manufacturing PI Connectivity to Azure"
+      }
+    ]
   },
   {
     "period": "2023 - 2024",
@@ -103,7 +110,12 @@ window.CAREER_TIMELINE = [
       "Led implementation/delivery/migration tasks and translated client pain points into practical technology solutions.",
       "Built stakeholder relationships across education and business environments."
     ],
-    "evidence": "Archive additions: public-safe RFP/project summary, implementation checklist, case-study story on business + technology translation."
+    "evidence": "Archive additions: public-safe RFP/project summary, implementation checklist, case-study story on business + technology translation.",
+    "caseStudy": {
+      "label": "Open RFP discovery case study",
+      "href": "case-study-moore-county-discovery.html",
+      "title": "Mapping the Problem Before Selling the Solution"
+    }
   },
   {
     "period": "2016 - 2017",
@@ -159,7 +171,12 @@ window.CAREER_TIMELINE = [
       "Participated in Dynamics AX ERP implementation and new data center rollout for a large manufacturing facility.",
       "Built the troubleshooting foundation: Wireshark, DNS, DHCP, firmware/updates, remote support, and vendor coordination."
     ],
-    "evidence": "Archive additions: public-safe ERP/data center story, early server/network notes, photos of hardware/racks if available."
+    "evidence": "Archive additions: public-safe ERP/data center story, early server/network notes, photos of hardware/racks if available.",
+    "caseStudy": {
+      "label": "Open infrastructure case study",
+      "href": "case-study-carbis-infrastructure.html",
+      "title": "From Legacy Server Room to Enterprise Platform"
+    }
   },
   {
     "period": "2007 - 2009",

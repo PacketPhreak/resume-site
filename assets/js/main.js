@@ -120,3 +120,15 @@ if (readingProgress) {
   window.addEventListener("scroll", updateReadingProgress, { passive: true });
   window.addEventListener("resize", updateReadingProgress);
 }
+
+
+
+// Phase 1 before/after infrastructure comparator.
+document.querySelectorAll('[data-before-after]').forEach((root) => {
+  const range = root.querySelector('[data-before-after-range]');
+  if (!range) return;
+  const update = () => root.style.setProperty('--split', `${range.value}%`);
+  range.addEventListener('input', update);
+  update();
+});
+

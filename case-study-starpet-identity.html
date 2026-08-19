@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="site-version" content="v3.9.0-career-evidence" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>The Password Reset That Exposed the Fault Domain | Joshua C. McDonald</title>
+  <meta name="title" content="The Password Reset That Exposed the Fault Domain | Joshua C. McDonald" />
+  <meta name="description" content="A public-safe, evidence-backed case study of a multi-day Active Directory identity incident spanning RODC behavior, writable-DC discovery, stale domain-controller state, password propagation, Wi-Fi authentication, and Microsoft 365 validation." />
+  <meta name="author" content="Joshua C. McDonald" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#07111f" />
+  <link rel="canonical" href="https://joshuacmcdonald.com/case-study-starpet-identity.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Joshua C. McDonald / PacketPhreak" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://joshuacmcdonald.com/case-study-starpet-identity.html" />
+  <meta property="og:title" content="The Password Reset That Exposed the Fault Domain" />
+  <meta property="og:description" content="An evidence-backed identity incident reconstruction spanning Active Directory, RODC/writable-DC behavior, stale DC state, Kerberos password paths, Wi-Fi authentication, and cloud sign-in validation." />
+  <meta property="og:image" content="https://joshuacmcdonald.com/og-image.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Password Reset That Exposed the Fault Domain" />
+  <meta name="twitter:description" content="A public-safe incident reconstruction built from direct tests, escalation records, and validation evidence." />
+  <meta name="twitter:image" content="https://joshuacmcdonald.com/og-image.png" />
+
+  <link rel="icon" href="/icons/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="stylesheet" href="assets/css/styles-v31.css?v=3.9.0" />
+  <link rel="stylesheet" href="assets/css/portfolio-wrap.css?v=1.0.0" />
+  <link rel="stylesheet" href="assets/css/viewer-pov-tune.css?v=1.0.0" />
+  <link rel="stylesheet" href="assets/css/starpet-identity.css?v=1.0.0" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"TechArticle",
+    "headline":"The Password Reset That Exposed the Fault Domain",
+    "author":{"@type":"Person","name":"Joshua C. McDonald","alternateName":"PacketPhreak"},
+    "about":[
+      "Active Directory",
+      "Read-Only Domain Controller",
+      "Domain Controller Locator",
+      "Kerberos password change",
+      "DNS",
+      "Replication",
+      "Microsoft 365",
+      "Cisco ISE",
+      "Root-cause analysis"
+    ],
+    "url":"https://joshuacmcdonald.com/case-study-starpet-identity.html"
+  }
+  </script>
+  <link rel="stylesheet" href="assets/css/final-visual-rhythm.css?v=1.0.0" />
+</head>
+<body class="case-study-page starpet-identity-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html#top" aria-label="Joshua C. McDonald portfolio home">
+        <span class="brand-mark" aria-hidden="true">⟠</span>
+        <span>
+          <strong>Joshua C. McDonald</strong>
+          <small><span>PacketPhreak</span><span class="brand-role"> · Infrastructure &amp; Network Analyst</span></small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" aria-label="Primary navigation" data-nav>
+        <a href="index.html#about">About</a>
+        <a href="index.html#focus">Focus</a>
+        <a href="index.html#case-studies">Case Studies</a>
+        <a href="breachd.html">BreachD</a>
+        <a href="toolbox.html">t00lB0x</a>
+        <a href="timeline.html">Time Capsule</a>
+        <a href="assets/docs/Joshua_C_McDonald_Resume_2026.pdf">Resume</a>
+        <a class="nav-cta" href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="reading-progress" aria-hidden="true"><span data-reading-progress></span></div>
+
+  <main id="main">
+    <section class="identity-hero section-pad">
+      <div class="container identity-hero-grid">
+        <div class="identity-hero-copy">
+          <p class="eyebrow">StarPet • Identity • Active Directory • Incident Analysis</p>
+          <h1>The password reset that exposed the fault domain.</h1>
+          <p class="hero-lede">
+            A user-facing password problem became a multi-layer identity investigation spanning
+            RODC behavior, writable-domain-controller discovery, stale former-DC state, replication,
+            DNS/DC Locator, Kerberos password-change paths, Wi-Fi authentication, and Microsoft 365 validation.
+          </p>
+          <div class="identity-impact-row" aria-label="Incident summary">
+            <span>High severity</span>
+            <span>Multi-day</span>
+            <span>AD / Domain</span>
+            <span>Wi-Fi</span>
+            <span>Microsoft 365</span>
+          </div>
+        </div>
+
+        <aside class="identity-console" aria-label="Incident evidence console">
+          <div class="identity-console-top">
+            <span></span><span></span><span></span>
+            <b>incident://identity-path</b>
+          </div>
+          <div class="identity-console-body">
+            <p><span class="prompt">$</span> dc-locator --site local --writable</p>
+            <strong class="error-text">ERROR 1355</strong>
+            <p><span class="prompt">$</span> dc-locator --any --writable</p>
+            <strong class="ok-text">REMOTE WRITABLE FOUND</strong>
+            <p><span class="prompt">$</span> replication --former-dc</p>
+            <strong class="warn-text">57+ DAY DELTA · 10/10 FAIL</strong>
+            <p><span class="prompt">$</span> rpc-status</p>
+            <strong class="error-text">1722 SERVER UNAVAILABLE</strong>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-pad identity-summary-strip">
+      <div class="container identity-summary-grid">
+        <article>
+          <span>01</span>
+          <h3>The symptom</h3>
+          <p>Password resets and changes did not behave consistently from the user's actual authentication path.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>The contradiction</h3>
+          <p>The local RODC behaved as an RODC should—but the site still lacked a reliable, clean writable-DC path.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>The evidence</h3>
+          <p>DC Locator, replication, DNS/SRV behavior, service reachability, and user validation all told the same story.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>The discipline</h3>
+          <p>Do not stop at “the reset synchronized.” Prove the entire path from write to user-visible authentication.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="container identity-section-grid">
+        <div class="identity-copy">
+          <p class="eyebrow">The architecture</p>
+          <h2>A password change is a path, not a button.</h2>
+          <p>
+            The site used a local read-only domain controller. That is valid architecture only when write operations can
+            reliably reach a writable controller elsewhere and the resulting state returns to the authentication path users actually consume.
+          </p>
+          <p>
+            The investigation therefore treated the password reset as a transaction with multiple checkpoints rather than a single success/fail event.
+          </p>
+        </div>
+
+        <div class="identity-path" data-identity-path>
+          <button class="identity-node is-active" type="button" data-step="user">
+            <span>01</span><strong>User</strong><small>Reset / change request</small>
+          </button>
+          <div class="identity-arrow" aria-hidden="true">→</div>
+          <button class="identity-node" type="button" data-step="rodc">
+            <span>02</span><strong>Local RODC</strong><small>Read / auth path</small>
+          </button>
+          <div class="identity-arrow" aria-hidden="true">→</div>
+          <button class="identity-node" type="button" data-step="writable">
+            <span>03</span><strong>Writable DC</strong><small>Password write</small>
+          </button>
+          <div class="identity-arrow" aria-hidden="true">→</div>
+          <button class="identity-node" type="button" data-step="return">
+            <span>04</span><strong>Replication</strong><small>State returns</small>
+          </button>
+          <div class="identity-arrow" aria-hidden="true">→</div>
+          <button class="identity-node" type="button" data-step="cloud">
+            <span>05</span><strong>User-visible result</strong><small>Windows + M365</small>
+          </button>
+        </div>
+
+        <div class="identity-step-detail" data-step-detail>
+          <p class="eyebrow" data-step-kicker>Checkpoint 01</p>
+          <h3 data-step-title>User symptom</h3>
+          <p data-step-copy>A reset is not proven until the user can authenticate through the path they actually use.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad identity-evidence-zone">
+      <div class="container">
+        <div class="identity-heading-row">
+          <div>
+            <p class="eyebrow">Evidence chain</p>
+            <h2>The useful clue was the contradiction.</h2>
+          </div>
+          <p>
+            The local RODC was discoverable and carried the expected read-only flags. But a site-scoped request for a writable DC failed,
+            while an unrestricted writable lookup found a remote controller. That separated “expected RODC behavior” from “healthy writable path.”
+          </p>
+        </div>
+
+        <div class="identity-evidence-grid">
+          <article class="evidence-card">
+            <span class="evidence-label">LOCAL DC</span>
+            <strong>RODC discovered</strong>
+            <code>flags: ... PARTIAL_SECRET ...</code>
+            <p>Expected behavior for the local read-only controller.</p>
+          </article>
+
+          <article class="evidence-card evidence-card-alert">
+            <span class="evidence-label">SITE WRITABLE LOOKUP</span>
+            <strong>Failed</strong>
+            <code>ERROR_NO_SUCH_DOMAIN (1355)</code>
+            <p>No usable writable DC was discoverable inside the site scope.</p>
+          </article>
+
+          <article class="evidence-card">
+            <span class="evidence-label">REMOTE WRITABLE LOOKUP</span>
+            <strong>Succeeded</strong>
+            <code>flags: WRITABLE ... FULL_SECRET</code>
+            <p>The domain had writable controllers; the dependency was remote.</p>
+          </article>
+
+          <article class="evidence-card evidence-card-alert">
+            <span class="evidence-label">FORMER LOCAL RWDC</span>
+            <strong>Still advertised</strong>
+            <code>57+ day delta · 10/10 fail · RPC 1722</code>
+            <p>Stale former-DC state remained visible in locator / replication evidence while the server was offline.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="container identity-split">
+        <div>
+          <p class="eyebrow">Why the easy answer was not enough</p>
+          <h2>“It synchronized to the cloud” did not prove the user path.</h2>
+          <p>
+            A cloud-side success only proved that one portion of the transaction completed. It did not identify which writable controller accepted the change,
+            how long the update took to return through the site authentication path, or whether the local RODC could immediately validate the new credential.
+          </p>
+          <div class="identity-proof-list">
+            <span>Which writable DC accepted the write?</span>
+            <span>Did the password reach the local authentication path?</span>
+            <span>Did cloud sync observe the same state?</span>
+            <span>Could the user actually sign in from the site?</span>
+          </div>
+        </div>
+
+        <div class="identity-command-board" aria-label="Sanitized diagnostic command set">
+          <p class="eyebrow">Diagnostic toolkit</p>
+          <pre><code>nltest /dsgetdc:&lt;domain&gt; /site:&lt;site&gt; /force
+nltest /dsgetdc:&lt;domain&gt; /site:&lt;site&gt; /force /writable
+nltest /dsgetdc:&lt;domain&gt; /force /writable
+
+repadmin /showrepl
+repadmin /replsummary
+dcdiag
+
+Resolve-DnsName _kpasswd._tcp.&lt;domain&gt; -Type SRV
+Test-NetConnection &lt;writable-dc&gt; -Port 464</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad identity-blast-zone">
+      <div class="container">
+        <div class="identity-heading-row">
+          <div>
+            <p class="eyebrow">Blast radius</p>
+            <h2>Then the host trust problem widened the fault domain.</h2>
+          </div>
+          <p>
+            The affected virtualization host carried multiple site services. Once its domain trust became part of the incident,
+            the question was no longer “can one person reset a password?” It became “what else depends on this host and its identity path?”
+          </p>
+        </div>
+
+        <div class="identity-service-grid">
+          <article><strong>Local RODC</strong><small>Authentication / DC Locator</small></article>
+          <article><strong>Privileged access</strong><small>PAM connector service</small></article>
+          <article><strong>Endpoint management</strong><small>Patch / distribution service</small></article>
+          <article><strong>Backup</strong><small>Local protection service</small></article>
+          <article><strong>Network authentication</strong><small>ISE / RADIUS service</small></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="container identity-split">
+        <div class="identity-copy">
+          <p class="eyebrow">Parallel signal</p>
+          <h2>Wi-Fi authentication failed differently—but it belonged in the same incident picture.</h2>
+          <p>
+            Separate troubleshooting found missing authentication logs, an unavailable site ISE node, and failover behavior that did not process requests as expected.
+            Port-authentication settings were also found in an open/bypass state and required correction and validation.
+          </p>
+          <p>
+            That was not automatically the same root cause as the password path. Treating the symptoms separately while still mapping their shared dependencies prevented one outage from hiding another.
+          </p>
+        </div>
+        <div class="identity-parallel-card">
+          <div><span>Signal A</span><strong>Password path</strong><small>RODC → writable DC → replication → user</small></div>
+          <div><span>Signal B</span><strong>Wi-Fi path</strong><small>Client → network → ISE / failover → authorization</small></div>
+          <p>Different transaction. Shared requirement: prove the complete path.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad identity-timeline-zone">
+      <div class="container">
+        <p class="eyebrow">Incident progression</p>
+        <h2>Symptoms became evidence. Evidence became questions. Questions became a validation plan.</h2>
+
+        <div class="identity-timeline">
+          <article>
+            <span>01</span>
+            <div><strong>Initial testing</strong><p>Local RODC behavior was confirmed, but site-scoped writable discovery failed and stale former-DC state remained visible.</p></div>
+          </article>
+          <article>
+            <span>02</span>
+            <div><strong>Replication and locator evidence</strong><p>Long replication delta, repeated failures, RPC errors, and stale locator references established that this was more than ordinary RODC behavior.</p></div>
+          </article>
+          <article>
+            <span>03</span>
+            <div><strong>Escalation</strong><p>The investigation defined the exact proof required: write target, propagation, site validation, cloud state, and real user sign-in.</p></div>
+          </article>
+          <article>
+            <span>04</span>
+            <div><strong>Former RWDC brought back into scope</strong><p>Later correspondence confirmed the former writable DC had been brought online after more than 70 days offline and connected to the production domain before demotion.</p></div>
+          </article>
+          <article>
+            <span>05</span>
+            <div><strong>Remediation + validation</strong><p>Cleanup/demotion and post-change checks covered the RODC, DNS, client logon, password behavior, Microsoft 365 applications, endpoint management, privileged access, and backup services.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad identity-validation-zone">
+      <div class="container identity-validation-grid">
+        <div>
+          <p class="eyebrow">Validation discipline</p>
+          <h2>A technical fix is not complete until the business path is proven.</h2>
+          <p>
+            The validation plan deliberately crossed layers. A domain controller coming online was not enough.
+            The end state had to be tested from infrastructure health through user authentication and dependent services.
+          </p>
+        </div>
+        <div class="identity-checklist">
+          <span>RODC online</span>
+          <span>DNS working</span>
+          <span>Client logon</span>
+          <span>Password reset / change behavior</span>
+          <span>OneDrive / Outlook / Teams authentication</span>
+          <span>Endpoint-management service online</span>
+          <span>Privileged-access service online</span>
+          <span>Backup service online</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad identity-outcome">
+      <div class="container">
+        <p class="eyebrow">Outcome</p>
+        <h2>The incident became an evidence-backed identity record—not a collection of user complaints.</h2>
+        <p>
+          The resulting record classified the event as a high-severity, multi-day disruption affecting Active Directory/domain services,
+          Wi-Fi authentication, and Microsoft 365. The investigation connected direct command output, replication evidence, architecture,
+          escalation questions, remediation activity, and a cross-service validation checklist into one coherent fault-domain story.
+        </p>
+        <div class="identity-lesson">
+          <strong>The lesson:</strong>
+          <span>Never confuse “one system says success” with “the user's transaction is proven end to end.”</span>
+        </div>
+        <p class="evidence-policy">
+          <strong>Evidence policy:</strong> This page is reconstructed from direct testing, incident correspondence, migration/identity evidence,
+          and later audit documentation. Internal hostnames, IP addresses, personal contact details, private screenshots, and proprietary documents are not published.
+          The public diagrams preserve the technical reasoning without reproducing confidential source material.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span data-year></span> Joshua C. McDonald / PacketPhreak.</p>
+      <a href="index.html#case-studies">Back to case studies</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/viewer-pov-tune.js" defer></script>
+  <script src="assets/js/starpet-identity.js" defer></script>
+</body>
+</html>

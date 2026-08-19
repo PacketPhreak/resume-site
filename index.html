@@ -43,6 +43,8 @@
   <link rel="manifest" href="/site.webmanifest" />
 
   <link rel="stylesheet" href="assets/css/styles-v31.css?v=3.9.0" />
+  <link rel="stylesheet" href="assets/css/portfolio-wrap.css?v=1.0.0" />
+  <link rel="stylesheet" href="assets/css/viewer-pov-tune.css?v=1.0.0" />
   <link rel="stylesheet" href="assets/css/toolbox.css?v=1.0.0" />
   <script type="application/ld+json">
 {
@@ -67,6 +69,7 @@
   ]
 }
   </script>
+  <link rel="stylesheet" href="assets/css/final-visual-rhythm.css?v=1.0.0" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -218,14 +221,25 @@ root cause found</code></pre>
           <p class="section-note">No internal IPs, no private screenshots, no vendor drama. Just the kind of work that shows judgment.</p>
         </div>
         <div class="case-grid case-grid-expanded">
-          <article class="case-card featured-case">
-            <div class="case-meta">Manufacturing • OT / DMZ • Azure</div>
-            <h3>Tracing Manufacturing PI Connectivity to Azure</h3>
-            <p>Mapped a segmented OT-to-cloud path for PI / analytics connectivity, tracing the packet through layered firewalls, DMZ relay services, NAT, internet egress, and cloud-side routing.</p>
-            <ul><li>Separated outbound reachability from return-path behavior.</li><li>Converted raw path observations into a clear remediation story.</li><li>Rebuilt the technical narrative into a public-safe visual case study.</li></ul>
-            <div class="case-actions"><a class="btn btn-primary btn-small" href="case-study-pi-azure.html">Open case study</a></div>
+          <article class="case-card featured-case starpet-identity-card">
+            <div class="case-meta">StarPet • Identity • Active Directory • Incident Analysis</div>
+            <h3>The Password Reset That Exposed the Fault Domain</h3>
+            <p>A multi-day identity incident where password behavior, domain logon, Wi-Fi authentication, and Microsoft 365 symptoms converged on a fragile writable-domain-controller path and stale former-DC state.</p>
+            <ul>
+              <li>Proved the difference between expected local RODC behavior and failed site-scoped writable-DC discovery.</li>
+              <li>Correlated stale DC Locator / replication evidence with user-facing password and authentication symptoms.</li>
+              <li>Built an end-to-end validation plan spanning AD, DNS, Kerberos password flow, cloud identity, and dependent site services.</li>
+            </ul>
+            <div class="case-actions"><a class="btn btn-primary btn-small" href="case-study-starpet-identity.html">Open flagship case study</a></div>
           </article>
-          <article class="case-card">
+          <article class="case-card featured-case pi-vignette-card">
+            <div class="case-meta">Project Quasar • Focused Investigation • OT / DMZ / Azure</div>
+            <h3>One Packet Path Inside a Much Larger Transformation</h3>
+            <p>Project Quasar was the broader digital-transformation foundation for StarPet. This public case study intentionally isolates one small troubleshooting thread: tracing PI / analytics traffic through OT, DMZ, firewall, NAT, internet egress, and cloud-side routing.</p>
+            <ul><li>Separated outbound reachability from return-path behavior.</li><li>Converted raw path observations into a clear remediation story.</li><li>Rebuilt the technical narrative into a public-safe visual case study.</li></ul>
+            <div class="case-actions"><a class="btn btn-primary btn-small" href="case-study-pi-azure.html">Open technical vignette</a></div>
+          </article>
+          <article class="case-card segmentation-note-card">
             <div class="case-meta">Network • Segmentation • Access</div>
             <h3>Troubleshooting Network Access in Segmented Environments</h3>
             <p>Worked through endpoint visibility, VLAN behavior, switchport state, authentication paths, and physical-layer assumptions.</p>
@@ -238,7 +252,20 @@ root cause found</code></pre>
             <ul><li>Installed and commissioned eight nodes across production and DR.</li><li>Documented manual failover and failback when automation was unavailable.</li><li>Coordinated internal IT, Dell, colocation, and implementation partners.</li></ul>
             <div class="case-actions"><a class="btn btn-primary btn-small" href="case-study-isilon-dr.html">Open case study</a></div>
           </article>
-        </div>
+          <article class="case-card featured-case carbis-home-card">
+            <div class="case-meta">Infrastructure Modernization • Manufacturing • ERP</div>
+            <h3>From Legacy Server Room to Enterprise Platform</h3>
+            <p>Early-career infrastructure modernization across Aluminum Ladder / Carbis, spanning enterprise compute, virtualization, Dynamics AX infrastructure, shared storage, power protection, networking, and voice communications.</p>
+            <ul><li>Moved from legacy server-room conditions toward a consolidated enterprise platform.</li><li>Supported HP BladeSystem, VMware, Windows Server, Dynamics AX workloads, backup, and shared storage.</li><li>Supported deployment and administration of the NEC UNIVERGE SV8100 communications platform.</li></ul>
+            <div class="case-actions"><a class="btn btn-primary btn-small" href="case-study-carbis-infrastructure.html">Open case study</a></div>
+          </article>
+          <article class="case-card featured-case moore-case-card">
+            <div class="case-meta">Discovery • K-12 • Managed Print • RFP</div>
+            <h3>Mapping the Problem Before Selling the Solution</h3>
+            <p>Districtwide field discovery that connected real user workflows, equipment capabilities, floor-plan mapping, proposal design, and post-deployment technical work with school-system IT teams.</p>
+            <ul><li>Walked every site with an experienced managed-print teammate and documented operational requirements.</li><li>Translated field observations into model-specific configurations and placement maps.</li><li>Worked directly with Moore and Scotland County IT teams after MyQ / Kyocera Net Manager implementation.</li></ul>
+            <div class="case-actions"><a class="btn btn-primary btn-small" href="case-study-moore-county-discovery.html">Open case study</a></div>
+          </article>        </div>
       </div>
     </section>
 
