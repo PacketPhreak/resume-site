@@ -20,7 +20,7 @@ window.CAREER_TIMELINE = [
     ],
     "evidence": "Archive additions: public-safe troubleshooting templates, identity flow diagrams, OneDrive repair notes, escalation summaries, screenshots with sensitive data removed.",
     "caseStudy": {
-      "label": "Open featured case study",
+      "label": "Open PI / Azure technical vignette",
       "href": "case-study-pi-azure.html",
       "title": "Tracing Manufacturing PI Connectivity to Azure"
     }
@@ -189,4 +189,5 @@ window.CAREER_TIMELINE = [
     "evidence": "Archive additions: student worker notes, photos, early stories, campus tech memories."
   }
 ];
+
 

@@ -14,3 +14,7 @@ These files are public-safe derivatives. Original evidence masters remain privat
 - `assets/img/case-studies/moore-county/moore-discovery-map-sanitized-2.jpg` ← private project floor-plan source — public derivative destroys usable facility geometry and labels; planning-marker positions are retained only as abstract evidence of the mapping methodology; metadata removed
 
 Exact private source paths are intentionally excluded from the public repository.
+
+## Phase 1 screen-recording visual derivatives
+- `assets/img/case-studies/moore-county/moore-placement-study-dark-1.png` — reconstructed from already-sanitized placement markers; no original facility geometry, labels, names, or metadata retained.
+- `assets/img/case-studies/moore-county/moore-placement-study-dark-2.png` — reconstructed from already-sanitized placement markers; no original facility geometry, labels, names, or metadata retained.

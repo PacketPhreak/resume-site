@@ -27,7 +27,6 @@ function makeCard(entry) {
     <p>${entry.summary}</p>
     <ul>${entry.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
     <div class="tag-row">${entry.type.map(t => `<span class="tag">${t}</span>`).join('')}</div>
-    <div class="evidence-box"><strong>Archive note:</strong> ${entry.evidence}</div>
     ${caseStudyAction}
   `;
   return article;
@@ -67,3 +66,4 @@ searchInput.addEventListener('input', applyFilters);
 
 renderFilters();
 renderCards();
+

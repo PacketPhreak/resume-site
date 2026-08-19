@@ -5584,3 +5584,177 @@
   .compare-frame { aspect-ratio:4/3; }
 }
 
+
+
+
+/* ==========================================================
+   Phase 1 screen-recording fixes
+   ========================================================== */
+
+/* Hero can shout. Supporting sections should not. */
+.carbis-case-page main section:not(.case-hero) .section-3d-title,
+.moore-case-page main section:not(.case-hero) .section-3d-title {
+  max-width: 25ch !important;
+  font-size: clamp(1.75rem, 2.65vw, 2.5rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.035em !important;
+  color: var(--text) !important;
+  -webkit-text-fill-color: var(--text) !important;
+  background: none !important;
+  text-shadow: none !important;
+  filter: none !important;
+  transform: none !important;
+  margin-bottom: 14px !important;
+}
+.carbis-case-page main section:not(.case-hero) .section-3d-title::before,
+.carbis-case-page main section:not(.case-hero) .section-3d-title::after,
+.moore-case-page main section:not(.case-hero) .section-3d-title::before,
+.moore-case-page main section:not(.case-hero) .section-3d-title::after {
+  content: none !important;
+  display: none !important;
+}
+.carbis-case-page main > .section-pad,
+.moore-case-page main > .section-pad {
+  padding-top: clamp(30px, 3.8vw, 48px) !important;
+  padding-bottom: clamp(30px, 3.8vw, 48px) !important;
+}
+.carbis-case-page .case-hero,
+.moore-case-page .case-hero {
+  padding-top: clamp(76px, 7vw, 104px) !important;
+  padding-bottom: clamp(44px, 5vw, 68px) !important;
+}
+.phase1-closing {
+  padding-top: clamp(24px, 3vw, 38px) !important;
+  padding-bottom: clamp(34px, 4vw, 52px) !important;
+}
+
+/* Carbis: the slider + two distinct supporting photos are enough. */
+.carbis-case-page .media-story-row {
+  padding-block: 4px;
+}
+.carbis-case-page .phase1-media-card img {
+  min-height: 330px;
+}
+
+/* Moore: turn the mapping evidence into a full-width dark planning board. */
+.moore-case-page .mapping-console {
+  grid-template-columns: 1fr !important;
+  align-items: start !important;
+  gap: 24px !important;
+}
+.moore-case-page .mapping-console-copy {
+  max-width: 820px;
+}
+.moore-case-page .mapping-evidence-grid {
+  grid-template-columns: 1fr 1fr !important;
+  gap: 16px !important;
+  width: 100%;
+}
+.moore-case-page .mapping-evidence-grid .phase1-media-card {
+  background: #06111f;
+  border-color: rgba(102,227,255,.24);
+}
+.moore-case-page .mapping-evidence-grid .phase1-media-card img {
+  aspect-ratio: 16 / 9 !important;
+  object-fit: cover !important;
+  background: #06111f;
+}
+.parallel-district-note {
+  margin: 0 0 18px;
+  padding: 18px 20px;
+  border: 1px solid rgba(102,227,255,.20);
+  border-left: 3px solid var(--accent);
+  border-radius: 18px;
+  background: rgba(102,227,255,.035);
+}
+.parallel-district-note .eyebrow { margin-bottom: 7px; }
+.parallel-district-note p:last-child {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+.moore-case-page .technical-followthrough {
+  margin-top: 14px;
+}
+.moore-case-page .delivery-rail {
+  gap: 10px;
+}
+
+/* Homepage: a regular two-column portfolio rhythm; center the fifth card. */
+@media (min-width: 921px) {
+  .case-grid.case-grid-expanded {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .case-grid-expanded > .case-card {
+    grid-column: auto !important;
+    display: block !important;
+  }
+  .case-grid-expanded .moore-case-card {
+    grid-column: 1 / -1 !important;
+    width: calc((100% - 18px) / 2) !important;
+    justify-self: center !important;
+    max-width: none !important;
+  }
+  .case-grid-expanded .moore-case-card .case-meta,
+  .case-grid-expanded .moore-case-card h3,
+  .case-grid-expanded .moore-case-card > p,
+  .case-grid-expanded .moore-case-card ul,
+  .case-grid-expanded .moore-case-card .case-actions {
+    grid-column: auto !important;
+  }
+}
+@media (max-width: 920px) {
+  .case-grid-expanded .moore-case-card {
+    width: 100% !important;
+    display: block !important;
+  }
+}
+
+/* Time Capsule: make the flame part of the word instead of a floating emoji. */
+.education-fire-icon { display: none !important; }
+.education-fire {
+  display: inline-flex !important;
+  align-items: baseline !important;
+  gap: .12em !important;
+}
+.education-fire-mark {
+  position: relative;
+  display: inline-block;
+  width: .48em;
+  height: .68em;
+  margin-left: .03em;
+  transform: translateY(.06em);
+  filter: drop-shadow(0 0 10px rgba(255,83,20,.56));
+}
+.education-fire-mark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 72% 0 72% 72%;
+  transform: rotate(-45deg);
+  background: linear-gradient(135deg, #fff16a 0 20%, #ff9b00 40%, #ff3d00 72%, #e90023 100%);
+}
+.education-fire-mark::after {
+  content: "";
+  position: absolute;
+  width: 38%;
+  height: 42%;
+  left: 31%;
+  bottom: 11%;
+  border-radius: 70% 0 70% 70%;
+  transform: rotate(-45deg);
+  background: #fff2a8;
+  box-shadow: 0 0 9px rgba(255,214,82,.8);
+}
+
+/* Time Capsule: no TODO-looking archive boxes on every job. */
+.timeline-card .evidence-box { display: none !important; }
+.timeline-card .timeline-actions { margin-top: 18px !important; }
+
+/* The sidebar should describe what exists now, not promise work already delivered. */
+.capsule-side .side-card ul { margin-top: 8px; }
+
+@media (max-width: 760px) {
+  .moore-case-page .mapping-evidence-grid { grid-template-columns: 1fr !important; }
+  .case-grid-expanded .moore-case-card { width: 100% !important; }
+}
+
