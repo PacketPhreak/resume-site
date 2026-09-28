@@ -35,4 +35,9 @@
   <url>
     <loc>https://joshuacmcdonald.com/case-study-starpet-identity.html</loc>
     <priority>0.9</priority>
-  </url></urlset>
+  </url>
+  <url>
+    <loc>https://joshuacmcdonald.com/resume</loc>
+    <priority>0.9</priority>
+  </url>
+</urlset>
