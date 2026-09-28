@@ -1,0 +1,208 @@
+/* Local resume preview only. Original site styles and pages are unchanged. */
+.resume-page { --rp-quiet: #b8c8dc; }
+.resume-page :is(section, article)[id] { scroll-margin-top: 90px; }
+.resume-page :focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.resume-page .rp-mono { font: 700 .73rem/1.5 Consolas, "Liberation Mono", monospace; letter-spacing: .1em; color: var(--accent-2); }
+.resume-page .rp-preview-note { display:flex; align-items:center; gap:10px; padding-block:15px; border-bottom:1px solid var(--line); font-size:.76rem; color:var(--muted); }
+.resume-page .rp-status-dot { width:6px; height:6px; border-radius:50%; background:var(--warning); }
+.resume-page .rp-preview-status { margin-left:auto; }
+.resume-page .rp-hero { padding:64px 0 42px; }
+.resume-page .rp-hero-grid { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(0,.8fr); gap:60px; align-items:center; }
+.resume-page h1 { font-size:clamp(3.7rem,6.5vw,6.25rem); max-width:none; line-height:.99; margin:0 0 24px; }
+.resume-page .rp-profession { font-size:clamp(1.2rem,2vw,1.55rem); font-weight:700; line-height:1.35; margin-bottom:14px; color:#e3f3ff; }
+.resume-page .rp-specialties { color:var(--accent-2); font-size:.91rem; margin-bottom:22px; }
+.resume-page .rp-specialties span { padding:0 5px; color:var(--muted); }
+.resume-page .hero-lede { font-size:1.09rem; max-width:55ch; }
+.resume-page .hero-actions { gap:10px; margin-top:26px; }
+.resume-page .hero-actions .btn { font-size:.89rem; gap:10px; }
+.resume-page .rp-download-note { font-size:.75rem; color:var(--muted); margin:12px 0 22px; }
+.resume-page .rp-download-note span { padding:0 7px; }
+.resume-page .rp-connect { display:flex; flex-wrap:wrap; gap:10px 20px; font-size:.8rem; color:var(--rp-quiet); }
+.resume-page .rp-connect a { text-underline-offset:4px; }
+.resume-page .rp-career-signal { align-self:center; }
+.resume-page .rp-career-signal .terminal-top { align-items:center; }
+.resume-page .rp-career-signal .terminal-top b { font:600 .72rem Consolas,monospace; margin-left:auto; color:var(--muted); }
+.resume-page .rp-signal-body { padding:28px 30px; position:relative; background:repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(102,227,255,.025) 40px); }
+.resume-page .rp-years { font-size:6rem; font-weight:800; line-height:1; letter-spacing:-.07em; color:#e8fbff; text-shadow:0 0 40px rgba(102,227,255,.18); }
+.resume-page .rp-years span { font-size:3.5rem; color:var(--accent-2); vertical-align:top; line-height:1.4; }
+.resume-page .rp-years-caption { margin:8px 0 0; max-width:22ch; color:var(--rp-quiet); font-size:.93rem; }
+.resume-page .rp-signal-rule { height:1px; margin:26px 0; background:linear-gradient(90deg,var(--accent),var(--line),transparent); }
+.resume-page .rp-signal-body h2 { font-size:1.22rem; line-height:1.4; letter-spacing:-.02em; margin:0 0 9px; }
+.resume-page .rp-signal-body h2+p { color:var(--muted); font-size:.87rem; }
+.resume-page .rp-sectors { font-size:.74rem; line-height:1.8; color:var(--muted); padding-top:16px; border-top:1px solid var(--line); }
+.resume-page .rp-jump-nav { display:flex; flex-wrap:wrap; gap:10px 26px; padding:19px 0; border-block:1px solid var(--line); }
+.resume-page .rp-jump-nav a { font-size:.84rem; color:var(--rp-quiet); text-decoration:none; }
+.resume-page .rp-jump-nav a:hover { color:var(--accent-2); }
+.resume-page .rp-section { padding:55px 0 20px; }
+.resume-page .rp-section-heading { display:flex; gap:36px; align-items:end; justify-content:space-between; margin-bottom:26px; }
+.resume-page .rp-section-heading h2 { font-size:clamp(1.8rem,3vw,2.75rem); line-height:1.08; margin-bottom:8px; max-width:25ch; }
+.resume-page .rp-section-heading > p { max-width:33ch; color:var(--muted); font-size:.91rem; margin-bottom:8px; }
+.resume-page .rp-highlights { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+.resume-page .rp-highlights .card { display:flex; flex-direction:column; padding:24px; }
+.resume-page .rp-highlights h3 { font-size:1.23rem; line-height:1.3; }
+.resume-page .rp-highlights .card > p:not(.rp-mono) { font-size:.92rem; }
+.resume-page .rp-highlights .rp-text-link { margin-top:auto; }
+.resume-page .rp-text-link { display:inline-block; color:var(--accent); font-weight:600; font-size:.86rem; text-decoration:none; }
+.resume-page .rp-text-link:hover { text-decoration:underline; text-underline-offset:4px; }
+.resume-page .rp-career-list { border-top:1px solid var(--line); }
+.resume-page .rp-role { display:grid; grid-template-columns:165px minmax(0,1fr); gap:32px; padding:32px 0; border-bottom:1px solid var(--line); }
+.resume-page .rp-role-period { position:relative; border-left:1px solid var(--line); padding:0 0 0 20px; }
+.resume-page .rp-role-period:before { content:""; position:absolute; left:-4px; top:7px; width:7px; height:7px; border-radius:50%; background:var(--accent-2); box-shadow:0 0 14px rgba(155,255,203,.3); }
+.resume-page .rp-role-number { color:var(--muted); font: .75rem Consolas,monospace; }
+.resume-page .rp-role-period p { color:var(--accent-2); font-size:.9rem; font-weight:700; line-height:1.5; margin:12px 0; }
+.resume-page .rp-current { font-size:.69rem; padding:4px 9px; border:1px solid rgba(155,255,203,.3); border-radius:99px; color:var(--accent-2); background:rgba(155,255,203,.045); }
+.resume-page .rp-employer { font-size:.81rem; text-transform:uppercase; letter-spacing:.08em; color:var(--accent-2); font-weight:700; margin-bottom:10px; }
+.resume-page .rp-role h3 { font-size:clamp(1.25rem,2.1vw,1.65rem); line-height:1.3; letter-spacing:-.025em; margin-bottom:6px; }
+.resume-page .rp-location { font-size:.84rem; color:var(--muted); margin-bottom:15px; }
+.resume-page .rp-role-body { display:grid; grid-template-columns:minmax(0,1fr); gap:18px; }
+.resume-page .rp-role ul { margin:0 0 14px; padding-left:19px; color:#c7d5e8; font-size:.93rem; }
+.resume-page .rp-role li { padding-left:3px; }
+.resume-page .rp-role li+li { margin-top:9px; }
+.resume-page .rp-role li::marker { color:#689baf; }
+.resume-page .rp-photo { margin:0; overflow:hidden; border:1px solid var(--line); border-radius:16px; align-self:start; background:#07111f; }
+.resume-page .rp-photo a { display:block; }
+.resume-page .rp-photo img { width:100%; height:auto; display:block; }
+.resume-page .rp-photo figcaption { padding:12px 14px; font-size:.73rem; color:var(--rp-quiet); }
+.resume-page .rp-photo figcaption span { float:right; }
+.resume-page .rp-has-photo .rp-role-body { grid-template-columns:minmax(0,1.3fr) minmax(0,.85fr); gap:25px; }
+.resume-page .rp-career-gallery { min-width:0; align-self:start; }
+.resume-page .rp-photo-pair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; align-items:start; }
+.resume-page .rp-photo-pair .rp-photo { min-width:0; width:100%; border-radius:12px; }
+.resume-page .rp-photo-pair .rp-photo img { aspect-ratio:3 / 4; object-fit:contain; background:#0b1420; }
+.resume-page .rp-photo-pair figcaption { padding:10px; font-size:.7rem; line-height:1.45; }
+.resume-page .rp-gallery-note { margin:14px 0 0; padding-left:12px; border-left:2px solid var(--accent); color:var(--rp-quiet); font-size:.82rem; line-height:1.6; }
+.resume-page .rp-career-photo-more { margin-top:14px; border-top:1px solid var(--line); }
+.resume-page .rp-career-photo-more summary { color:var(--accent); font-size:.78rem; padding:13px 0; cursor:pointer; }
+.resume-page .rp-career-photo-more[open] summary { margin-bottom:4px; }
+.resume-page #role-6 .rp-role-content { display:grid; grid-template-columns:minmax(0,1fr) 300px; column-gap:32px; }
+.resume-page #role-6 .rp-role-body { display:contents; }
+.resume-page .rp-owner-brands { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; grid-column:2; grid-row:1 / span 2; align-self:center; }
+.resume-page .rp-owner-brand { margin:0; min-width:0; }
+.resume-page .rp-owner-logo { display:grid; place-items:center; height:142px; padding:12px; border:1px solid rgba(255,255,255,.2); border-radius:14px; background:#eeeadd; }
+.resume-page .rp-owner-logo img { display:block; width:100%; height:116px; object-fit:contain; }
+.resume-page .rp-owner-brand figcaption { margin-top:10px; color:var(--muted); font-size:.7rem; line-height:1.5; text-align:center; }
+.resume-page .rp-owner-website { grid-column:1 / -1; width:min(100%,640px); margin-top:24px; }
+.resume-page .rp-project-evidence { margin-top:22px; padding:23px; border:1px solid var(--line); border-radius:16px; background:linear-gradient(135deg,rgba(102,227,255,.055),rgba(155,255,203,.025)); }
+.resume-page .rp-project-evidence h4 { margin:0 0 20px; font-size:1.16rem; line-height:1.35; }
+.resume-page .rp-proposal-scope { display:grid; grid-template-columns:180px minmax(0,1fr); gap:24px; align-items:center; margin-bottom:20px; }
+.resume-page .rp-proposal-scope strong { font-size:2.5rem; line-height:1.2; letter-spacing:-.04em; }
+.resume-page .rp-proposal-scope strong span { display:block; font-size:.76rem; font-weight:400; letter-spacing:0; color:var(--muted); margin-top:7px; }
+.resume-page .rp-proposal-scope p { font-size:.89rem; margin:0; color:var(--rp-quiet); }
+.resume-page .rp-project-evidence .rp-evidence-note { font-size:.72rem; color:var(--muted); margin:18px 0 0; }
+.resume-page .rp-photo-placeholder { display:flex; flex-wrap:wrap; gap:8px 14px; border:1px dashed rgba(141,191,255,.2); border-radius:10px; padding:10px 14px; align-items:center; }
+.resume-page .rp-photo-placeholder .rp-mono { font-size:.64rem; color:#a3b2c8; }
+.resume-page .rp-photo-placeholder p { font-size:.73rem; color:var(--muted); margin:0; }
+.resume-page .rp-strengths { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:16px; }
+.resume-page .rp-strength { grid-column:span 2; padding:24px; }
+.resume-page .rp-strength:nth-child(n+4) { grid-column:span 3; }
+.resume-page .rp-strength h3 { margin-top:20px; }
+.resume-page .rp-strength p { font-size:.9rem; margin-bottom:0; }
+.resume-page .rp-technologies { margin-top:26px; }
+.resume-page .rp-technologies h3 { font-size:.88rem; color:var(--rp-quiet); }
+.resume-page .rp-technologies ul { display:flex; flex-wrap:wrap; gap:8px; padding:0; margin:14px 0 0; list-style:none; }
+.resume-page .rp-technologies li { font-size:.76rem; padding:5px 11px; border:1px solid var(--line); border-radius:99px; color:var(--muted); background:rgba(255,255,255,.025); }
+.resume-page .rp-education { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+.resume-page .rp-education-card { padding:24px; }
+.resume-page .rp-education-top { position:relative; margin-bottom:20px; }
+.resume-page .rp-education-top > .rp-mono { position:absolute; top:0; right:0; z-index:2; }
+.resume-page .rp-education-card h3 { font-size:1.2rem; }
+.resume-page .rp-education-card p { font-size:.85rem; margin-bottom:0; }
+.resume-page .rp-education-card p.rp-degree { color:#d9e9fa; font-size:.93rem; margin-bottom:12px; }
+.resume-page .rp-community { padding:30px; }
+.resume-page .rp-community-intro { display:grid; grid-template-columns:1fr 1.15fr; gap:32px; }
+.resume-page .rp-community h2 { font-size:2.2rem; margin-bottom:10px; }
+.resume-page .rp-community .rp-community-lede { font-size:1.05rem; color:#d9e9fa; max-width:32ch; }
+.resume-page .rp-community-story { font-size:.95rem; align-self:center; }
+.resume-page .rp-community-story p:last-child { margin-bottom:0; }
+.resume-page .rp-collage { display:grid; grid-template-columns:1.25fr 1fr; gap:32px; padding:22px 0 8px; align-items:start; }
+.resume-page .rp-collage-right { display:grid; gap:16px; padding:7px; min-width:0; }
+.resume-page .rp-paper, .resume-page .rp-memory { margin:0; background:#e8e3d5; padding:7px; color:#263333; box-shadow:0 12px 28px rgba(0,0,0,.3); }
+.resume-page .rp-paper img, .resume-page .rp-memory img { display:block; width:100%; height:auto; }
+.resume-page .rp-paper a, .resume-page .rp-memory a { display:block; }
+.resume-page .rp-paper figcaption { padding:10px 7px 7px; font-size:.83rem; font-weight:700; line-height:1.5; }
+.resume-page .rp-paper figcaption span { font-size:.73rem; font-weight:400; }
+.resume-page .rp-paper figcaption a { display:inline; text-underline-offset:3px; }
+.resume-page .rp-memory figcaption { padding:10px 4px 5px; font-size:.72rem; font-weight:600; line-height:1.3; }
+.resume-page .rp-memory-pair { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:3px; }
+.resume-page .rp-classroom { transform:rotate(1.5deg); }
+.resume-page .rp-registration { transform:rotate(-2deg); }
+.resume-page .rp-activities { transform:rotate(2deg); }
+.resume-page .rp-press-more { margin-top:18px; }
+.resume-page :is(.rp-press-more, .rp-program-more) summary { color:var(--accent); font-size:.84rem; cursor:pointer; padding:10px 0; }
+.resume-page .rp-press-more[open] summary { margin-bottom:8px; }
+.resume-page .rp-program-more { border-top:1px solid var(--line); margin-top:20px; padding-top:8px; }
+.resume-page .rp-activity-detail { display:grid; grid-template-columns:180px 180px 1fr; gap:24px; padding-top:14px; align-items:center; }
+.resume-page .rp-activity-detail p { font-size:.91rem; max-width:48ch; }
+.resume-page .rp-download-section { padding-bottom:55px; }
+.resume-page .rp-download-section h2 { font-size:2.1rem; }
+.resume-page .rp-download-actions { display:flex; flex-direction:column; gap:12px; }
+.resume-page .rp-download-actions .btn { font-size:.89rem; }
+.resume-page .site-footer { font-size:.8rem; }
+@media(max-width:1100px) and (min-width:721px) { .resume-page .nav { gap:0; } .resume-page .nav a { padding:.62rem .5rem; font-size:.82rem; } .resume-page .nav-wrap { gap:8px; } }
+@media(max-width:960px) {
+  .resume-page .rp-hero-grid { grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr); gap:28px; }
+  .resume-page h1 { font-size:clamp(3.5rem,7vw,5.5rem); }
+  .resume-page .rp-signal-body { padding:24px; }
+  .resume-page .rp-role { grid-template-columns:140px minmax(0,1fr); gap:20px; }
+  .resume-page .rp-has-photo .rp-role-body { grid-template-columns:1fr; }
+  .resume-page .rp-career-gallery { max-width:540px; }
+  .resume-page #role-6 .rp-role-content { display:block; }
+  .resume-page #role-6 .rp-role-body { display:grid; grid-template-columns:1fr; gap:22px; }
+  .resume-page .rp-owner-brands { grid-column:auto; grid-row:auto; width:min(100%,300px); }
+  .resume-page .rp-owner-website { margin-top:0; }
+  .resume-page .rp-photo { max-width:450px; }
+  .resume-page .rp-section-heading > p { max-width:28ch; }
+}
+@media(max-width:720px) {
+  .resume-page .nav:not(.is-open) { visibility:hidden; }
+  .resume-page .nav { top:64px; }
+  .resume-page .rp-preview-note { gap:7px; font-size:.68rem; }
+  .resume-page .rp-hero { padding:38px 0 30px; }
+  .resume-page .rp-hero-grid { grid-template-columns:1fr; gap:28px; }
+  .resume-page h1 { font-size:clamp(3.15rem,12vw,5rem); }
+  .resume-page .rp-career-signal { width:100%; }
+  .resume-page .rp-signal-body { display:grid; grid-template-columns:auto 1fr; gap:8px 22px; }
+  .resume-page .rp-signal-body > .rp-mono:first-child { grid-column:1 / -1; margin:0; }
+  .resume-page .rp-years { font-size:4rem; }
+  .resume-page .rp-years span { font-size:2.5rem; }
+  .resume-page .rp-years-caption { align-self:center; font-size:.87rem; }
+  .resume-page .rp-signal-rule { grid-column:1 / -1; margin:10px 0; }
+  .resume-page .rp-signal-body > .rp-mono:not(:first-child), .resume-page .rp-signal-body > h2, .resume-page .rp-signal-body > h2+p, .resume-page .rp-sectors { grid-column:1 / -1; margin:0; }
+  .resume-page .rp-sectors { margin-top:10px; }
+  .resume-page .rp-jump-nav { gap:14px 22px; }
+  .resume-page .rp-section { padding:36px 0 12px; }
+  .resume-page .rp-section-heading { display:block; margin-bottom:22px; }
+  .resume-page .rp-section-heading > p { max-width:50ch; margin-top:12px; }
+  .resume-page .rp-highlights, .resume-page .rp-education, .resume-page .rp-strengths { grid-template-columns:1fr; }
+  .resume-page .rp-strength, .resume-page .rp-strength:nth-child(n+4) { grid-column:auto; }
+  .resume-page .rp-role { grid-template-columns:1fr; gap:15px; padding-block:28px; }
+  .resume-page .rp-role-period { display:flex; gap:14px; align-items:center; border-left:0; padding-left:15px; }
+  .resume-page .rp-role-period:before { top:10px; left:0; }
+  .resume-page .rp-role-period p { margin:0; }
+  .resume-page .rp-role-number { display:none; }
+  .resume-page .rp-employer { font-size:.75rem; }
+  .resume-page .rp-role-content { padding-left:15px; }
+  .resume-page .rp-proposal-scope { grid-template-columns:1fr; gap:16px; }
+  .resume-page .rp-role ul { font-size:.92rem; }
+  .resume-page .rp-photo { max-width:100%; }
+  .resume-page .rp-community { padding:22px; }
+  .resume-page .rp-community-intro, .resume-page .rp-collage { grid-template-columns:1fr; gap:16px; }
+  .resume-page .rp-collage { padding:6px 0; }
+  .resume-page .rp-clipping { min-height:190px; }
+  .resume-page .rp-classroom, .resume-page .rp-registration, .resume-page .rp-activities { transform:none; }
+  .resume-page .rp-collage-right { padding:0; }
+  .resume-page .rp-activity-detail { grid-template-columns:1fr; }
+  .resume-page .rp-activity-detail .rp-photo { max-width:230px; }
+  .resume-page .rp-download-section { padding-bottom:36px; }
+  .resume-page .rp-download-section h2 { font-size:1.9rem; }
+}
+@media(prefers-reduced-motion:reduce) { .resume-page *, .resume-page *::before, .resume-page *::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; } }
+@media print {
+  .resume-page { background:white; color:black; }
+  .resume-page::before, .resume-page .site-header, .resume-page .rp-preview-note, .resume-page .rp-jump-nav, .resume-page .rp-career-signal, .resume-page .hero-actions, .resume-page .rp-download-note, .resume-page .rp-download-section, .resume-page .rp-photo-placeholder, .resume-page .rp-collage { display:none; }
+  .resume-page .rp-hero-grid, .resume-page .rp-role, .resume-page .rp-role-body { display:block; }
+  .resume-page h1, .resume-page h2 { color:black!important; background:none; text-shadow:none; filter:none; }
+  .resume-page p, .resume-page li, .resume-page a { color:black!important; }
+  .resume-page .rp-section { padding-top:20px; }
+  .resume-page .card, .resume-page .rp-photo { background:white; box-shadow:none; break-inside:avoid; }
+}
